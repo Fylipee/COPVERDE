@@ -1,0 +1,3 @@
+link rel=preconnect href=httpsfonts.googleapis.com
+link rel=preconnect href=httpsfonts.gstatic.com crossorigin
+link href=httpsfonts.googleapis.comcss2family=Crimson+Textital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gochi+Hand&display=swap rel=stylesheet
