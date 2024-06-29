@@ -1,8 +1,11 @@
+/* 
 @media (max-width: 1500px) {
     .desktop .card {
         display: none;
     }
 }
+
+/* Cores */
 
 :root {    
     --cores-fundo: #E5E5E5;
@@ -13,3 +16,32 @@
     --button: #C8F8EC;
     --links: #3676D6;
 }
+
+/* titulos */
+.marcadores {
+    background-color: var(--marcadores);
+    height: 20px;
+    width: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .logo img {
+    border-radius: 50%;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .social-links a:hover {
+    color: var(--links);
+    text-decoration: none;
+  }
