@@ -1,4 +1,4 @@
-/* 
+/*  expansão */
 @media (max-width: 1500px) {
     .desktop .card {
         display: none;
@@ -17,11 +17,35 @@
     --links: #3676D6;
 }
 
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/* Position da 1° imagem */
+.position1 {
+display: flex;
+align-items: start;
+margin-left: 0;
+padding-left: 0;
+text-align: center;
+}
 /* titulos */
-.marcadores {
+.marcadores h2 {
     background-color: var(--marcadores);
     height: 20px;
-    width: 20px;
+    width: 100px;
+    text-align: center;
+    padding: auto;
+}
+
+/* Figure posição */
+.figure {
+ display: flex;
+ justify-content: space-around;
 }
 
 /* Rodapé */
@@ -30,6 +54,7 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+    margin-top: 100%;
   }
   
   .logo img {
