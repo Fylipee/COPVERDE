@@ -50,23 +50,39 @@ text-align: center;
 
 /* Rodapé */
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 100%;
-  }
-  
-  .logo img {
-    border-radius: 50%;
-  }
-  
-  .social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  .social-links a:hover {
-    color: var(--links);
-    text-decoration: none;
-  }
+  background-color: var(--rodape);
+  color: white;
+  padding: 19px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.footer-content h2 p {
+  margin: 15px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  align-items: center;
+  font-size: 7px;
+  margin-top: 25px;
+}
