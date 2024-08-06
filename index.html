@@ -18,13 +18,18 @@
 <body>
     <header>
         <img src="assets/images/header.svg" alt="A">
-        <nav>
-            <ol>
-                <li>Login</li>
-                <li>Noticias</li>
-                <li>Sobre nós</li>
-            </ol>
-        </nav>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#">Início</a></li>
+                <li><a class="menu__item" href="#">Login</a></li>
+                <li><a class="menu__item" href="#">Notícias</a></li>
+                <li><a class="menu__item" href="#">Rede sociais</a></li>
+            </ul>
+        </div>
     </header>
     <h2> Quem somos? </h2>
     <p> Nós somos uma equipe de estudantes do Senac PA ,
