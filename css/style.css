@@ -138,6 +138,12 @@ margin: auto;
   padding: auto;
 }
 
+h2, p {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* Figure posição */
 .figure {
   display: flex;
