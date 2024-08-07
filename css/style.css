@@ -135,6 +135,20 @@ margin: auto;
   padding: auto;
 }
 
+.marcadores {
+  text-align: center;
+  font-size: 37px;
+  font-weight: bold;
+  background-color: var(--topicos);
+}
+
+p {
+  padding: 10px 100px;
+  text-align: center;
+  text-align: justify;
+  font-size: 28px;
+}
+
 h2, p {
   font-family: "Crimson Text", serif;
   font-weight: 600;
