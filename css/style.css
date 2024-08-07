@@ -28,6 +28,22 @@
   font-size: 100%;
   vertical-align: baseline;
 }
+/* Banner */
+.responsive {
+  width: 385px;
+  height: 227px;
+  object-fit: initial;
+  object-position: right;
+}
+.cabecalho {
+display: flex;
+justify-content: right;
+align-items: center;
+text-align: center;
+background-color: #dbbf;
+margin: auto;
+}
+
 
 /* Menu Hambúrguer */
 #menu__toggle {
