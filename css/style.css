@@ -4,6 +4,7 @@
     display: none;
   }
 }
+/* ---------- */
 
 /* Cores */
 
@@ -17,7 +18,9 @@
   --links: #3676D6;
   --cabecalho: #dbbdbf;
 }
+/* ---------- */
 
+/* Geral */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +28,8 @@
   font-size: 100%;
   vertical-align: baseline;
 }
+/* ---------- */
+
 /* Banner */
 .responsive {
   width: 385px;
@@ -40,7 +45,7 @@ text-align: center;
 background-color: #dbbf;
 margin: auto;
 }
-
+/* ---------- */
 
 /* Menu Hambúrguer */
 #menu__toggle {
@@ -125,6 +130,7 @@ margin: auto;
 .menu__item:hover {
   background-color: #CFD8DC;
 }
+/* ---------- */
 
 /* títulos */
 .marcadores h2 {
@@ -154,12 +160,14 @@ h2, p {
   font-weight: 600;
   font-style: normal;
 }
+/* ---------- */
 
 /* Figure posição */
 .figure {
   display: flex;
   justify-content: space-around;
 }
+/* ---------- */
 
 /* Rodapé */
 footer {
@@ -199,52 +207,4 @@ footer {
   font-size: 7px;
   margin-top: 25px;
 }
-
-
-/* Tela de Login */
-.pagtl{
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-}
-
-.telaloguin {
-  background-color: rgba(18, 243, 93, 0.274);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 80px;
-  border-radius: 15px;
-  color: #cccaca;
-}
-.input{
-  padding: 15px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-}
-.button{
-  background-color: rgb(0, 0, 0);
-  border-style: none;
-  padding: 2px;
-  width: 100%;
-  border-radius: 3px;
-  color: white;
-  font-size: 20px;
-  
-}
-.button2{
-  background-color: rgb(0, 0, 0);
-  border: none;
-  padding: 15px;
-  width: 100%;
-  border-radius: 10px;
-  color: white;
-  font-size: 25px;
-}
-.figure2{
-  display: flex;
-  justify-content: space-around;
-  font-size: 18px;
- }
- 
+/* ---------- */
