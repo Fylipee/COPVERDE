@@ -208,3 +208,46 @@ footer {
   margin-top: 25px;
 }
 /* ---------- */
+
+/* Cads Noticias */
+.card {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card h2 {
+  font-family: helvetica;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: helvetica;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card button a {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+}
+/* ---------- */
