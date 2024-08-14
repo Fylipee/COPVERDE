@@ -156,33 +156,3 @@
 #login_button:hover {
     transform: scale(1.05);
 }
-
-/* Dark Mode */
-.dark#login_form {
-    color: var(--color-light-50);
-    background-color: var(--color-dark-100);
-    animation: light-to-dark-background 0.3s ease-in-out;
-}
-
-.dark#login_form .input-field input,
-.dark#login_form .input-field i {
-    color: var(--color-light-50);
-}
-
-@keyframes dark-to-light-background {
-    0% {
-        background-color:var(--color-dark-100);
-    }
-    100.0% {
-        background-color:var(--color-light-50);
-    }
-}
-
-@keyframes light-to-dark-background {
-    0% {
-        background-color:var(--color-light-50);
-    }
-    100.0% {
-        background-color:var(--color-dark-100); 
-    }
-}
