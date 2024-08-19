@@ -2,21 +2,22 @@
 
 /** Variables - colors **/
 :root {
-    /* Light */
-    --color-light-50: #f8fafc;
+     /* Light */
+ --color-light-50: #f8fafc;
+ --background-img: #BEDC74;
 
-    /* Dark */
-    --color-dark-50: #797984;
-    --color-dark-100: #312d37;
-    --color-dark-900: #000;
+ /* Dark */
+ --color-dark-50: #606064;
+ --color-dark-100: #312d37;
+ --color-dark-900: #000;
 
-    /* Purple */
-    --color-purple-50: #40ed3a;
-    --color-purple-100: #68f755;
-    --color-purple-200: #4cef46;
-
+ /* Purple */
+ --color-purple-50: #F6E96B;
+ --color-purple-100: #A2CA71;
+ --color-purple-200: #387F39;
+    
     /* Gradient */
-    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
+    --color-gradient: linear-gradient(10deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
 }
 
 /* General */
