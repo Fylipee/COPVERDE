@@ -222,6 +222,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: -1;
 }
 
 .card h2 {
