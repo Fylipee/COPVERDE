@@ -28,7 +28,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
+/* Corpo */
 body {
     width: 100%;
     height: 100vh;
@@ -37,14 +37,14 @@ body {
     align-items: center;
     background: var(--color-gradient);
 }
-
+/* Quadrado da Imagem */
 .container {
     width: 80%;
     height: 80vh;
     display: flex;
     
 }
-
+/* Forma da imagem */
 .form-image {
     width: 50%;
     display: flex;
@@ -55,11 +55,11 @@ body {
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
-
+/* Tamanho da imagem */
 .form-image img {
     width: 35rem;
 }
-
+/* Forma dos inputs */
 .form {
     width: 50%;
     display: flex;
@@ -71,18 +71,18 @@ body {
     border-radius: 7px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
 }
-
+/* Forma do Cadastre-se e Entrar */
 .form-header {
     margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
 }
-
+/* Botão Login */
 .login-button {
     display: flex;
     align-items: center;
 }
-
+/* Estrutura do botão login */
 .login-button button {
     border: none;
     background-color: var(--color-dark-50);
@@ -90,18 +90,18 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/* Mundança no botão ao passar o cursor */
 .login-button button:hover {
     background-color:  var(--hover);
     color: #000;
 }
-
+/* Texto do botão */
 .login-button button a {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
 }
-
+/* Traço embaixo do cadastra-se */
 .form-header h1::after {
     content: '';
     display: block;
@@ -112,20 +112,20 @@ body {
     position: absolute;
     border-radius: 10px;
 }
-
+/* Customização dos inputs */
 .input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
 }
-
+/* Customização separada dos inputs */
 .input-box {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
 }
-
+/* Customização da caixa dos inputs */
 .input-box input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
@@ -134,25 +134,25 @@ body {
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
 }
-
+/* Customização da borda da caixa dos inputs  */
 .input-box input:hover {
     background-color: #eeeeee75;
 }
-
+/* Customização da cor da caixa dos inputs */
 .input-box input:focus-visible {
     outline: 1px solid var(--color-dark-50);
 }
-
+/* Customização do texto dos inputs */
 .input-box label {
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
 }
-
+/* Customização do texto dentro da caixa dos inputs */
 .input-box input::placeholder {
     color: #000000be;
 }
-
+/* Customização do botão continue */
 .continue-button button {
     width: 100%;
     margin-top: 2.5rem;
@@ -162,12 +162,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/* Customização do botão contiue para mudar ao passar o cursor */
 .continue-button button:hover {
     background-color: var(--hover);
     color: #000;
 }
-
+/* Customização do texto do botão continue */
 .continue-button button a {
     text-decoration: none;
     font-size: 0.93rem;
@@ -175,6 +175,7 @@ body {
     color: #fff;
 }
 
+/* responsividade */
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
@@ -190,13 +191,13 @@ body {
 @media screen and (max-width: 1064px) {
     .container {
         width: 90%;
-        height: auto;
+        height: 80vh;
     }
     .input-group {
         flex-direction: column;
         z-index: 5;
         padding-right: 5rem;
-        max-height: 10rem;
+        max-height: 20rem;
         overflow-y: scroll;
         flex-wrap: nowrap;
     }
