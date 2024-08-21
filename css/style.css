@@ -10,8 +10,8 @@
 
 :root {
   --cores-fundo: #E5E5E5;
-  --marcadores: #DDA77B;
-  --topicos: #EDDEA4;
+  --Topicos: #DDA77B;
+  --Topicos: #EDDEA4;
   --texto: black;
   --rodape: black;
   --button: #C8F8EC;
@@ -132,21 +132,24 @@ margin: auto;
 }
 /* ---------- */
 
-/* títulos */
-.marcadores h2 {
-  background-color: var(--marcadores);
+/* tópicos */
+.Topicos h2 {
+  background-color: var(--Topicos);
   height: 20px;
   width: 100px;
   text-align: center;
   padding: auto;
 }
 
-.marcadores {
+.Topicos {
   text-align: center;
   font-size: 37px;
   font-weight: bold;
-  background-color: var(--topicos);
+  background-color: var(--Topicos);
+  margin-bottom: 20px;
 }
+
+/* ---------- */
 
 p {
   padding: 10px 100px;
@@ -210,45 +213,96 @@ footer {
 /* ---------- */
 
 /* Cads Noticias */
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
 .card {
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(70deg, #A2CA71 40%, #387F39 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
   text-align: center;
-  z-index: -1;
 }
 
-.card h2 {
-  font-family: helvetica;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-family: helvetica;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.card button a {
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+  padding: 1rem;
 }
 /* ---------- */
