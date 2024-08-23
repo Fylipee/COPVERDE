@@ -15,6 +15,7 @@
         <form id="login_form">
             <div id="form_header">
                 <h1>Login</h1>
+                <i id="mode_icon" class="fa-solid fa-moon"></i>
             </div>
 
             <!-- SOCIAL MEDIA LINKS -->
@@ -35,18 +36,6 @@
                 </a>
             </div>
 
-            <div id="inputs">
-                <!-- NOME -->
-                <div class="input-box">
-                    <label for="name">
-                        NOME
-                        <div class="input-field">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="name" name="name">
-                        </div>
-                    </label>
-                </div>
-                
                 <!-- EMAIL -->
                 <div class="input-box">
                     <label for="email">
@@ -64,7 +53,7 @@
                         SENHA
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
-                            <input type="senha" id="senha" name="senha">
+                            <input type="password" id="senha" name="senha">
                         </div>
                     </label>
                     
@@ -83,10 +72,11 @@
             </button>
             
             <!-- CRIAR CONTA BUTTON -->
-            <button type="submit" id="login_button">
-               <a href="cadastro.html"> Criar Conta </a> 
+            <button type="submit" id="criar_button">
+                <a href="cadastro.html"> Criar Conta </a>
             </button>
         </form>
     </main>
+<script type="text/javascript" src="JavasScripts/Login.js"></script>
 </body>
 </html>
