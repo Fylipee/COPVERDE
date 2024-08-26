@@ -52,7 +52,7 @@
 
 
                     <div class="input-box">
-                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <label for="confirmPassword">Confirme_sua_Senha</label>
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
                     </div>
 
@@ -60,11 +60,17 @@
 
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button onclick="registro()"><a href="#">Continuar</a> </button>
                 </div>
             </form>
         </div>
     </div>
+
+    <!--Conecta com o firebase, autenticação e inicialização da API-->
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="JavasScripts/Cadastro & autenticação.js"></script>
+
 </body>
 
 </html>
