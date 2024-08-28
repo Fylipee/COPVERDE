@@ -76,7 +76,7 @@
     font-size: 20px;
 }
 
-/* botão de voltar
+/* botão de voltar */
 .voltar {
     display: flex;
     height: 3em;
@@ -84,19 +84,14 @@
     align-items: center;
     justify-content: center;
     background-color: #eeeeee4b;
-    border-radius: 8px;
+    border-radius: 3px;
     letter-spacing: 1px;
     transition: all 0.2s linear;
     cursor: pointer;
     border: none;
     background: #fff;
-    position: absolute;
-    top: 190px;
-    left: 295px;
-    margin-bottom: 5px;
-
    }
-   
+
    .voltar > svg {
     margin-right: 5px;
     margin-left: 5px;
@@ -112,13 +107,12 @@
    .voltar:hover {
     box-shadow: 9px 9px 25px #d1d1d1, -9px -9px 33px #ffffff;
     transform: translateY(-2px);
-   }
+   } 
 
    .seta {
     height: 20px;
     width: 20px;
-    
-   } */
+   } 
 
 /* Social Media */
 #social_media {
