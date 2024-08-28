@@ -29,12 +29,3 @@ function registro() {
       alert(error);
     });
 }
-//function voltar da tela de cadastra
-function voltar() {
-    window.location.href = "Login.html";
-}
-
-//function voltar da tela principal
-// function voltar1() {
-//     window.location.href = "index.html";
-// }
