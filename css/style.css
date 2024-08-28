@@ -24,7 +24,7 @@
 
 /* Geral */
 * {
-  margin: 0;
+  margin: 0 20%;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -46,6 +46,7 @@ align-items: center;
 text-align: center;
 background: var(--color-gradient);
 margin: auto;
+margin: 0 20%;
 }
 /* ---------- */
 
