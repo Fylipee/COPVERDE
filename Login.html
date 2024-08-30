@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/stylelogin.css">
-    
+
     <title>Login CopVerde</title>
 </head>
-<body>   
+
+<body>
     <main id="container">
         <form id="login_form">
             <div id="form_header">
-               <!-- <button class="voltar" onclick="voltar1()"><img class="seta" src="assets/images/seta-esquerda.png"></button> -->
+                <!-- <button class="voltar" onclick="voltar1()"><img class="seta" src="assets/images/seta-esquerda.png"></button> -->
                 <h1>Login</h1>
-                <a type="button" class="voltar" href="index.html"><img class="seta" src="assets/images/seta-esquerda.png"></a>
+                <a type="button" class="voltar" href="index.html"><img class="seta"
+                        src="assets/images/seta-esquerda.png"></a>
                 <!--<i id="mode_icon" class="fa-solid fa-moon"></i>-->
             </div>
 
@@ -30,48 +35,48 @@
                 <a href="#">
                     <img src="assets/images/icongmail.png" alt="Google logo">
                 </a>
-                
+
                 <!-- ? -->
                 <a href="#">
                     <img src="assets/images/?.png" alt="">
                 </a>
             </div>
 
-                <!-- EMAIL -->
-                <div class="input-box">
-                    <label for="email">
-                        E-MAIL
-                        <div class="input-field">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </label>
-                </div>
-                
-                <!-- SENHA -->
-                <div class="input-box">
-                    <label for="senha">
-                        SENHA
-                        <div class="input-field">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="senha" name="senha">
-                        </div>
-                    </label>
-                    
-                    <!-- ESQUECEU SUA SENHA -->
-                    <div id="forgot_password">
-                        <a href="#">
-                            Esqueceu sua senha?
-                        </a>
+            <!-- EMAIL -->
+            <div class="input-box">
+                <label for="email">
+                    E-MAIL
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" name="email">
                     </div>
+                </label>
+            </div>
+
+            <!-- SENHA -->
+            <div class="input-box">
+                <label for="senha">
+                    SENHA
+                    <div class="input-field">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="senha" name="senha">
+                    </div>
+                </label>
+
+                <!-- ESQUECEU SUA SENHA -->
+                <div id="forgot_password">
+                    <a href="#">
+                        Esqueceu sua senha?
+                    </a>
                 </div>
+            </div>
             </div>
 
             <!-- LOGIN BUTTON -->
-            <button  id="login_button" onclick="login()">
+            <button id="login_button" onclick="login()">
                 Login
             </button>
-            
+
             <!-- CRIAR CONTA BUTTON -->
             <button type="button" id="criar_button" onclick="window.location.href = 'cadastro.html'">
                 Criar Conta
@@ -79,15 +84,16 @@
         </form>
     </main>
     <!-- Modo escuro -->
-<script type="text/javascript" src="JavasScripts/Logindark.js"></script>
+    <script type="text/javascript" src="JavasScripts/Logindark.js"></script>
 
 
-<!--Conecta com o firebase, autenticação e inicialização da API-->
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
-<script src="JavasScripts/firebase-init.js"></script>
-<script src="JavasScripts/Cadastro & autenticação.js"></script>
+    <!--Conecta com o firebase, autenticação e inicialização da API-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="JavasScripts/firebase-init.js"></script>
+    <script src="JavasScripts/Cadastro & autenticação.js"></script>
 
 
 </body>
+
 </html>
