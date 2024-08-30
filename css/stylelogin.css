@@ -228,7 +228,7 @@
     color: var(--color-light-50);
 }
 
-@keyframes dark-to-light {
+/* @keyframes dark-to-light {
     0% {
         background-color: var(--color-dark-100);
     }
@@ -245,5 +245,5 @@
 
     100% {
         background-color: var(--color-dark-100)
-    }
-}
+    } 
+ } */
