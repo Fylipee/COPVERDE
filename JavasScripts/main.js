@@ -19,3 +19,8 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
+/* window.onclick = closeMenu(event) {
+     if (event.target == navLink) {
+         navMenu.style.display = "none";
+     }
+ }*/
