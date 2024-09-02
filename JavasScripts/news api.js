@@ -8,46 +8,76 @@ const url = 'https://newsapi.org/v2/everything?' +
 var req = new Request(url);
     console.log(url)
 
-    // async function getData() {
-    //     try {
-    //         const response = await fetch(url);
-    //         if (!response.ok) {
-    //             throw new Error(`Response status: ${response.status}`);
-    //         }
-    //         const json = await response.json();
-    //         console.log(json);
+    async function getData() {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+            const json = await response.json();
+            //console.log(json);
     
-    
-    //         const Cards = document.getElementById("cards_item")
-    //         console.log(json.articles)
+            //? UL HTML */
+            const Cards = document.getElementById("container")
+            Cards.classList.add('cards');
+            console.log(Cards);
+            //console.log(json.articles)
 
-    //         json.articles.forEach(item => {
-    //                 const art = document.createElement("card_item");
+            json.articles.forEach(item => {
+                    
+                    //? LI HTML */
+                    const art = document.createElement('li');
+                    art.classList.add('cards_item' );
+
+                        //? Img HTML */
+                        const img = document.createElement('div');
+                        //const link = item.urlToImage
+                        img.innerHTML = item.urlToImage;
+                        img.classList.add('card_image');
+                        
+                        art.appendChild(img);
+                        
+                        //? Title HTML */
+                        const title = document.createElement("h2");
+                        title.innerHTML = item.title;
+                        title.classList.add('card_title');
+                        art.appendChild(title);
+                        
+        
+                            //? Descrição HTML */
+                            const description = document.createElement('p');
+                            description.innerHTML = item.description;
+                            description.classList.add('card_text');
+                            art.appendChild(description);
+                            
+                            //? Botão HTML */
+                            const url = document.createElement("button");
+                            url.innerHTML = item.url;
+                            url.classList.add('btn');
+                            art.appendChild(url);
+                            
+                                   
+                    //console.log(Cards);
     
-    //                 const img = document.createElement("card_image");
-    //                 img.innerHTML = item.urlToImage;
-    //                 art.appendChild(img);
+                    Cards.appendChild(art);
+
+                   /* <ul id="container" class="cards">
+                    <li class="cards_item">
+                        <div class="card">
+                            <div class="card_image"><img src="#"></div>
+                            <div class="card_content">
+                                <h2 class="card_title">Titulo</h2>
+                                <p class="card_text">Descrição</p>
+                                <button class="btn">leia mais</button>
+                            </div>
+                        </div>
+                    </li>*/
+            
+            });
     
-    //                 const description = document.createElement("card_text");
-    //                 description.innerHTML = item.description;
-    //                 art.appendChild(description);
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
     
-    //                 const name = document.createElement("card_title");
-    //                 name.innerHTML = item.name;
-    //                 art.appendChild(name);
-    
-    //                 const url = document.createElement("bnt");
-    //                 url.innerHTML = item.url;
-    //                 art.appendChild(url);
-    
-    //             console.log(art)
-    
-    //         Cards.appendChild(art)
-    //         });
-    
-    //     } catch (error) {
-    //         console.error(error.message);
-    //     }
-    // }
-    
-    // getData()
+    getData()

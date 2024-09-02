@@ -51,8 +51,8 @@ margin: 0 20%;
 
 /* ---------- */
 
-/* margin no mobile - index */
-@media screen and (max-width: 500px) {
+/** margin no mobile - index */
+@media screen and (max-width: 550px) {
   * {
     margin: 0;
     padding: 0;
