@@ -273,67 +273,22 @@ footer {
 /* ---------- */
 
 /* Cads Noticias */
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(201, 52, 52, 0.668);
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 16px;
 }
-
+/*? Formatação do card */
 .cards_item {
   display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-.card {
+  flex-direction: column;
+  padding: 5rem;
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -341,29 +296,72 @@ img {
   flex-direction: column;
   overflow: hidden;
   z-index: -1;
-}
-
-.card_content {
   padding: 1rem;
-  background: linear-gradient(70deg, #A2CA71 40%, #387F39 100%);
+  background: linear-gradient(70deg, #A2CA71 40%, #387F39 100%);  
 }
 
+
+/*? Imagem do card */
+.card_image {
+  width: 350px;
+
+}
+
+/*? titulo do card */
 .card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: black;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing:2px;
   text-transform: capitalize;
   margin: 0px;
   text-align: center;
-}
 
+}
+ /*? Descrição do card */
 .card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
+  color: black;
+  font-size: 1.0rem;
   line-height: 1.2;
   margin-bottom: 1.25rem;    
   font-weight: 400;
-  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
 }
+
+/*? Botão do card */
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  width: 60%;
+  margin-left: 70px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgba(201, 52, 52, 0.668);
+}
+
+/* ? responsividade do card
+ @media (min-width: 40rem) {
+  .cards_item {
+    width: 40%;
+              }
+    .card_image {
+      width: 350px;
+      }
+    } */
+
+/* @media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+} */
+
 /* ---------- */

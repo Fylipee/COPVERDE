@@ -20,18 +20,19 @@ var req = new Request(url);
             //? UL HTML */
             const Cards = document.getElementById("container")
             Cards.classList.add('cards');
-            console.log(Cards);
             //console.log(json.articles)
 
             json.articles.forEach(item => {
                     
                     //? LI HTML */
                     const art = document.createElement('li');
-                    art.classList.add('cards_item' );
+                    art.classList.add('cards_item');
+
+                        const card = document.createElement('div')
+                        card.classList.add('card')
 
                         //? Img HTML */
-                        const img = document.createElement('div');
-                        //const link = item.urlToImage
+                        const img = document.createElement('img');
                         img.innerHTML = item.urlToImage;
                         img.classList.add('card_image');
                         
