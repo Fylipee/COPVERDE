@@ -7,6 +7,8 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+
+    navMenu.style.position = "fixed";
 }
 
 // Fechar o menu //

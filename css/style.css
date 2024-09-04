@@ -38,6 +38,7 @@
   height: 227px;
   object-fit: initial;
   object-position: right;
+ 
 }
 .cabecalho {
 display: flex;
@@ -52,7 +53,7 @@ margin: 0 20%;
 /* ---------- */
 
 /** margin no mobile - index */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   * {
     margin: 0;
     padding: 0;
@@ -80,17 +81,10 @@ margin: 0 20%;
     text-align: center;
     border-bottom-style:outset black;
     border-radius: 3px;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-}
-
-.perfil {
-  height: 45px;
-  right: 45px;
-  transition: 500ms linear;
-}
-
-.perfil:hover {
-  scale: 1.4;
+    /* position: absolute;
+    top: 0;
+    width: 100%; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
 .nav-menu {
@@ -100,14 +94,16 @@ margin: 0 20%;
 }
 
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 2.6rem;
+    margin-right: 2rem;
 }
 
 .nav-link{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #2f363e;
     font-weight: bold;
+    align-items: center;
 }
 
 .nav-link:hover{
@@ -119,6 +115,7 @@ margin: 0 20%;
     font-weight: 500;
     color: var(--background);
     text-decoration: none;
+    padding-left: 100px;
 }
 
 /* Menu hambúrguer */
@@ -151,12 +148,16 @@ margin: 0 20%;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
+  .nav-logo {
+    padding-left: 0;
+  }
+
   .nav-menu.active {
       left: 0;
   }
 
   .nav-item {
-      margin: 2.5rem 0;
+      margin: 2rem 0;
   }
 
   .hamburger {
