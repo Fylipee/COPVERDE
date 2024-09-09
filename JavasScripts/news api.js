@@ -1,5 +1,5 @@
-const API_KEY = "7b4cd4463df74df39f67998c96a9611b";
-const url = 'https://newsapi.org/v2/everything?' +
+const API_KEY = "fac887160d7fdceea35ae023029c348c";
+const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=' + API_KEY; +
     'q=Compostagem&' +
     'pageSize=20&' +
     'sortBy=popularity&' +
@@ -52,10 +52,19 @@ var req = new Request(url);
                             art.appendChild(description);
                             
                             //? Botão HTML */
-                            const url = document.createElement("button");
-                            url.innerHTML = item.url;
-                            url.classList.add('btn');
-                            art.appendChild(url);
+                            const button = document.createElement("button");
+                            button.textContent = "Read More"; // Or use item.url for the button text
+                            button.classList.add('btn');
+                      
+                            // Create a link element within the button
+                            const link = document.createElement('a');
+                            link.href = item.url;
+                            link.textContent = "Read More"; // Or use item.url for the link text
+                            button.appendChild(link);
+                      
+                            card.appendChild(button);
+                            art.appendChild(card);
+                            Cards.appendChild(art);
                             
                                    
                     //console.log(Cards);
