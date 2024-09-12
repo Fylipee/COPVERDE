@@ -1,13 +1,4 @@
-/*  expansão */
-@media (max-width: 1500px) {
-  .desktop .card {
-    display: none;
-  }
-}
-/* ---------- */
-
 /* Cores */
-
 :root {
   --cores-fundo: #E5E5E5;
   --marcadores: #F6E96B;
@@ -49,9 +40,6 @@ background: var(--color-gradient);
 margin: 0 20%;
 }
 
-
-/* ---------- */
-
 /** margin no mobile - index */
 @media screen and (max-width: 650px) {
   * {
@@ -71,6 +59,18 @@ margin: 0 20%;
     }
 }
 /* ---------- */
+
+/* .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-item {
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+} */
 
 /* Nav bar */
 .navbar {
@@ -96,6 +96,7 @@ margin: 0 20%;
 .nav-item {
     margin-left: 2.6rem;
     margin-right: 2rem;
+
 }
 
 .nav-link{
@@ -132,17 +133,37 @@ margin: 0 20%;
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
-/* Media queries -hambúrguer */
+@media only screen and (max-width: 1345px) {
+  .nav-item {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+  .nav-link{
+    font-size: 13px;
+    font-weight: 400;
+    color: #2f363e;
+    font-weight: bold;
+    align-items: center;
+  }
+  .nav-logo {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--background);
+    text-decoration: none;
+    padding-left: 10px;
+  }
 
-@media only screen and (max-width: 650px) {
+}
+
+/* Media queries -hambúrguer */
+@media only screen and (max-width: 720px) {
   .nav-menu {
       position: fixed;
       left: -100%;
-      top: 5rem;
+      top: 3.4rem;
       flex-direction: column;
       background-color: #fff;
       width: 100%;
-      border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
@@ -155,6 +176,18 @@ margin: 0 20%;
   .nav-menu.active {
       left: 0;
   }
+
+  .nav-link{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2f363e;
+    font-weight: bold;
+    align-items: center;
+}
+
+.nav-link:hover{
+    color: var(--links)
+}
 
   .nav-item {
       margin: 2rem 0;
@@ -175,6 +208,11 @@ margin: 0 20%;
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+
+body.no-scroll {
+  overflow: hidden;
+}
+
 }
 /* ---------- */
 
@@ -194,8 +232,6 @@ margin: 0 20%;
   background-color: var(--marcadores);
   margin-bottom: 20px;
 }
-
-/* ---------- */
 
 p {
   padding: 10px 100px;
@@ -222,13 +258,6 @@ h2, p {
   font-size: 29px;
  }
 
-}
-/* ---------- */
-
-/* Figure posição */
-.figure {
-  display: flex;
-  justify-content: space-around;
 }
 /* ---------- */
 
@@ -269,7 +298,7 @@ footer {
   text-align: center;
   align-items: center;
   font-size: 7px;
-  margin-top: 25px;
+  margin-top: 3px;
 }
 /* ---------- */
 
