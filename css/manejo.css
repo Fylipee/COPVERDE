@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* botão de voltar */
+ .voltar {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  transition: 500ms linear;
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+}
+
+.voltar:hover {
+  scale: 1.02;
+  backdrop-filter: blur(40px);
+}
+
+.seta {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 2px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 7px 6px 19px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 7px 6px 19px 1px rgba(0,0,0,0.37);
+     box-shadow: 7px 6px 19px 1px rgba(0,0,0,0.37);
+}
+
+#espaco {
+    margin: 0;
+    padding: 5px;
+}
+
+
+.image {
+    width: 150px;
+    height: 150px;
+    max-width: auto;
+    max-height: auto;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.link_itens {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #EDD188;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none; 
+  color: #333;
+  cursor: pointer; 
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease; 
+}
+
+.link_itens:hover {
+  background-color: #e0e0e0; 
+}
+
+@media screen and (max-width: 650px) {
+
+    .seta {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 2px;
+        left: 2px; 
+        height: 1em;
+      }
+
+}
