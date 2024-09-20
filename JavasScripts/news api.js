@@ -1,9 +1,8 @@
-const API_KEY = "fac887160d7fdceea35ae023029c348c";
-const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=' + API_KEY; +
-    'q=Compostagem&' +
-    'pageSize=20&' +
-    'sortBy=popularity&' +
-    'apiKey=' + API_KEY;
+const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave Projeto
+const API_KEY2 ="7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave Fylipe
+const API_KEY3 ="7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave "Bruno"
+const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=' + API_KEY;
+    
 
 var req = new Request(url);
 console.log(url)
@@ -37,7 +36,6 @@ async function getData() {
             img.classList.add('card_image');
             img.src = item.image;
             img.alt = item.title;
-
             art.appendChild(img);
 
             //? Title HTML */
@@ -63,7 +61,6 @@ async function getData() {
             art.appendChild(link);
 
             
-            Cards.appendChild(art);
             Cards.appendChild(art);
 
 
