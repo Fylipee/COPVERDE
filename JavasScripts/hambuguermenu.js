@@ -11,16 +11,16 @@ function mobileMenu() {
 
 }
 
-// Close the menu when clicking outside or on specific links
+// Evento de fechar o hamburguer
 document.addEventListener("click", (event) => {
-  // Check if click is outside the hamburger or menu area
+  // checa se ele está clicando no menu ainda.
   if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    return; // Early exit if clicked outside
+    return; //se clicou fora irá fechar.
   }
 
-  // Close menu when clicking on "NOTÍCIAS" or "REDES SOCIAIS" links
+  // se clicar em noticias ou rede socias o menu irá fechar.
   const clickedLink = event.target.closest(".nav-link"); // Get closest ancestor with class "nav-link"
   if (clickedLink && (clickedLink.textContent === "NOTÍCIAS" || clickedLink.textContent === "REDES SOCIAIS")) {
     hamburger.classList.remove("active");
