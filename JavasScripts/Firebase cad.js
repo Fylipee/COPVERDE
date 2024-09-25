@@ -34,8 +34,8 @@ function registro() {
   const Celular = document.getElementById('number').value
   const Senha = document.getElementById('password').value
   const Confirme_sua_Senha = document.getElementById('confirmPassword').value
-
-  firebase.auth().createUserWithEmailAndPassword(Nome, local, Email, number, password, confirmPassword
+    console.log(Nome, local, Email,Celular,Senha, Confirme_sua_Senha)
+  firebase.auth().createUserWithEmailAndPassword( Email, password
   ).then(() => {
     window.location.href = "index.html";
   }).catch(error => {
