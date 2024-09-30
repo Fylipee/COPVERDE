@@ -1,10 +1,10 @@
 const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave Projeto
 const API_KEY2 ="7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave Fylipe
 const API_KEY3 ="7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave "Bruno"
-const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=' + API_KEY;
+const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=';
     
 
-var req = new Request(url);
+var req = new Request(url+API_KEY);
 console.log(url)
 
 async function getData() {
@@ -67,7 +67,17 @@ async function getData() {
         });
 
     } catch (error) {
-        console.error(error.message);
+       console.error(error.message);
+       if (error.message == "Response status: 403"){
+        req = new Request(url+API_KEY2)
+        getData()
+       }
+       else if (error.message == "Response status: 403"){
+        req = new Request(url+API_KEY3);
+       }
+       else if (error.message == "Response status: 403"){
+        console.log("precisa de mais uma chave")
+       }
     }
 }
 
