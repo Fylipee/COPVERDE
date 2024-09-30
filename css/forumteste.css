@@ -6,8 +6,7 @@ body {
 }
 
 header {
-    background: #3b8b3a; /* Verde escuro */
-    color: #ffffff;
+    background: #3b8b3a;
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,34 +17,41 @@ header {
     align-items: center;
     justify-content: center;
     margin: 10px auto;
-    max-width: 600px;
+    max-width: 900px;
 }
-
-.icone-perfil {
-    font-size: 24px; /* Tamanho do ícone de perfil */
-    margin-right: 10px;
+.perfil img{
+    width: 40px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    
+    
 }
 
 .barra-pesquisa input[type="text"] {
+    background-color: #BEDC74;
+    border-color: #BEDC74;
     padding: 10px;
-    width: 60%; /* Reduzido para dar espaço ao ícone */
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Bordas arredondadas */
+    width: 60%; 
+    border-radius: 9px; 
+    
 }
 
 .barra-pesquisa .botao-buscar {
-    padding: 5px; /* Diminuído o padding */
-    background: transparent; /* Fundo transparente */
-    color: #3b8b3a; /* Texto verde escuro */
-    border: none; /* Sem bordas */
+    max-width: 50px;
+    max-height: 50px;
+    padding: 8px;
+    color: #3b8b3a;
+    border: none;
     cursor: pointer;
-    font-size: 20px; /* Diminuído o tamanho do ícone */
-    margin-left: 10px; /* Espaço entre o input e o botão */
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
     transition: color 0.3s;
+
 }
 
 .barra-pesquisa .botao-buscar:hover {
-    color: #66c46f; /* Verde claro ao passar o mouse */
+    color: #f0f4f0;
 }
 
 .tags {
@@ -55,23 +61,24 @@ header {
 
 .tag {
     display: inline-block;
-    background: #66c46f; /* Verde claro */
+    background: #D4E4D7;
     color: #ffffff;
     padding: 5px 10px;
-    border-radius: 15px; /* Bordas arredondadas */
+    border-radius: 15px;
     margin-right: 5px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .tag:hover {
-    background: #3b8b3a; /* Verde escuro ao passar o mouse */
+    background: #3b8b3a;
 }
 
 main {
     padding: 20px;
     max-width: 800px;
     margin: auto;
+
 }
 
 .topicos {
@@ -92,7 +99,7 @@ li {
     margin: 10px 0;
     padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -102,12 +109,12 @@ li h3 {
 }
 
 li a {
-    color: #3b8b3a; /* Cor verde escura */
-    text-decoration: none; /* Remove o sublinhado */
+    color: #3b8b3a;
+    text-decoration: none;
 }
 
 li a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
+    text-decoration: underline;
 }
 
 li .tags {
@@ -118,7 +125,7 @@ form {
     background: #ffffff;
     padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -133,7 +140,7 @@ input[type="text"], textarea {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
 }
 
 button[type="submit"] {
@@ -141,11 +148,11 @@ button[type="submit"] {
     color: #ffffff;
     padding: 10px 15px;
     border: none;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
 }
 
 button[type="submit"]:hover {
-    background: #66c46f; /* Verde claro */
+    background: #66c46f;
 }
