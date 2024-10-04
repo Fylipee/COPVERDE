@@ -41,3 +41,12 @@ function registro() {
     alert(error);
   });
 }
+
+function resetSenha() {
+  firebase.auth().sendPasswordResetEmail(document.getElementById('email').value).then(() =>{
+    alert('Email enviado com sucesso');
+  }).catch(error =>{
+    alert('deu ruim')
+  });
+
+}

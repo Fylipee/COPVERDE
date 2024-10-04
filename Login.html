@@ -48,7 +48,7 @@
                     E-MAIL
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                 </label>
             </div>
@@ -65,9 +65,9 @@
 
                 <!-- ESQUECEU SUA SENHA -->
                 <div id="forgot_password">
-                    <a href="#">
-                        Esqueceu sua senha?
-                    </a>
+                    <button type="button" onclick="resetSenha()">
+                        Esqueceu sua senha
+                    </button>
                 </div>
             </div>
             </div>
@@ -84,7 +84,7 @@
         </form>
     </main>
     <!-- Modo escuro -->
-    <script type="text/javascript" src="JavasScripts/Logindark.js"></script>
+    <!-- <script type="text/javascript" src="JavasScripts/Logindark.js"></script> -->
 
 
     <!--Conecta com o firebase, autenticação e inicialização da API-->

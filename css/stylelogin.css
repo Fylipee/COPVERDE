@@ -170,13 +170,13 @@
 }
 
 /* Forgot password */
-#forgot_password a {
+#forgot_password button {
     text-decoration: none;
     color: var(--color-dark-50);
     font-size: 12px;
 }
 
-#forgot_password a:hover {
+#forgot_password button:hover {
     color: var(--color-green-50);
 }
 
