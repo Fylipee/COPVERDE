@@ -170,9 +170,11 @@ header {
 #cabecalho {
   display: flex;
   flex-direction: column; 
+  width: 100%;
   padding-top: 100px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding-left: 21.8rem;
 }
 
 #cabecalho h2, #cabecalho p {
@@ -182,24 +184,24 @@ header {
 div#cabecalho h2 {
   font-size: 64px;
   font-weight: 600;
-  padding-left: 16.3rem ;
   letter-spacing: -4px;
   line-height: 0.79;
+  user-select: none;
 }
 
 div#cabecalho p {
   font-size: 20px;
   font-weight: 300;
   padding-top: 4px ;
-  padding-left: 16.5rem;
+  /* padding-left: 16.5rem; */
 }
 
 #cabecalho img {
   align-self: center;
   position: absolute;
   max-width: 100%;
-  top: 115px;
-  right: 260px;
+  top: 100px;
+  right: 340px;
   height: 250px;
 }
 
