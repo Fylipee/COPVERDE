@@ -28,6 +28,10 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet" />
+
     <!-- Css Reset -->
     <link href="css/reset.css" rel="stylesheet">
     <!-- Css Style -->
@@ -64,16 +68,18 @@
         </div>
     </header>
     
-    <div id="cabecalho">
-        <h2>Composte Facil:<br>Transforme seu resíduos<br>em adubo natural.</h2>
-        <p>Aprenda a compostar de forma simples e sustentável.</p>
-        <img class="responsive" src="assets/images/Layer_1-removebg-preview.png" alt="A">
-      </div>
-
-    <main>
+   <section class="hero">
+    <div class="hero-text">
+        <h2>Composte Facil:<br>Nutri a sua planta<br>e o planeta.</h2>
+        <p>Cansado de jogar comida no lixo? Transforme seus restos orgânicos em um adubo natural poderoso e nutritivo para suas plantas.</p>
+    </div>
+    <div class="hero-image">
+        <img src="#" alt="Imagem de vegetais">
+    </div>
+   </section>
+   <div class="tracinho"></div>
+    <main id="conteudos">
         <!-- Texto -->
-        <section id="conteudos">
-            
             <h2 class="Topicos"> O que é a Compostagem? </h2>
             <p>Compostagem é um processo simples e eficaz para
                  transformar resíduos orgânicos em um recurso
@@ -88,10 +94,9 @@
             <p>• Reduz a emissão de gases do efeito estufa: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</p>
 
             <h2 class="Topicos"> Pra quem é o compostagem? </h2>
-            <p>• Menos lixo: Diminui a quantidade de lixo que vai para os aterros sanitários.</p>
-            <p>• Adubo natural: Cria um adubo orgânico e gratuito para suas plantas.</p>
-            <p>• Melhora o solo: Torna o solo mais rico em nutrientes e com melhor estrutura.</p>
-            <p>• Reduz a emissão de gases do efeito estufa: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</p>
+            <p>• A compostagem é para todos!</p>
+            <p>• É para quem quer ter um planeta <i class="ri-earth-line"></i> mais saudável e um jardim mais bonito, gastando menos!</p>
+           
 
 
             <!-- Card noticias -->
@@ -148,7 +153,9 @@
     <!-- a api de traduzir -->
     <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    
+    <!-- Scrollreveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 </body>
 
 </html>
