@@ -70,6 +70,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px groove black;
+  margin-bottom: 0.1%;
 }
 
 .navbar .logo a {
