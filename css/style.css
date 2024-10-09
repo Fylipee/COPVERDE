@@ -17,11 +17,19 @@
 }
 
 .hero {
-  background-image: url(../assets/images/Imagem_site.JPG);
+  background-image: url(../assets/images/Imagem_site.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
+  transition: ease;
+}
+
+@media (max-width: 576px) {
+  .hero {
+   background-image: url(../assets/images/Imagem_site\ 576px.jpeg);
+  }
 }
 
 * {
@@ -87,7 +95,7 @@ header {
 
 .action_bnt {
   background-color: var(--amarelinho);
-  color: #fff;
+  color: #000000;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
@@ -113,8 +121,8 @@ header {
   right: 2rem;
   height: 0;
   top: 60px;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 280px;
+  background: #fff;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
@@ -160,7 +168,6 @@ header {
     left: 2rem;
     width: unset;
   }
-
 }
 
 /* Quando Logar no site irá aparecer */
@@ -204,12 +211,6 @@ section {
   color: #fff;
 }
 
-.hero-image {
-  width: 350px;
-  height: auto;
-  user-select: none;
-}
-
 @media (max-width: 1460px){
   section{
     padding: 0 12%;
@@ -218,10 +219,6 @@ section {
 }
 
 @media (max-width: 1340px){
-  .hero-img{
-    width: 100%;
-    height: auto;
-  }
   .hero-text h2{
     font-size: 50px;
     margin: 0 0 30px;
@@ -241,13 +238,6 @@ section {
   .hero-text {
     padding-top: 115px;
   }
-  .hero-img {
-    text-align: center;
-  }
-  .hero-img img {
-    width: 560px;
-    height: auto;
-  }
   .hero {
     height: 100%;
     gap: 1rem;
@@ -256,8 +246,8 @@ section {
 }
 
 .tracinho {
-  width: 82px;
-  height: 2px;
+  width:82px;
+  height: 1.1px;
   background-color: #DDA77B;
   padding: 6px;
   margin: 8px 0;
@@ -265,7 +255,7 @@ section {
 
 .tracinho2 {
   width: 82px;
-  height: 1.5px;
+  height: 1.1px;
   background-color: #DDA77B;
   padding: 6px;
   margin: 8px 0;
@@ -297,6 +287,33 @@ section {
 .textp {
   list-style:inside;
 }
+
+.noti {
+}
+
+@media (max-width: 1595px) {
+  .conteudos{
+    margin: 0 3%;
+  }
+  .oquee h2{
+    font-size: 25px;
+    margin:0;
+    align-items: justify;
+  }
+  .oquee p{
+    font-size: 15px;
+    line-height: 1;
+    margin-right: 2rem;
+  }
+  .textp li{
+    margin-right: 2rem;
+  }
+}
+
+.noti {
+  text-align: center;
+}
+
 
 /* Cards */
 .cards {
