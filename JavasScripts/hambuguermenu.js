@@ -12,3 +12,13 @@ toggleBnt.onclick = function() {
     ? 'fa-solid fa-x'
     : 'fa-solid fa-bars';
 };
+
+document.addEventListener('click', function(event) {
+  const isClickInsideMenu = dropDownMenu.contains(event.target);
+  const isClickInsideToggle = toggleBnt.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickInsideToggle) {
+    dropDownMenu.classList.remove('open');
+    toggleBntIcon.classList = 'fa-solid fa-bars';
+  }
+});
