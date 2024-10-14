@@ -11,6 +11,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 
+
+//login normal.
 function login() {
   firebase.auth().signInWithEmailAndPassword
     (document.getElementById('email').value, document.getElementById('senha').value)
@@ -23,6 +25,7 @@ function login() {
     })
 }
 
+//cadastro.
 function cadastrar() {
   window.location.href = "cadastro.html"
 }
@@ -42,11 +45,12 @@ function registro() {
   });
 }
 
+//recuparar senha.
 function resetSenha() {
   firebase.auth().sendPasswordResetEmail(document.getElementById('email').value).then(() =>{
     alert('Email enviado com sucesso');
   }).catch(error =>{
-    alert('deu ruim')
+    alert('Esqueceu o email, bobo.')
   });
 
 }
