@@ -12,6 +12,13 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 
+function loginGmail() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/user.addresses.read');
+  firebase.auth().signInWithPopup(provider)
+}
+
+
 //login normal.
 function login() {
   firebase.auth().signInWithEmailAndPassword
@@ -37,7 +44,7 @@ function registro() {
   const Celular = document.getElementById('number').value
   const Senha = document.getElementById('password').value
   const Confirme_sua_Senha = document.getElementById('confirmPassword').value
-  firebase.auth().createUserWithEmailAndPassword( Email, Senha
+  firebase.auth().createUserWithEmailAndPassword(Email, Senha
   ).then(() => {
     window.location.href = "index.html";
   }).catch(error => {
@@ -47,9 +54,9 @@ function registro() {
 
 //recuparar senha.
 function resetSenha() {
-  firebase.auth().sendPasswordResetEmail(document.getElementById('email').value).then(() =>{
+  firebase.auth().sendPasswordResetEmail(document.getElementById('email').value).then(() => {
     alert('Email enviado com sucesso');
-  }).catch(error =>{
+  }).catch(error => {
     alert('Esqueceu o email, bobo.')
   });
 
