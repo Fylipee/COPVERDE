@@ -22,3 +22,22 @@ document.addEventListener('click', function(event) {
     toggleBntIcon.classList = 'fa-solid fa-bars';
   }
 });
+
+
+const cards = document.querySelectorAll('.compostagem');
+
+cards.forEach(compostagem => {
+  compostagem.addEventListener('click', () => {
+    const content = compostagem.querySelector('.compostagem-content');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none'; 
+  });
+});
+
+// const cards = document.querySelectorAll('.card');
+
+// cards.forEach(card => {
+//   card.addEventListener('click', () => {
+//     const content = card.querySelector('.card-content');
+//     content.style.display = content.style.display === 'none' ? 'block' : 'none';
+//   });
+// });

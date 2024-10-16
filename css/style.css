@@ -16,6 +16,10 @@
 
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 .hero {
   background-image: url(../assets/images/Imagem_site.jpeg);
   background-repeat: no-repeat;
@@ -454,4 +458,32 @@ footer {
 /* Tradutor */
 .gtranslate_wrapper {
  z-index: 1000;
+}
+
+.compostagem-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.compostagem-container h2 {
+  font-size: 15px;
+}
+
+.compostagem {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding:  10px 10px;
+  cursor: pointer;
+}
+
+.compostagem-title {
+  user-select: none;
+  text-align: center;
+}
+
+.compostagem-content {
+  display: none;
+  user-select: none;
+  text-align: justify;
 }
