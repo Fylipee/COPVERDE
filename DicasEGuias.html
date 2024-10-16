@@ -28,30 +28,6 @@
             <section class="topicos">
                 <h2>Tópicos Recentes</h2>
                 <ul id="topics">
-                    <li>
-                        <h3><a href="link-do-topico1.html" target="_blank">Título do Tópico 1</a></h3>
-                        <p>Descrição breve do tópico 1.</p>
-                        <div class="tags">
-                            <span class="tag">Tag1</span>
-                            <span class="tag">Tag2</span>
-                        </div>
-                    </li>
-                    <li>
-                        <h3><a href="link-do-topico2.html" target="_blank">Título do Tópico 2</a></h3>
-                        <p>Descrição breve do tópico 2.</p>
-                        <div class="tags">
-                            <span class="tag">Tag3</span>
-                            <span class="tag">Tag4</span>
-                        </div>
-                    </li>
-                    <li>
-                        <h3><a href="link-do-topico3.html" target="_blank">Título do Tópico 3</a></h3>
-                        <p>Descrição breve do tópico 3.</p>
-                        <div class="tags">
-                            <span class="tag">Tag1</span>
-                            <span class="tag">Tag5</span>
-                        </div>
-                    </li>
                 </ul>
             </section>
             <section class="novo-topico">
@@ -63,14 +39,14 @@
                     <textarea id="descricao" name="descricao" required></textarea>
                     <label for="tags">Tags (separadas por vírgula):</label>
                     <input type="text" id="tags" name="tags">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" onclick="cadastrarTopico()">Enviar</button>
                 </form>
             </section>
         </main>
     </body>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
-    <script src="/JavasScripts/firebaseinit.js"></script>
+    <script src="JavasScripts/Firebase init.js"></script>
     <script src="JavasScripts/consultaforum.js"></script>
 
     <!-- Api de tradução-->
