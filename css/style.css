@@ -462,12 +462,18 @@ footer {
 
 .compostagem-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   padding: 3px;
 }
 
 .compostagem-container h2 {
   font-size: 15px;
+}
+
+.compostagem-container img {
+  width: 100px;
+  margin: 0 45%;
 }
 
 .compostagem {
@@ -486,4 +492,5 @@ footer {
   display: none;
   user-select: none;
   text-align: justify;
+  text-align: center;
 }
