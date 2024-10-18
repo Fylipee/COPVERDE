@@ -1,15 +1,14 @@
 const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave Projeto
 const API_KEY2 ="7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave Fylipe
 const API_KEY3 ="7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave "Bruno"
-const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=fac887160d7fdceea35ae023029c348c';
+const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=';
     
 
 var req = new Request(url+API_KEY);
-console.log(url)
 
 async function getData() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(req);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -59,27 +58,23 @@ async function getData() {
             setTimeout(() => {
               cardLink.remove();
             }, 300); 
-          }
+        }
         
-});
-    } catch (error) {
+        })
+    }
+    catch (error) {
         console.error(error.message);
-        if (error.message == "Response status: 403") {
-            // Tenta a segunda chave
-            req = new Request(url + API_KEY2);
-            getData(); // Chama novamente
-        } else if (error.message == "Response status: 403" && req.url !== (url + API_KEY2)) {
-            // Tenta a terceira chave
-            req = new Request(url + API_KEY3);
-            getData(); // Chama novamente
-        } else {
-            console.log("Precisa de mais uma chave");
+        if (error.message == "Response status: 403"){
+            req = new Request(url+API_KEY2);
+            getData()
+        }
+        else if (error.message == "Reponse status: 403"){
+            req = new Request(url+API_KEY3);
+            getData()
+        }
+        else if (error.message == "response status: 403"){
+            console.log("precisa de mais uma chave")
         }
     }
 }
-
-getData();
-
-
-
- 
+getData()

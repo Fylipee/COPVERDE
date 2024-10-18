@@ -24,6 +24,8 @@ document.addEventListener('click', function(event) {
 });
 
 
+
+
 const cards = document.querySelectorAll('.compostagem');
 
 cards.forEach(compostagem => {
@@ -32,12 +34,3 @@ cards.forEach(compostagem => {
     content.style.display = content.style.display === 'none' ? 'block' : 'none'; 
   });
 });
-
-// const cards = document.querySelectorAll('.card');
-
-// cards.forEach(card => {
-//   card.addEventListener('click', () => {
-//     const content = card.querySelector('.card-content');
-//     content.style.display = content.style.display === 'none' ? 'block' : 'none';
-//   });
-// });
