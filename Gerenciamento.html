@@ -5,23 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manejo.css">
-        <!-- Icon do site -->
-        <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
-    <title>Minha Compostagem</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
+    <title>Gerenciamento - Minha Compostagem</title>
 </head>
 <body>
-    <div class="perfil"> 
-        <a type="button" class="voltar" href="index.html"><img class="seta" src="assets/images/seta-esquerda.png"></a>
-        <img src="https://placehold.co/150" alt="user-avatar" class="image" />
-        <h2 id="espaco">John Doe</h2>
-        <p id="espaco" class="text">xxx@gmail.com</p>
-        <section class="link">
-          <a class="link_itens" href="#">Início</a>
-          <a class="link_itens" href="#">Dashboard</a>
-          <a class="link_itens" href="#">Lembretes</a>
-      </section>
-      </div>
+    <div class="container">
+        <header>
+            <h1>Gerenciamento de Compostagem</h1>
+            <nav>
+                <a href="index.html">Voltar</a>
+            </nav>
+        </header>
 
+        <main>
+            <section class="perfil">
+                <h2>Perfil</h2>
+                <div class="perfil-info">
+                    <img src="assets/images/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture">
+                    <div class="perfil-details">
+                        <p>Nome: John Doe</p>
+                        <p>Email: xxx@gmail.com</p>
+                        <div class="perfil-actions">
+                            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+                            <label for="uploadProfilePic" class="upload-label">Alterar Foto</label>
+                            <button class="edit-profile" onclick="openModal()">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="compostagem">
+                <h2>Gerenciamento de Compostagem</h2>
+                <p>Aqui você pode gerenciar suas compostagens.</p>
+                <div class="compostagem-actions">
+                    <a href="#">Adicionar Compostagem</a>
+                    <a href="#">Ver Compostagens</a>
+                </div>
+            </section>
+
+            <section class="lembretes">
+                <h2>Lembretes</h2>
+                <p>Configure seus lembretes para o gerenciamento de compostagem.</p>
+                <div class="lembretes-actions">
+                    <button onclick="openReminderModal()">Adicionar Lembrete</button>
+                    <a href="#">Ver Lembretes</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para editar perfil -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="editProfileForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="location">Local:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Número:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para adicionar lembrete -->
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReminderModal()">&times;</span>
+            <h2>Adicionar Lembrete</h2>
+            <form id="reminderForm">
+                <label for="reminderTitle">Título:</label>
+                <input type="text" id="reminderTitle" name="reminderTitle" required>
+
+                <label for="reminderDate">Data:</label>
+                <input type="date" id="reminderDate" name="reminderDate" required>
+
+                <label for="reminderTime">Hora:</label>
+                <input type="time" id="reminderTime" name="reminderTime" required>
+
+                <button type="submit">Adicionar Lembrete</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal de edição de perfil
+        function openModal() {
+            document.getElementById('editProfileModal').style.display = 'block';
+        }
+
+        // Função para fechar o modal de edição de perfil
+        function closeModal() {
+            document.getElementById('editProfileModal').style.display = 'none';
+        }
+
+        // Função para abrir o modal de adição de lembrete
+        function openReminderModal() {
+            document.getElementById('reminderModal').style.display = 'block';
+        }
+
+        // Função para fechar o modal de adição de lembrete
+        function closeReminderModal() {
+            document.getElementById('reminderModal').style.display = 'none';
+        }
+
+        // Adiciona o evento de clique ao botão "Editar Perfil"
+        document.querySelector('.edit-profile').addEventListener('click', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            openModal(); // Abre o modal
+        });
+
+        // Fecha o modal quando o usuário clica fora da área do modal
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('editProfileModal')) {
+                closeModal();
+            }
+            if (event.target == document.getElementById('reminderModal')) {
+                closeReminderModal();
+            }
+        }
+
+        // Lida com o envio do formulário de edição de perfil
+        document.getElementById('editProfileForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+            alert('Perfil atualizado com sucesso!'); // Mensagem de sucesso
+            closeModal(); // Fecha o modal após o envio
+        });
+
+        // Lida com o envio do formulário de adição de lembrete
+        document.getElementById('reminderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+            alert('Lembrete adicionado com sucesso!'); // Mensagem de sucesso
+            closeReminderModal(); // Fecha o modal após o envio
+        });
+
+        // Função para preview da imagem de perfil
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profilePicture');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
       <!-- Api de tradução-->
       <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
