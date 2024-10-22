@@ -200,6 +200,7 @@ a{
 
 p.account a{
     color: #000000;
+    text-decoration: underline;
 }
 
 p.account a:hover{

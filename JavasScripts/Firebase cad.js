@@ -19,18 +19,10 @@ function login() {
     })
 }
 
-//cadastro.
-function cadastrar() {
-  window.location.href = "cadastro.html"
-}
-
 function registro() {
-  const Nome = document.getElementById('nome').value
-  const local = document.getElementById('local').value
-  const Email = document.getElementById('email').value
-  const Celular = document.getElementById('number').value
-  const Senha = document.getElementById('password').value
-  const Confirme_sua_Senha = document.getElementById('confirmPassword').value
+  const Email = document.getElementById('E-mail').value
+  const Senha = document.getElementById('Senha').value
+  // const confirmarSenha = document.getElementById('confirmar-senha').value;
   firebase.auth().createUserWithEmailAndPassword(Email, Senha
   ).then(() => {
     window.location.href = "index.html";
@@ -41,7 +33,7 @@ function registro() {
 
 //recuparar senha.
 function resetSenha() {
-  firebase.auth().sendPasswordResetEmail(document.getElementById('email').value).then(() => {
+  firebase.auth().sendPasswordResetEmail(document.getElementById('E-mail').value).then(() => {
     alert('Email enviado com sucesso');
   }).catch(error => {
     alert('Esqueceu o email, bobo.')
