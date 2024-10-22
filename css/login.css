@@ -98,14 +98,42 @@
     margin-top: 5px;
 }
 
-.logo_google {
+.button_g {
+    display: flex;
     border: none;
     background-color: white;
-    height: 10px;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 2px 10px;
 }
 
-.logo_google img{
-    height: 40px;
+.button_g p {
+    color: #000;
+}
+
+.button_g:focus {
+    background-color: rgba(174, 180, 174, 0.637);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.google_l {
+    height: 30px;
+}
+
+.reset_senha {
+    border: none;
+    background-color: white;
+    margin-bottom: 7px;
+    text-decoration: underline;
+}
+
+.reset_senha:focus {
+    background-color: rgba(174, 180, 174, 0.637);
+    border-radius: 20px;
+    padding: 0 10px;
 }
 
 
@@ -121,12 +149,12 @@ p{
     text-align: center;
 }
 
-#btn{
+.btn{
     border-radius: 35px;
 }
 
-#btn:hover{
-  color: #000000;
+.btn:hover{
+  color: #ffffff;
   transition: 0.5s ease;
 }
 
@@ -159,23 +187,24 @@ a{
     border: 1px solid #4e34b6;
 }
 
-#btn{
+.btn{
     font-size: 18px;
-    color: #ffffff;
+    color: #000000;
     width: 100%;
-    background: #4e34b6;
+    background:#EDD188;
     border: none;
     padding: 14px 15px;
-    font-weight: 600;
+    font-weight: 100;
     transition: 0.3s ease;
 }
 
 p.account a{
-    color: #4e34b6;
+    color: #000000;
 }
 
 p.account a:hover{
  text-decoration: underline;
+ color: #EDD188;
 }
 
 @media(max-width:736px){
@@ -191,12 +220,14 @@ p.account a:hover{
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         order: 2;
+        border-bottom: 1px solid #665320;
     }
     .content{
         order: 1;
         border-radius: 0;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+        border-top: 1px solid #665320;
     }
 
 }

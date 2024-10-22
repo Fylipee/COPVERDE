@@ -7,6 +7,7 @@
     <!-- Remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
         rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
     <link rel="stylesheet" href="css/login.css">
 
 </head>
@@ -19,27 +20,36 @@
                     <h2>Log In</h2>
 
                     <form action="#" method="post">
-                        <input type="text" name="" placeholder="e-mail" required autofocus="">
+                        <input type="text" name="" placeholder="E-mail" required autofocus="">
                         <input type="password" name="" placeholder="Senha" required autofocus="">
-                         <button id="btn" type="submit">
-                            Login
-                         </button>
+                        <button class="reset_senha" type="button" onclick="resetSenha()">Esqueceu a senha?</button>
+                        <button class="btn" type="button" id="login_button" onclick="login()">Login</button>
                          <div class="google">
                          <p><hr> ou <hr></p>                      
                          </div>
                          <div class="google_img">
-                         <button class="logo_google">
-                            <img src="assets/images/Google icon.png" alt="Logo Google">
+                         <button class="button_g" type="button" onclick="loginGmail()">
+                            <p>Entre com o Google</p>
+                            <img class="google_l" src="assets/images/Google icon.png" alt="Logo Google">
                          </button>
                         </div>
                     </form>
                     <p class="account"><span>Você não tem conta?</span> <a href="#">Registre-se</a></p>
                 </div>
                 <div class="form-img">
-                    <img src="bg.png" alt="">
+                    <img src="#" alt="">
                 </div>
             </div>
         </div>
     </div>
+
+    <!--Conecta com o firebase, autenticação e inicialização da API-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts\Firebase cad.js"></script>
+    <!-- Api de tradução-->
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
 </body>
 </html>
