@@ -5,6 +5,13 @@ body {
     background-color: #f0f4f0;
 }
 
+.seta {
+    width: 40px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    order:1;
+  }
+
 header {
     background: #3b8b3a;
     padding: 15px 0;
@@ -18,12 +25,13 @@ header {
     justify-content: center;
     margin: 10px auto;
     max-width: 900px;
+    order:3;
 }
 .perfil img{
     width: 40px;
     margin-right: 20px;
     margin-bottom: 5px;
-    
+    order:2;
     
 }
 
@@ -47,6 +55,7 @@ header {
     margin-left: 10px;
     margin-bottom: 5px;
     transition: color 0.3s;
+    order:4;
 
 }
 
