@@ -13,7 +13,6 @@
 
   /* gradiente */
   --gradiente: linear-gradient(88deg, var(--amarelinho), var(--verde_meio_escuro), var(--verde_meio_escuro));
-
 }
 
 body {
@@ -57,7 +56,7 @@ a {
 }
 
 .links a:hover {
-  color: #fff;
+  color: var(--amarelinho);
 }
 
 header {
@@ -177,7 +176,7 @@ header {
 
 /* Quando Logar no site irá aparecer */
 .quando_logar {
-  /* display: none; */
+  display: none;
 }
 
 .hero {
