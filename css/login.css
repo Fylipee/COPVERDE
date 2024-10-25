@@ -151,6 +151,7 @@ p{
 
 .btn{
     border-radius: 35px;
+    cursor: pointer;
 }
 
 .btn:hover{
