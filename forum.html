@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forumteste.css">
+        <!-- Icon do site -->
+        <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
+    <title>Dicas e Guias</title>
+</head>
+<body>  
+        <header>
+            <div class="barra-pesquisa">
+                <a href="index.html"><img class="seta" src="assets/images/seta-esquerda.png"></a>
+                <a class="perfil"><img src="assets/images/perfilforum.png"></a>
+                <input type="text" placeholder="Pesquisar tópicos...">
+                <button type="submit" class="botao-buscar">
+                    <img src="assets/images/lupa.png">
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="tags">
+                <span class="tag">Tag1</span>
+                <span class="tag">Tag2</span>
+                <span class="tag">Tag3</span>
+                <span class="tag">Tag4</span>
+                <span class="tag">Tag5</span>
+            </div>
+            <section class="topicos">
+                <h2>Tópicos Recentes</h2>
+                <ul id="topics">
+                </ul>
+            </section>
+            <section class="novo-topico">
+                <h2>Criar Novo Tópico</h2>
+                <form>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                    <label for="tags">Tags (separadas por vírgula):</label>
+                    <input type="text" id="tags" name="tags">
+                    <button type="submit" onclick="cadastrarTopico()">Enviar</button>
+                </form>
+            </section>
+        </main>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/consultaforum.js"></script>
+
+    <!-- Api de tradução-->
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    </html>
+    
