@@ -2,14 +2,19 @@
 function loginGmail() {
   const provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/user.addresses.read');
-  firebase.auth().signInWithPopup(provider)
+  firebase.auth().signInWithPopup(provider).then(() => {
+    window.location.href = "index.html";
+})
+.catch(error => {
+    alert(error);
+});
 }
 
 
 //login normal.
 function login() {
   firebase.auth().signInWithEmailAndPassword
-    (document.getElementById('email').value, document.getElementById('senha').value)
+    (document.getElementById('E-mail').value, document.getElementById('senha').value)
     .then(() => {
       //se tiver cadastro
       window.location.href = "index.html";
