@@ -20,7 +20,7 @@ function login() {
       window.location.href = "index.html";
     }).catch(error => {
       //o que acontece se errar o email / senha.
-      alert(error);
+      alert('E-mail ou senha estão incorreta!', + error);
     })
 }
 

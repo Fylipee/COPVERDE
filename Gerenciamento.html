@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manejo.css">
+    <link rel="stylesheet" href="css/navbar_pg.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
     <title>Gerenciamento - Minha Compostagem</title>
 </head>
 <body>
+    <header class="navbarmain">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo"><a href="index.html">COPVERDE</a></div>
+            <a href="llogin.html" class="action_bnt">Conecte-se</a>
+            <div class="toggle_bnt">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="llogin.html" class="action_bnt">Conecte-se</a></li>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
+        <div class="headera">
             <h1>Gerenciamento de Compostagem</h1>
             <a type="button" class="voltar" href="index.html"><img class="seta"
                 src="assets/images/seta-esquerda.png"></a>
-        </header>
+            </div>
 
         <main>
             <section class="perfil">
@@ -107,6 +126,7 @@
       <script src="JavasScripts/firebase_conta.js" type="module"></script>
       <!--js manejo-->
       <script src="JavasScripts/manejo.js"></script>
+      <script src="JavasScripts/hambuguermenu.js"></script>
 
 </body>
 </html>

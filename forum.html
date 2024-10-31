@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/forumteste.css" >
+    <link rel="stylesheet" href="css/navbar_pg.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Icon do site -->
         <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
     <title>Dicas e Guias</title>
 </head>
 <body>  
-        <header>
+    <header class="navbarmain">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo"><a href="index.html">COPVERDE</a></div>
+            <a href="llogin.html" class="action_bnt">Conecte-se</a>
+            <div class="toggle_bnt">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="llogin.html" class="action_bnt">Conecte-se</a></li>
+        </div>
+    </header>
+        <div class="headera">
             <div class="barra-pesquisa">
                 <a href="DicasEGuias.html"><img class="seta" src="assets/images/seta-esquerda.png"></a>
                 <a class="perfil"><img src="assets/images/perfilforum.png"></a>
@@ -19,7 +37,7 @@
                     <img src="assets/images/lupa.png">
                 </button>
             </div>
-        </header>
+        </div>
         <main>
             <div class="tags">
                 <span class="tag">Tag1</span>
@@ -46,39 +64,40 @@
                 </form>
             </section>
         </main>
-    </body>
-    <footer>
-        <!-- Rodapé -->
-        <div class="footer-container">
-            <div class="logo">
-                <img src="assets/images/Logo - Copverde.svg" alt="Logo CopVerde"> <!-- logo Rodapé -->
-            </div>
-
-            <div id="Redes" class="footer-content">
-                <h2>COPVERDE</h2>
-                <h6>Vida sustentável</h6>
-                <h6>SIGA NOSSAS REDE SOCIAIS:</h6>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/copve_rde/" target="_blank"><i class="fa-brands fa-instagram fa-xs"></i>Instagram</a> |
-                    <a href="#" target="_blank"><i class="fa-solid fa-envelope fa-xs"></i>E-mail</a> |
-                    <a href="https://www.youtube.com/@COPVERDE-Projeto" target="_blank"><i class="fa-brands fa-youtube fa-xs"></i></i>YouTube</a>
+        <footer>
+            <!-- Rodapé -->
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="assets/images/Logo - Copverde.svg" alt="Logo CopVerde"> <!-- logo Rodapé -->
                 </div>
+                
+                <div id="Redes" class="footer-content">
+                    <h2>COPVERDE</h2>
+                    <h6>Vida sustentável</h6>
+                    <h6>SIGA NOSSAS REDE SOCIAIS:</h6>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/copve_rde/" target="_blank"><i class="fa-brands fa-instagram fa-xs"></i>Instagram</a> |
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope fa-xs"></i>E-mail</a> |
+                        <a href="https://www.youtube.com/@COPVERDE-Projeto" target="_blank"><i class="fa-brands fa-youtube fa-xs"></i></i>YouTube</a>
+                    </div>
+                </div>
+                <h7 class="copyright">Integrantes: Alan Lopes, Bruno Coelho, Fylipe Costa, Lucas Souza</h7>
             </div>
-            <h7 class="copyright">Integrantes: Alan Lopes, Bruno Coelho, Fylipe Costa, Lucas Souza</h7>
-        </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <h7>Copyright (c) 2024 CopVerde All Rights Reserved</h7>
+            </div>
+        </footer> 
 
-        <!-- Copyright -->
-        <div class="copyright">
-            <h7>Copyright (c) 2024 CopVerde All Rights Reserved</h7>
-        </div>
-    </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
-    <script src="JavasScripts/Firebase init.js"></script>
-    <script src="JavasScripts/consultaforum.js"></script>
-
-    <!-- Api de tradução-->
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    </html>
-    
+        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+        <script src="JavasScripts/Firebase init.js"></script>
+        <script src="JavasScripts/consultaforum.js"></script>
+        
+        <!-- Api de tradução-->
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+        <script src="JavasScripts/hambuguermenu.js"></script>
+    </body>
+</html>
+        
