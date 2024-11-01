@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 :root {
   /* Paleta Principal */
   --amarelinho: #EDD188;
@@ -207,7 +210,7 @@ section {
 }
 
 .hero-text p {
-  font-size: 19px;
+  font-size: 22px;
   line-height: 1.4;
   margin-bottom: 35px;
   user-select: none;
@@ -223,11 +226,11 @@ section {
 
 @media (max-width: 1340px){
   .hero-text h2{
-    font-size: 50px;
+    font-size: 96px;
     margin: 0 0 30px;
   }
   .hero-text p{
-    font-size: 19px;
+    font-size: 28px;
     line-height: 1.2;
     margin: 0 0 30px;
   }
@@ -299,13 +302,13 @@ section {
 .noti {
   text-align: center;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   font-style: italic;
 }
 
 .oquee h2{
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   font-style: italic;
   margin-bottom: 12px;
@@ -313,13 +316,17 @@ section {
 }
 
 .oquee p{
-  font-size: 17px;
-  font-style: justify;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .textp li{
-  font-size: 17px;
-  font-style: justify;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .textp {
@@ -374,6 +381,10 @@ section {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #424242;
 }
 
 .card_content {
@@ -391,7 +402,10 @@ section {
 }
 
 .card_text {
-  font-size: 17px;
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Responsividade */
@@ -469,11 +483,15 @@ footer {
 .copyright {
   text-align: center;
   align-items: center;
-  font-size: 7px;
+  font-size: 12px;
   margin-top: 3px;
 }
 
-
+.font {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .compostagem-container {
   display: flex;
@@ -482,9 +500,6 @@ footer {
   padding: 3px;
 }
 
-.compostagem-container h2 {
-  font-size: 15px;
-}
 
 .compostagem-container img {
   width: 100px;
@@ -495,7 +510,7 @@ footer {
 .compostagem {
   border: 1px solid #ccc;
   margin-top: 10px;
-  padding:  10px 10px;
+  padding:  15px 10px;
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
@@ -503,6 +518,9 @@ footer {
 .compostagem-title {
   user-select: none;
   text-align: center;
+}
+.compostagem h2 {
+  font-size: 22px;
 }
 
 .compostagem-content {
@@ -513,6 +531,10 @@ footer {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .compostagem:hover {
@@ -522,6 +544,12 @@ footer {
 .res_comp {
   text-align: left;
   padding: 0%;
+}
+
+.res_comp p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .res_comp span {
