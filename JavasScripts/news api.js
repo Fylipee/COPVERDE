@@ -4,7 +4,7 @@ const API_KEY3 ="7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave "Bruno"
 const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=';
     
 
-var req = new Request(url+API_KEY3);
+var req = new Request(url+API_KEY);
 async function getData() {
     try {
         const response = await fetch(req);
