@@ -81,6 +81,31 @@ h3 {
     color: #2980b9;
 }
 
+/* sumário interativo */
+h5 {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.REFE{
+    text-decoration: underline; 
+}
+
+.Sumario{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #387F39;
+}
+
+.ref{
+    font-size: 12px;
+    line-height: 0.8; 
+    color: #2980b9;
+}
+
 p {
     margin: 10px 0;
     font-size: 1.1em; /* Aumenta a fonte do texto */
