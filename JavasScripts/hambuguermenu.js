@@ -24,7 +24,13 @@ document.addEventListener('click', function(event) {
 });
 
 
-
+windowCheck()
+function windowCheck() {
+    const urlAtual = window.location.pathname;
+    if (urlAtual == "/index.html") {
+        cards;
+    };
+}
 
 const cards = document.querySelectorAll('.compostagem');
 
