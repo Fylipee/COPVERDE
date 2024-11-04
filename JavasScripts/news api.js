@@ -4,8 +4,7 @@ const API_KEY3 ="7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave "Bruno"
 const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=';
     
 
-var req = new Request(url+API_KEY3);
-
+var req = new Request(url+API_KEY);
 async function getData() {
     try {
         const response = await fetch(req);
@@ -31,13 +30,13 @@ async function getData() {
 
         // Criação do título
         const title = document.createElement("h2");
-        title.textContent = item.title;
+        title.textContent = item.title + '!';
         title.classList.add('card_title');
         cardContent.appendChild(title);
 
         // Criação da descrição
         const description = document.createElement('p');
-        description.textContent = item.description;
+        description.textContent = item.description + '.';
         description.classList.add('card_text');
         cardContent.appendChild(description);
 
@@ -78,3 +77,23 @@ async function getData() {
     }
 }
 getData()
+
+// Esconder o Tradutor (sobreposição no footer! no modo mobile)
+const footer = document.querySelector('footer')
+const esconder = document.getElementById('tradutor')
+
+window.addEventListener('scroll', () => {
+    const posfooter = footer.getBoundingClientRect();
+    if (posfooter.top <= window.innerHeight && posfooter.top >= 0) {
+        esconder.style.display = 'none'; 
+    } else {
+        esconder.style.display = 'block'; 
+    }
+});
+
+//Indicador que tem um tradutor
+const seta = document.getElementById('animação');
+
+setTimeout(()=> {
+    seta.classList.add('sumir');
+}, 5000)

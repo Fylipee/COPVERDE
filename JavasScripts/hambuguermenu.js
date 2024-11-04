@@ -24,8 +24,6 @@ document.addEventListener('click', function(event) {
 });
 
 
-
-
 const cards = document.querySelectorAll('.compostagem');
 
 cards.forEach(compostagem => {
