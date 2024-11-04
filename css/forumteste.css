@@ -152,7 +152,7 @@ input[type="text"], textarea {
     border-radius: 10px;
 }
 
-button[type="submit"] {
+button {
     background: #3b8b3a;
     color: #ffffff;
     padding: 10px 15px;
@@ -162,7 +162,7 @@ button[type="submit"] {
     width: 100%;
 }
 
-button[type="submit"]:hover {
+button:hover {
     background: #66c46f;
 }
 

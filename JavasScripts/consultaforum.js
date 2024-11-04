@@ -5,10 +5,9 @@ function findTopic() {
     .get().then(snapshot =>{
         const topics = snapshot.docs.map(doc => doc.data())
         cleanTopicsFromScreen()
-        addTopicsToScreen(topics);
-        console.log(topics)
+        addTopicsToScreen(topics)
     })
-}
+};
 
 function cleanTopicsFromScreen () {
     clear = document.getElementById('topics');
@@ -36,7 +35,7 @@ function addTopicsToScreen(topics) {
             li.appendChild(tags);
         unorderedList.appendChild(li);
     })
-}
+};
 
 function cadastrarTopico() {
     createTopic()
@@ -46,24 +45,25 @@ function cadastrarTopico() {
     .add(createTopic())
     .then(() => {
         alert("Novo topico criado")
+        findTopic()
     })
     .catch(() => {
         alert("Erro ao criar topico")
     })
-}
+};
 
 function createTopic() {
     return{
         titulo: form.titulo().value,
         descricao: form.descricao().value,
-        tags: form.tags().value,
+        tags: form.tags().value
     }
-}
+};
 
 const form = {
     titulo: () => document.getElementById('titulo'),
     descricao: () => document.getElementById('descricao'),
-    tags: () => document.getElementById('tags'),
-}
+    tags: () => document.getElementById('tags')
+};
 
 findTopic()
