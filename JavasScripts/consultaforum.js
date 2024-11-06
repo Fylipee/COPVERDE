@@ -1,3 +1,21 @@
+    const SearchInput = document.getElementById('barra-pesquisa');
+    if (SearchInput) {
+        SearchInput.addEventListener('botao-buscar', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = reportsTableBody.getElementsByTagName('tr');
+
+            Array.from(rows).forEach(row =>{
+                const cells = row.getElementsByTagName('td');
+                const match = Array.from(cells).some(cell => cell.textContent.toLowerCase() .includes(searchTerm));
+                row.style.display = match ? '' : 'none';
+
+        });
+    });
+}   else {
+    console.error("Campo de pesquisa não encontrado");
+}
+
+
 function findTopic() {
     firebase.firestore()
     .collection('topicos_forum')
