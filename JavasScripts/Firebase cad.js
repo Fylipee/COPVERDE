@@ -17,6 +17,7 @@ function login() {
     (document.getElementById('E-mail').value, document.getElementById('senha').value)
     .then(() => {
       //se tiver cadastro
+      // document.getElementById('loginForm').reset();
       window.location.href = "index.html";
     }).catch(error => {
       //o que acontece se errar o email / senha.
@@ -42,10 +43,11 @@ if (Senha.length < 10) {
 
 firebase.auth().createUserWithEmailAndPassword(Email, Senha)
 .then(() => {
+  // document.getElementById('RegistroForm').reset();
     window.location.href = "index.html";
 })
 .catch(error => {
-    alert(error);
+    alert('Essa conta já existe, Faça seu login');
 });
 }
 
@@ -57,3 +59,28 @@ function resetSenha() {
     alert('Esqueceu o email, bobo.')
   });
 }
+
+function mostrarModal() {
+  const modal = document.getElementById('modalResetSenha');
+  modal.style.display = "block";
+  modal.querySelector('input').focus();
+}
+
+function fecharModal() {
+  const modal = document.getElementById('modalResetSenha');
+  const tela = document.querySelector('.modal-overlay')
+  modal.style.display = "none";
+  tela.style.display ="none"
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+      fecharModal();
+  }
+  if (event.key === 'Enter') {
+    login();
+  }
+  if (event.key === 'Enter') {
+    registro();
+}
+}); 

@@ -54,6 +54,7 @@
                             <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
                             <label for="uploadProfilePic" class="upload-label">Alterar Foto</label>
                             <button class="edit-profile" onclick="openModal()">Editar Perfil</button>
+                           <button id="logoutBtn" style="display:none;">Deslogar</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +98,7 @@
                 <label for="password">local:</label>
                 <input type="text" id="local" name="local" required>
 
-                <button onclick="cadastro()" type="submit">Salvar</button>
+                <button id="formPerfil">Salvar</button>
             </form>
         </div>
     </div>
@@ -124,11 +125,11 @@
     <!-- Api de tradução-->
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js" type="module"></script>
-    <script src="JavasScripts/Firebase init.js" type="module"></script>
-    <script src="JavasScripts/authstate.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/authstate.js"></script>
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

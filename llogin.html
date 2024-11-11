@@ -40,10 +40,10 @@
                 <div class="content">
                     <h2>Log In</h2>
 
-                    <form action="#" method="post">
+                    <form id="loginForm" action="#" method="post">
                         <input id="E-mail" type="text" name="" placeholder="E-mail" required autofocus="">
                         <input id="senha" type="password" name="" placeholder="Senha" required autofocus="">
-                        <button class="reset_senha" type="button" onclick="resetSenha()">Esqueceu a senha?</button>
+                        <button class="reset_senha" type="button" onclick="mostrarModal()">Esqueceu a senha?</button>
                         <button class="btn" type="button" id="login_button" onclick="login()">Login</button>
                          <div class="google">
                          <p><hr> ou <hr></p>                      
@@ -63,6 +63,16 @@
             </div>
         </div>
     </div>
+
+    <div id="modalResetSenha" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <h2>Redefinir Senha</h2>
+          <p>Digite seu e-mail para receber o link de redefinição de senha:</p>
+          <input type="email" id="emailReset" placeholder="Seu e-mail" required>
+          <button onclick="resetSenha()">Enviar Link</button>
+        </div>
+      </div>
 
     <!--Conecta com o firebase, autenticação e inicialização da API-->
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
