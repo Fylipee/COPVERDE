@@ -1,13 +1,3 @@
-// Função para abrir o modal de edição de perfil
-function openModal() {
-    document.getElementById('editProfileModal').style.display = 'block';
-}
-
-// Função para fechar o modal de edição de perfil
-function closeModal() {
-    document.getElementById('editProfileModal').style.display = 'none';
-}
-
 // Função para abrir o modal de adição de lembrete
 function openReminderModal() {
     document.getElementById('reminderModal').style.display = 'block';
@@ -33,14 +23,6 @@ window.onclick = function(event) {
         closeReminderModal();
     }
 }
-
-// Lida com o envio do formulário de edição de perfil
-document.getElementById('editProfileForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previne o envio padrão do formulário
-    alert('Perfil atualizado com sucesso!'); // Mensagem de sucesso
-    closeModal(); // Fecha o modal após o envio
-});
-
 // Lida com o envio do formulário de adição de lembrete
 document.getElementById('reminderForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Previne o envio padrão do formulário

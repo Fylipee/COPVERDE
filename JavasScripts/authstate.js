@@ -1,4 +1,5 @@
-firebase.auth().onAuthStateChanged(user => {
+    //Verifica se está logado;
+    firebase.auth().onAuthStateChanged(user => {
     if (user) {
         const userId = user.uid;
         const email = user.email;
@@ -9,11 +10,10 @@ firebase.auth().onAuthStateChanged(user => {
         }
     }});
 
+    //função pra deslogar do sistema;
     function logout() {
         firebase.auth().signOut().then(() => {
-            console.log('Usuário deslogado com sucesso!');
-            alert('Você foi deslogado.');
-    
+            alert('Deslogado com sucesso.');
             window.location.href = '/index.html'; 
         }).catch((error) => {
             console.error('Erro ao deslogar: ', error);
@@ -21,8 +21,10 @@ firebase.auth().onAuthStateChanged(user => {
         });
     }
     
+    // Desloga do sistema;
     document.getElementById('logoutBtn').addEventListener('click', logout);
-    
+
+    //botão que aparece e some dependo está logado ou não;
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             document.getElementById('logoutBtn').style.display = 'block';

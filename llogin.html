@@ -23,13 +23,23 @@
         <!-- Navbar -->
         <div class="navbar">
             <div class="logo"><a href="index.html">COPVERDE</a></div>
-            <a href="llogin.html" class="action_bnt">Conecte-se</a>
+            <ul class="links">
+                <li><a href="index.html">Notícias</a></li>
+                <li><a href="DicasEGuias.html">Dicas</a></li>
+                <li><a href="index.html">Rede Sociais</a></li>
+                <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
+            </ul>
+            <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
+           <button onclick="openModal()" class="edit"><img src="assets/images/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
-            <li><a href="llogin.html" class="action_bnt">Conecte-se</a></li>
+            <li><a href="#Noticias">Notícias</a></li>
+            <li><a href="DicasEGuias.html">Dicas</a></li>
+            <li><a href="#Redes">Rede Sociais</a></li>
+            <li id="quandologardrop"  style="display:none;text-align:center;"><a href="Gerenciamento.html" id="quandologardrop">Minha Compostagem</a></li>
         </div>
     </header>
 
@@ -74,14 +84,16 @@
         </div>
       </div>
 
-    <!--Conecta com o firebase, autenticação e inicialização da API-->
+    <!--Conecta o firebase-->
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <!--Script js-->
     <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/hambuguermenu.js"></script>
+    <script src="JavasScripts/Perfil index.js"></script>
     <script src="JavasScripts\Firebase cad.js"></script>
     <!-- Api de tradução-->
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    <script src="JavasScripts/hambuguermenu.js"></script>
 
 </body>
 </html>

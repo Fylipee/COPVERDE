@@ -16,6 +16,12 @@
     list-style: none;
   }
   
+  .navbarmain a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+  }
+  
   .links a:hover {
     color: var(--amarelinho);
   }
@@ -40,13 +46,13 @@
   .navbar .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: none;
-    color: #000000;
   }
   
   .navbar .links {
     display: flex;
     gap: 2rem;
+    align-items: center;
+    margin: auto;
   }
   
   .links {
@@ -60,7 +66,6 @@
     display: none;
   }
   
-
   .action_bnt {
     background-color: var(--amarelinho);
     color: #000000;
@@ -72,8 +77,6 @@
     font-weight:bold ;
     cursor: pointer;
     transition: scale 0.2 ease ;
-    text-decoration: none;
-    
   }
   
   .action_bnt:hover {
@@ -92,6 +95,7 @@
     height: 0;
     top: 60px;
     width: 280px;
+    background: #fff;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -99,8 +103,8 @@
   }
   
   .dropdown_menu.open {
-    height: 50px;
-    z-index: 10000;
+    height: 160px;
+    z-index: 1;
   }
   
   .dropdown_menu li {
@@ -139,5 +143,137 @@
     }
   }
 
+  /* Style do modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+.modal-content h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-picture {
+    display: none;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: 2px solid #4CAF50;
+}
+
+.form h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Form .form-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.Form .form-rowb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* input[type="file"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+} */
+
+input[type="text"], 
+input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.form-rowb button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-rowb button:hover {
+  background-color: #45a049;
+}
+
+#logoutBtn {
+  background-color: #f44336; 
+}
+
+#logoutBtn:hover {
+  background-color: #e53935;
+}
+
+#email_user {
+  font-size: 18px;
+  color: black;
+  font-weight: 450;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit {
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+      width: 90%;
+  }
+
+  .form h2 {
+      font-size: 20px;
+  }
+}
+/* /------------------------------/ */
   /* footer... */
