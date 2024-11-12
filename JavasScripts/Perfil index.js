@@ -30,7 +30,7 @@
     function logout() {
         firebase.auth().signOut().then(() => {
             alert('Deslogado com sucesso.');
-            window.location.href = '/index.html'; 
+            window.location.href = "index.html"; 
         }).catch((error) => {
             console.error('Erro ao deslogar: ', error);
             alert('Erro ao deslogar. Tente novamente.');
