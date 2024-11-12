@@ -87,6 +87,49 @@
   .action_bnt:active{
     scale: 0.95;
   }
+
+  #logocenter {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .navbarmainn header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #E-mail {
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #000000;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #ffffff;
+    border: 1px solid #000000;
+    transition: 0.3s ease;
+  }
+
+  #email {
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #000000;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #ffffff;
+    border: 1px solid #000000;
+    transition: 0.3s ease;
+  }
   
     /* ITEMS MENU */
   .dropdown_menu {
