@@ -1,3 +1,7 @@
+:root {
+    --amarelinho: #EDD188;
+}
+
 body {
     color: black; /* Define a cor do texto do body */
     text-decoration: none; /* Remove o sublinhado de todos os links dentro do body */
@@ -8,49 +12,12 @@ body a {
     text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-body h2, body h3, body p {
+body .h2, body .h3, body .p {
     text-align: center; /* Centraliza o texto dos cabeçalhos e parágrafos */
     margin: 1rem 0; /* Adiciona margens para espaçamento */
 }
 
-footer {
-    background-color: black;
-    color: rgb(255, 255, 255);
-    padding: 19px 0;
-}
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-container .logo img {
-    max-width: 100px;
-}
-
-.footer-content h2 p {
-    margin: 15px 0;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    text-decoration: none; /* Mantém o estilo do rodapé sem sublinhado */
-    color: rgb(255, 255, 255);
-}
-
-.social-icons a:hover {
-    color: var(--amarelinho);
-}
-
-.copyright {
-    text-align: center;
-    font-size: 7px;
-    margin-top: 3px;
-}
-
-/* Estilos para o main e seções */
 main {
     font-family: Arial, sans-serif;
     margin: 20px auto; /* Centraliza o conteúdo */
@@ -65,17 +32,17 @@ section {
     background-color: #e8f5e9; /* Fundo verde-claro */
 }
 
-h2, h3 {
+.h2, .h3 {
     color: #2c3e50;
 }
 
-h2 {
+.h2 {
     font-size: 1.8em; /* Aumenta a fonte do título */
     border-bottom: 2px solid #2980b9;
     padding-bottom: 10px;
 }
 
-h3 {
+.h3 {
     font-size: 1.5em; /* Aumenta a fonte dos subtítulos */
     margin-top: 20px;
     color: #2980b9;
@@ -106,12 +73,12 @@ h5 {
     color: #2980b9;
 }
 
-p {
+.p {
     margin: 10px 0;
-    font-size: 1.1em; /* Aumenta a fonte do texto */
+    font-size: 1.1rem; /* Aumenta a fonte do texto */
 }
 
-ul {
+.ul {
     list-style-type: square;
     padding-left: 20px;
 }
@@ -135,8 +102,10 @@ strong {
 }
 
 /* Estilos para listas */
-ul li {
+.ul li {
     margin-bottom: 5px;
+    color: black;
+    font-size: 1.1rem;
 }
 
 /* Negrito para seções específicas */
@@ -144,3 +113,57 @@ ul li {
     font-weight: bold; /* Aplica negrito */
 }
 
+.focus {
+    outline: 2px solid var(--amarelinho);  /* Cor de destaque (exemplo: tom de laranja) */
+    transition: outline 0.3s ease-in-out;
+}
+
+#forum{
+    text-align: center;
+}
+
+#forum .visitbnt {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#forum span {
+    text-decoration: none;
+    
+}
+
+#bntt {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#spanf {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#bntt.visible {
+    animation: fadeIn 2s forwards;
+}
+
+#bntt:hover {
+    opacity: 1;
+}
