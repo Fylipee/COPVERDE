@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
     <title>Gerenciamento - Minha Compostagem</title>
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
 </head>
 
 <body>
@@ -23,13 +24,23 @@
         <!-- Navbar -->
         <div class="navbar">
             <div class="logo"><a href="index.html">COPVERDE</a></div>
-            <a href="llogin.html" class="action_bnt">Conecte-se</a>
+            <ul class="links">
+                <li><a href="index.html">Notícias</a></li>
+                <li><a href="DicasEGuias.html">Dicas</a></li>
+                <li><a href="index.html">Rede Sociais</a></li>
+                <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
+            </ul>
+            <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
+           <button onclick="openModal()" class="edit"><img src="assets/images/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
-            <li><a href="llogin.html" class="action_bnt">Conecte-se</a></li>
+            <li><a href="#Noticias">Notícias</a></li>
+            <li><a href="DicasEGuias.html">Dicas</a></li>
+            <li><a href="#Redes">Rede Sociais</a></li>
+            <li id="quandologardrop"  style="display:none;text-align:center;"><a href="Gerenciamento.html" id="quandologardrop">Minha Compostagem</a></li>
         </div>
     </header>
 
@@ -39,30 +50,11 @@
         </div>
 
         <main>
-            <section class="perfil">
-                <h2>Perfil</h2>
-                <div class="perfil-info">
-                    <img src="assets/images/perfilforum.png" alt="Foto de Perfil" id="profilePicture"
-                        class="profile-picture">
-                    <div class="perfil-details">
-                        <p></p>
-                        <p id="email_user"></p>
-                        <p id="nome_user"></p>
-                        <p id="local_user"></p>
-                        <p id="tel_user"></p>
-                        <div class="perfil-actions">
-                            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
-                            <label for="uploadProfilePic" class="upload-label">Alterar Foto</label>
-                            <button class="edit-profile" onclick="openModal()">Editar Perfil</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="compostagem">
                 <h2>Gerenciamento de Compostagem</h2>
                 <p>Aqui você pode gerenciar suas compostagens.</p>
                 <div class="compostagem-actions">
+                    <div id='myDiv'></div>  
                     <a href="#">Adicionar Compostagem</a>
                     
                     <!-- Graficos: Umidade, Redução de volume, Tipo de material -->
@@ -81,26 +73,6 @@
                 </div>
             </section>
         </main>
-    </div>
-
-    <!-- Modal para editar perfil -->
-    <div id="editProfileModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Editar Perfil</h2>
-            <form id="editProfileForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="phone">Número:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="password">local:</label>
-                <input type="text" id="local" name="local" required>
-
-                <button onclick="cadastro()" type="submit">Salvar</button>
-            </form>
-        </div>
     </div>
 
     <!-- Modal para adicionar lembrete -->
@@ -122,14 +94,47 @@
             </form>
         </div>
     </div>
+
+    <!-- Modal para editar perfil -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="editProfileForm" class="Form">
+                <p id="email_user"></p>
+
+                <!-- <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)"> -->
+            <div class="form-row">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-row">
+                <label for="phone">Número:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-row">
+                <label for="text">local:</label>
+                <input type="text" id="local" name="local">
+            </div>
+            <div class="form-rowb">
+                <button id="formPerfil">Salvar</button>
+                <button id="logoutBtn">Deslogar</button>
+            </div>
+            </form>
+        </div>
+    </div>
     <!-- Api de tradução-->
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js" type="module"></script>
-    <script src="JavasScripts/Firebase init.js" type="module"></script>
-    <script src="JavasScripts/authstate.js" type="module"></script>
+    <!--Conecta o firebase-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <!--Script js-->
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/hambuguermenu.js"></script>
+    <script src="JavasScripts/Perfil index.js"></script>
+    <script src="JavasScripts/authstate.js"></script>
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -142,6 +147,7 @@
     <script src="JavasScripts/hambuguermenu.js"></script>
     <script src="JavasScripts/Clima.js"></script>
     <script src="JavasScripts/Graficos.js"></script>
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
 </body>
 
 </html>

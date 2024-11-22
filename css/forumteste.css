@@ -5,13 +5,6 @@ body {
     background-color: #f0f4f0;
 }
 
-.seta {
-    width: 40px;
-    margin-right: 50px;
-    margin-bottom: 5px;
-    order:1;
-  }
-  
   .headera {
     background: #3b8b3a;
     padding: 15px 0;
@@ -98,12 +91,12 @@ main {
     color: #3b8b3a;
 }
 
-ul {
+.topics {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.topics li {
     background: #ffffff;
     margin: 10px 0;
     padding: 15px;
@@ -112,25 +105,25 @@ li {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-li h3 {
+.topics li h3 {
     margin: 0 0 5px;
     color: #3b8b3a;
 }
 
-li a {
+.topics li a {
     color: #3b8b3a;
     text-decoration: none;
 }
 
-li a:hover {
+.topics li a:hover {
     text-decoration: underline;
 }
 
-li .tags {
+.topics li .tags {
     margin-top: 10px;
 }
 
-form {
+.novo-topico form {
     background: #ffffff;
     padding: 15px;
     border: 1px solid #ddd;
@@ -152,7 +145,7 @@ input[type="text"], textarea {
     border-radius: 10px;
 }
 
-button {
+.novo-topico button {
     background: #3b8b3a;
     color: #ffffff;
     padding: 10px 15px;
@@ -162,7 +155,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+.novo-topico button:hover {
     background: #66c46f;
 }
 

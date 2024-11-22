@@ -77,23 +77,3 @@ async function getData() {
     }
 }
 getData()
-
-// Esconder o Tradutor (sobreposição no footer! no modo mobile)
-const footer = document.querySelector('footer')
-const esconder = document.getElementById('tradutor')
-
-window.addEventListener('scroll', () => {
-    const posfooter = footer.getBoundingClientRect();
-    if (posfooter.top <= window.innerHeight && posfooter.top >= 0) {
-        esconder.style.display = 'none'; 
-    } else {
-        esconder.style.display = 'block'; 
-    }
-});
-
-//Indicador que tem um tradutor
-const seta = document.getElementById('animação');
-
-setTimeout(()=> {
-    seta.classList.add('sumir');
-}, 5000)

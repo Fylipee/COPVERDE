@@ -21,15 +21,8 @@
 <body>
     <header class="navbarmain">
         <!-- Navbar -->
-        <div class="navbar">
-            <div class="logo"><a href="index.html">COPVERDE</a></div>
-            <a href="llogin.html" class="action_bnt">Conecte-se</a>
-            <div class="toggle_bnt">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-        <div class="dropdown_menu">
-            <li><a href="llogin.html" class="action_bnt">Conecte-se</a></li>
+        <div id="logocenter" class="navbar">
+            <div id="logocenter" class="logo"><a href="index.html">COPVERDE</a></div>
         </div>
     </header>
 
@@ -40,10 +33,10 @@
                 <div class="content">
                     <h2>Log In</h2>
 
-                    <form action="#" method="post">
+                    <form id="loginForm" action="#" method="post">
                         <input id="E-mail" type="text" name="" placeholder="E-mail" required autofocus="">
                         <input id="senha" type="password" name="" placeholder="Senha" required autofocus="">
-                        <button class="reset_senha" type="button" onclick="resetSenha()">Esqueceu a senha?</button>
+                        <button class="reset_senha" type="button" onclick="mostrarModal()">Esqueceu a senha?</button>
                         <button class="btn" type="button" id="login_button" onclick="login()">Login</button>
                          <div class="google">
                          <p><hr> ou <hr></p>                      
@@ -64,14 +57,26 @@
         </div>
     </div>
 
-    <!--Conecta com o firebase, autenticação e inicialização da API-->
+    <div id="modalResetSenha" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <h2>Redefinir Senha</h2>
+          <p>Digite seu e-mail para receber o link de redefinição de senha:</p>
+          <input type="email" id="emailReset" placeholder="Seu e-mail" required>
+          <button onclick="resetSenha()">Enviar Link</button>
+        </div>
+      </div>
+
+    <!--Conecta o firebase-->
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <!--Script js-->
     <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/hambuguermenu.js"></script>
+    <script src="JavasScripts/Perfil index.js"></script>
     <script src="JavasScripts\Firebase cad.js"></script>
     <!-- Api de tradução-->
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    <script src="JavasScripts/hambuguermenu.js"></script>
 
 </body>
 </html>

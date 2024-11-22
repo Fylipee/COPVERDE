@@ -130,7 +130,7 @@ input:focus {
   outline: none; /* Remove o contorno padrão */
 }
 
-button {
+.reminderForm button {
   background-color: #4CAF50;
   color: white;
   padding: 10px;
@@ -140,7 +140,7 @@ button {
   transition: background-color 0.3s; /* Efeito de transição */
 }
 
-button:hover {
+.reminderForm button:hover {
     background-color: #45a049; /* Cor do botão ao passar o mouse */
 }
 
@@ -148,14 +148,6 @@ button:hover {
 .perfil-info {
     display: flex; /* Flexbox para alinhar a foto e os detalhes */
     align-items: center; /* Alinha verticalmente ao centro */
-}
-
-.profile-picture {
-    width: 100px; /* Largura da foto */
-    height: 100px; /* Altura da foto */
-    border-radius: 50%; /* Para deixar a foto redonda */
-    border: 2px solid #4CAF50; /* Borda verde */
-    margin-right: 20px; /* Espaço entre a foto e os detalhes */
 }
 
 .perfil-details {

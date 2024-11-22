@@ -2,11 +2,11 @@
     if (SearchInput) {
         SearchInput.addEventListener('botao-buscar', function() {
             const searchTerm = this.value.toLowerCase();
-            const rows = reportsTableBody.getElementsByTagName('tr');
+            const topics = reportsTableBody.getElementsByTagName('tr');
 
-            Array.from(rows).forEach(row =>{
-                const cells = row.getElementsByTagName('td');
-                const match = Array.from(cells).some(cell => cell.textContent.toLowerCase() .includes(searchTerm));
+            Array.from(topic).forEach(topic =>{
+                const topics = topics.getElementsByTagName('td');
+                const match = Array.from(topics).some(topics => topic.textContent.toLowerCase() .includes(searchTerm));
                 row.style.display = match ? '' : 'none';
 
         });
