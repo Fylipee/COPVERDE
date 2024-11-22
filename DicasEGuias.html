@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/dicas.css">
     <link rel="stylesheet" href="css/navbar_pg.css">
     <!-- Icon do site -->
-    <link rel="icon" type="image/x-icon" href="assets/images/Logo - Copverde.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/perfilforum.webp">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -319,6 +319,33 @@
                 </section>
         </main>
 
+        <!-- <div id="editProfileModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Editar Perfil</h2>
+                <form id="editProfileForm" class="Form">
+                    <p id="email_user"></p>
+    
+                    <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+                <div class="form-row">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-row">
+                    <label for="phone">Número:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-row">
+                    <label for="text">local:</label>
+                    <input type="text" id="local" name="local">
+                </div>
+                <div class="form-rowb">
+                    <button id="formPerfil">Salvar</button>
+                    <button id="logoutBtn">Deslogar</button>
+                </div>
+                </form>
+            </div>
+        </div> -->
 
 
         <section id="forum">
@@ -330,7 +357,7 @@
             <!-- Rodapé -->
             <div class="footer-container">
                 <div class="logo">
-                    <img src="assets/images/Logo - Copverde.svg" alt="Logo CopVerde"> <!-- logo Rodapé -->
+                    <img src="assets/images/Fotos_pra_otimização/Logo.webp" alt="Logo CopVerde"> <!-- logo Rodapé -->
                 </div>
 
                 <div class="footer-content">
@@ -353,35 +380,6 @@
                 <h7>Copyright (c) 2024 CopVerde All Rights Reserved</h7>
             </div>
         </footer>
-
-        <!-- Modal para editar perfil
-    <div id="editProfileModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Editar Perfil</h2>
-            <form id="editProfileForm" class="Form">
-                <p id="email_user"></p>
-
-                <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
-            <div class="form-row">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="form-row">
-                <label for="phone">Número:</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="form-row">
-                <label for="text">local:</label>
-                <input type="text" id="local" name="local">
-            </div>
-            <div class="form-rowb">
-                <button id="formPerfil">Salvar</button>
-                <button id="logoutBtn">Deslogar</button>
-            </div>
-            </form>
-        </div>
-    </div> -->
 
      <!--Conecta o firebase-->
      <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
