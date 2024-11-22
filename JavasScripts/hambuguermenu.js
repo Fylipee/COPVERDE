@@ -27,15 +27,26 @@ document.addEventListener('click', function(event) {
 const cards = document.querySelectorAll('.compostagem');
 
 cards.forEach(compostagem => {
+  const icon = compostagem.querySelector('.compostagem-title i');
+  
   compostagem.addEventListener('click', () => {
-    // Alterna a classe 'expanded' no card
+    // Alterna a classe 'expanded' no card;
     compostagem.classList.toggle('expanded');
+
+    // Verifica se o card está expandido e troca o ícone;
+    if (compostagem.classList.contains('expanded')) {
+      icon.classList.remove('ri-add-line');
+      icon.classList.add('ri-subtract-line');
+    } else {
+      icon.classList.remove('ri-subtract-line');
+      icon.classList.add('ri-add-line');
+    }
   });
 });
 
-// Esconder o Tradutor (sobreposição no footer! no modo mobile)
-const footer = document.querySelector('footer')
-const esconder = document.getElementById('tradutor')
+// Esconder o Tradutor (sobreposição no footer! no modo mobile);
+const footer = document.querySelector('footer');
+const esconder = document.getElementById('tradutor');
   
   window.addEventListener('scroll', () => {
       const posfooter = footer.getBoundingClientRect();
@@ -55,6 +66,6 @@ const esconder = document.getElementById('tradutor')
         setTimeout(() => {
             seta.classList.add('sumir');
         }, 5000);
-    }
-}
+    };
+};
 
