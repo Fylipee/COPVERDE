@@ -7,14 +7,19 @@ async function getData() {
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-        const json = await response.json();
-        console.log(json)
+        const json = await response.json();     
+        return json
     }
 
     catch (error) {
         console.error(error.message);
-
-    }
-
+    }   
 }
-getData()
+
+getData().then(
+    clima => {
+    const umidade = clima.current.humidity 
+    return umidade
+});
+
+console.log(umidade);

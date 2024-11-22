@@ -1,8 +1,12 @@
+// import {clima} from ("Clima.js"); 
+
+// console.log (json)
+
 var data = [
   {
     type: "indicator",
     mode: "gauge+number+delta",
-    value: 42,
+    value: 63,
     title: { text: "Umidade%", font: { size: 24 } },
     delta: { reference: 55, increasing: { color: "RebeccaPurple" } },
     gauge: {
