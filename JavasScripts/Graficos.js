@@ -1,13 +1,16 @@
-// import {clima} from ("Clima.js"); 
+import {getData} from "./Clima.js"; 
 
-// console.log (json)
+getData().then(
+  clima => {
+    const umidade = clima.current.humidity
+
 
 var data = [
   {
     type: "indicator",
     mode: "gauge+number+delta",
-    value: 63,
-    title: { text: "Umidade%", font: { size: 24 } },
+    value: umidade,
+    title: { text: "Umidade %", font: { size: 24 } },
     delta: { reference: 55, increasing: { color: "RebeccaPurple" } },
     gauge: {
       axis: { range: [null, 100], tickwidth: 1, tickcolor: "darkblue" },
@@ -29,7 +32,8 @@ var data = [
       }
     }
   }
-];
+]
+
 
 var layout = {
   width: 500,
@@ -39,3 +43,5 @@ var layout = {
 };
 
 Plotly.newPlot('myDiv', data, layout);
+
+});
