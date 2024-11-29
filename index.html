@@ -212,7 +212,8 @@
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Editar Perfil</h2>
           <form id="editProfileForm" class="Form">
-            <!-- <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)"> -->
+            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button>
             <p id="email_user"></p>
             <div class="form-row">
               <label for="name">Nome:</label>
@@ -227,6 +228,7 @@
               <input type="text" id="local" name="local">
             </div>
             <div class="form-rowb">
+                <!-- <button>Editar</button> -->
               <button id="formPerfil">Salvar</button>
               <button id="logoutBtn">Deslogar</button>
             </div>
@@ -248,8 +250,9 @@
     <script src="JavasScripts/Perfil index.js"></script>
     <script src="JavasScripts/news api.js"></script>
     <script src="JavasScripts/profile.js"></script>
+    <script src="JavasScripts/vefoto.js"></script> 
     <!-- a api de traduzir -->
-    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}} ,console.log(window.gtranslateSettings)</script>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     
 </body>
