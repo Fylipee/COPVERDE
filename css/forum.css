@@ -5,7 +5,7 @@ body {
     background-color: #eeeeee;
 }
 
-  .headera {
+.headera {
     background: #3b8b3a;
     padding: 15px 0;
     text-align: center;
@@ -20,21 +20,24 @@ body {
     max-width: 900px;
     order:3;
 }
-.perfil img{
-    width: 40px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    order:2;
-    
-}
 
 .barra-pesquisa input[type="text"] {
     background-color: #BEDC74;
     border-color: #BEDC74;
     padding: 10px;
     width: 60%; 
-    border-radius: 9px; 
-    
+    border-radius: 9px;  
+}
+
+.perfil img{
+    width: 40px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    order:2;  
+}
+
+.lupa {
+    background-color: transparent; 
 }
 
 .barra-pesquisa .botao-buscar {
@@ -49,7 +52,6 @@ body {
     margin-bottom: 5px;
     transition: color 0.3s;
     order:4;
-
 }
 
 .barra-pesquisa .botao-buscar:hover {
@@ -76,11 +78,10 @@ body {
     background: #3b8b3a;
 }
 
-main {
+.maainha {
     padding: 20px;
     max-width: 800px;
     margin: auto;
-
 }
 
 .topicos {
@@ -131,13 +132,14 @@ main {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.labela {
     display: block;
     margin: 10px 0 5px;
     color: #333;
+    height: 100%;
 }
 
-input[type="text"], textarea {
+.tagsname, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -158,47 +160,3 @@ input[type="text"], textarea {
 .novo-topico button:hover {
     background: #66c46f;
 }
-
-/* Rodapé */
-footer {
-    background-color: black;
-    color: rgb(255, 255, 255);
-    padding: 19px 0;
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .logo img {
-    max-width: 100px;
-  }
-  
-  .footer-content h2 p {
-    margin: 15px 0;
-  }
-  
-  .social-icons i {
-    padding: 5px;
-  }
-  
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-  
-  .social-icons a:hover {
-    text-decoration: none;
-    color: var(--amarelinho);
-  }
-  
-  .copyright {
-    text-align: center;
-    align-items: center;
-    font-size: 7px;
-    margin-top: 3px;
-  }

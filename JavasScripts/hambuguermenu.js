@@ -26,6 +26,7 @@ document.addEventListener('click', function(event) {
 
 const cards = document.querySelectorAll('.compostagem');
 
+if (window.location.pathname === '/index.html') {
 cards.forEach(compostagem => {
   const icon = compostagem.querySelector('.compostagem-title i');
   
@@ -42,30 +43,25 @@ cards.forEach(compostagem => {
       icon.classList.add('ri-add-line');
     }
   });
-});
+})};
 
-// Esconder o Tradutor (sobreposição no footer! no modo mobile);
 const footer = document.querySelector('footer');
 const esconder = document.getElementById('tradutor');
-  
-  window.addEventListener('scroll', () => {
+const seta = document.getElementById('animação');
+
+if (window.location.pathname === '/index.html') {
+
+  setTimeout(() => {
+    window.addEventListener('scroll', () => {
       const posfooter = footer.getBoundingClientRect();
-      if (posfooter.top <= window.innerHeight && posfooter.top >= 0) {
-          esconder.style.display = 'none'; 
-      } else {
-          esconder.style.display = 'block'; 
-      }
-  });
-  
-  //Indicador que tem um tradutor
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-    const seta = document.getElementById('animação');
-    
-    // Garante que a animação só aconteça se o elemento existir
-    if (seta) {
-        setTimeout(() => {
-            seta.classList.add('sumir');
-        }, 5000);
-    };
-};
+      esconder.style.display = posfooter.top <= 0 ? 'none' : 'block';
+    });
+  }, 500);
+
+  if (seta) {
+    setTimeout(() => {
+      seta.classList.add('sumir');
+    }, 5000);
+  }
+}
 

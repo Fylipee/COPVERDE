@@ -40,7 +40,7 @@
     // Evento de deslogar do sistema;
     document.getElementById('logoutBtn').addEventListener('click', logout);
 
-    //botão que aparece e some dependo está logado ou não;
+    //botão que aparece e some dependo estando logado ou não;
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             document.getElementById('logoutBtn').style.display = 'block';

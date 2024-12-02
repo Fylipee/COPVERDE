@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Reset css -->
-    <link rel="stylesheet" href="css/reset.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <!-- Css Página -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/manejo.css">
     <link rel="stylesheet" href="css/navbar_pg.css">
-    <!-- Fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ModalPerfil.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -53,41 +55,40 @@
 
     <div class="container">
         <div class="headera">
-            <h1>Gerenciamento de Compostagem</h1>
+            <h1 class="gh1">Gerenciamento de Compostagem</h1>
         </div>
 
         <main>
             <section class="compostagem">
-                <h2>Gerenciamento de Compostagem</h2>
+                <h2 class="gh2">Gerenciamento de Compostagem</h2>
                 <p>Aqui você pode gerenciar suas compostagens.</p>
                 <div class="compostagem-actions">
                     <div id='umida'></div>  
                     <div id='temp'></div>  
-                    <a href="#">Adicionar Compostagem</a>
-                    
+                    <a class="gag" href="#">Adicionar Compostagem</a>
                     <!-- Graficos: Umidade, Redução de volume, Tipo de material -->
                     <!-- Weatherapi.com copverdeyt@gmail.com CopVerde2024 -->
                     <!-- fusioncharts -->
-                    <a href="#">Ver Compostagens</a>
+                    <a class="gag" href="#">Ver Compostagens</a>
                 </div>
             </section>
 
             <section class="lembretes">
-                <h2>Lembretes</h2>
+                <h2 class="gh2">Lembretes</h2>
                 <p>Configure seus lembretes para o gerenciamento de compostagem.</p>
                 <div class="lembretes-actions">
                     <button onclick="openReminderModal()">Adicionar Lembrete</button>
-                    <a href="#">Ver Lembretes</a>
+                    <a class="gag" href="#">Ver Lembretes</a>
                 </div>
             </section>
         </main>
     </div>
 
     <!-- Modal para adicionar lembrete -->
-    <div id="reminderModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeReminderModal()">&times;</span>
-            <h2>Adicionar Lembrete</h2>
+    <div id="reminderModal" class="modall">
+        <div class="modal-contentt">
+            <span class="closee" onclick="closeReminderModal()">&times;</span>
+            <h2 class="gh2">Adicionar Lembrete</h2>
             <form id="reminderForm">
                 <label for="reminderTitle">Título:</label>
                 <input type="text" id="reminderTitle" name="reminderTitle" required>
@@ -106,35 +107,34 @@
     <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Editar Perfil</h2>
-            <form id="editProfileForm" class="Form">
-                <p id="email_user"></p>
-
-                <!-- <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)"> -->
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Editar Perfil</h2>
+          <form id="editProfileForm" class="Form">
+            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button>
+            <p id="email_user"></p>
             <div class="form-row">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name">
             </div>
             <div class="form-row">
-                <label for="phone">Número:</label>
-                <input type="tel" id="phone" name="phone">
+              <label for="phone">Número:</label>
+              <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-row">
-                <label for="text">local:</label>
-                <input type="text" id="local" name="local">
+              <label for="text">Local:</label>
+              <input type="text" id="local" name="local">
             </div>
             <div class="form-rowb">
-                <button id="formPerfil">Salvar</button>
-                <button id="logoutBtn">Deslogar</button>
+                <!-- <button>Editar</button> -->
+              <button id="formPerfil">Salvar</button>
+              <button id="logoutBtn">Deslogar</button>
             </div>
-            </form>
+          </form>
         </div>
-    </div>
-    <!-- Api de tradução-->
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+      </div>
+    
     <!-- Firebase -->
-    <!--Conecta o firebase-->
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
@@ -142,20 +142,19 @@
     <script src="JavasScripts/Firebase init.js"></script>
     <script src="JavasScripts/hambuguermenu.js"></script>
     <script src="JavasScripts/Perfil index.js"></script>
-    <script src="JavasScripts/authstate.js"></script>
+    <script src="JavasScripts/manejo.js"></script>
+    <script src="JavasScripts/vefoto.js"></script>
+    <script src="JavasScripts/Clima.js" type="module"></script>
+    <script src="JavasScripts/Graficos.js" type="module"></script>
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    <!--js manejo-->
-    <script src="JavasScripts/manejo.js"></script>
-    <script src="JavasScripts/hambuguermenu.js"></script>
-    <script src="JavasScripts/Clima.js" type="module"></script>
-    <script src="JavasScripts/Graficos.js" type="module"></script>
-    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+    <!-- Api de tradução-->
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
-
 </html>

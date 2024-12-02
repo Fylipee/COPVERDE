@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/forumteste.css" >
-    <link rel="stylesheet" href="css/navbar_pg.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Icon do site -->
-        <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="css/forum.css" >
+    <link rel="stylesheet" href="css/navbar_pg.css">
+    <!-- Icon do site -->
+    <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
     <title>Dicas e Guias</title>
 </head>
 <body>  
@@ -20,19 +28,19 @@
             <div class="logo"><a href="index.html">COPVERDE</a></div>
             <ul class="links">
                 <li><a href="index.html">Notícias</a></li>
-                <li><a href="DicasEGuias.html">Dicas</a></li>
+                <li id="dicass"><a href="DicasEGuias.html">Dicas</a></li>
                 <li><a href="index.html">Rede Sociais</a></li>
                 <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
-           <button class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.webp" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+           <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.webp" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
             <li><a href="#Noticias">Notícias</a></li>
-            <li><a href="DicasEGuias.html">Dicas</a></li>
+            <li id="dicass"><a href="DicasEGuias.html">Dicas</a></li>
             <li><a href="#Redes">Rede Sociais</a></li>
             <li id="quandologardrop"  style="display:none;text-align:center;"><a href="Gerenciamento.html" id="quandologardrop">Minha Compostagem</a></li>
         </div>
@@ -43,11 +51,11 @@
                 <a class="perfil"><img src="assets/images/Fotos_pra_otimização/perfilforum.webp"></a>
                 <input type="text" placeholder="Pesquisar tópicos...">
                 <button type="submit" class="botao-buscar">
-                    <img src="assets/images/lupa.png">
+                    <img class="lupa" src="assets/images/Fotos_pra_otimização/lupa.webp">
                 </button>
             </div>
         </div>
-        <main>
+<main class="maainha">
             <div class="tags">
                 <span class="tag">Tag1</span>
                 <span class="tag">Tag2</span>
@@ -55,25 +63,24 @@
                 <span class="tag">Tag4</span>
                 <span class="tag">Tag5</span>
             </div>
-            <section class="topicos">
+    <section class="topicos">
                 <h2>Tópicos Recentes</h2>
-                <ul id="topics">
-                </ul>
-            </section>
-            <section class="novo-topico">
+                <ul id="topics"></ul>
+    </section>
+        <section class="novo-topico">
                 <h2>Criar Novo Tópico</h2>
-                <form>
-                    <label for="titulo">Título:</label>
+            <form>
+                    <label class="labela" for="titulo">Título:</label>
                     <input type="text" id="titulo" name="titulo" required>
-                    <label for="descricao">Descrição:</label>
+                    <label class="labela" for="descricao">Descrição:</label>
                     <textarea id="descricao" name="descricao" required></textarea>
-                    <label for="tags">Tags (separadas por vírgula):</label>
-                    <input type="text" id="tags" name="tags">
+                    <label class="labela" for="tags">Tags (separadas por vírgula):</label>
+                    <input class="tagsname" type="text" id="tags" name="tags">
                     <button type="button" onclick="cadastrarTopico()">Enviar</button>
-                </form>
-            </section>
-        </main>
-        <footer>
+            </form>
+        </section>
+ </main>
+     <footer>
             <!-- Rodapé -->
             <div class="footer-container">
                 <div class="logo">
@@ -99,46 +106,51 @@
             </div>
         </footer> 
 
-        <!-- Modal para editar perfil
+        <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Editar Perfil</h2>
-            <form id="editProfileForm" class="Form">
-                <p id="email_user"></p>
-
-                <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Editar Perfil</h2>
+          <form id="editProfileForm" class="Form">
+            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button>
+            <p id="email_user"></p>
             <div class="form-row">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name">
             </div>
             <div class="form-row">
-                <label for="phone">Número:</label>
-                <input type="tel" id="phone" name="phone">
+              <label for="phone">Número:</label>
+              <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-row">
-                <label for="text">local:</label>
-                <input type="text" id="local" name="local">
+              <label for="text">Local:</label>
+              <input type="text" id="local" name="local">
             </div>
             <div class="form-rowb">
-                <button id="formPerfil">Salvar</button>
-                <button id="logoutBtn">Deslogar</button>
+                <!-- <button>Editar</button> -->
+              <button id="formPerfil">Salvar</button>
+              <button id="logoutBtn">Deslogar</button>
             </div>
-            </form>
+          </form>
         </div>
-    </div> -->
-
-        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
-        <script src="JavasScripts/Firebase init.js"></script>
-        <script src="JavasScripts/consultaforum.js"></script>
-        <script src="JavasScripts/hambuguermenu.js"></script>
-        <script src="JavasScripts/Perfil index.js"></script>
-        
-        <!-- Api de tradução-->
-        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-        <script src="JavasScripts/hambuguermenu.js"></script>
-    </body>
+      </div>
+    <!--Conecta com o bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <!--Conecta o firebase-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <!-- Js -->
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/hambuguermenu.js"></script>
+    <script src="JavasScripts/Perfil index.js"></script>
+    <script src="JavasScripts/vefoto.js"></script>
+    <script src="JavasScripts/consultaforum.js"></script>
+    <!-- Api de tradução-->
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
 </html>
         

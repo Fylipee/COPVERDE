@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #eeeeee;
+}
+
 .login-form{
     position: relative;
     min-height: 100vh;
     z-index: 0;
-    background: #ffffff;
+    background: #eeeeee;
     padding: 30px;
     justify-content: center;
     display: grid;
