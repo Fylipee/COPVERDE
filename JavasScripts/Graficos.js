@@ -15,8 +15,7 @@ var data = [
     delta: { reference: 55, increasing: { color: "RebeccaPurple" } },
     gauge: {
       axis: { range: [null, 100], tickwidth: 1, tickcolor: "darkblue" },
-      bar: { color: "purple" },
-      bgcolor: "white",
+      bar: { color: "purple" }, 
       borderwidth: 2,
       bordercolor: "gray",
       steps: [
@@ -40,7 +39,9 @@ var layout = {
   width: 500,
   height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
-  font: { color: "darkblue", family: "Arial" }
+  font: { color: "darkblue", family: "Arial" },
+  paper_bgcolor: 'rgba(0, 0, 0, 0)',
+  plot_bgcolor: 'rgba(0, 0, 0, 0)'
 };
 
 Plotly.newPlot('umida', data, layout);
@@ -55,7 +56,8 @@ var data = [
     gauge: {
       axis: { range: [null, 80], tickwidth: 1, tickcolor: "darkblue" },
       bar: { color: "purple" },
-      bgcolor: "white",
+      paper_bgcolor: '#eeeeee', 
+      plot_bgcolor: '#eeeeee',
       borderwidth: 2,
       bordercolor: "gray",
       steps: [
@@ -79,7 +81,9 @@ var layout = {
   width: 500,
   height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
-  font: { color: "darkblue", family: "Arial" }
+  font: { color: "darkblue", family: "Arial" },
+  paper_bgcolor: 'rgba(0, 0, 0, 0)',
+  plot_bgcolor: 'rgba(0, 0, 0, 0)'
 };
 
 Plotly.newPlot('temp', data, layout);

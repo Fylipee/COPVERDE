@@ -5,6 +5,7 @@
 body {
     color: black; /* Define a cor do texto do body */
     text-decoration: none; /* Remove o sublinhado de todos os links dentro do body */
+    background-color: #eeeeee;
 }
 
 body a {

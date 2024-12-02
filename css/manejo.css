@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Estilos gerais da página */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f4f0;
+  background-color: #eeeeee;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +39,7 @@ main {
 
 /* Estilo das seções */
 section {
-  background-color: white;
+  background-color: #eeeeee;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
