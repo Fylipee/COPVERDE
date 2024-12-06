@@ -45,6 +45,12 @@ section {
   color: #4CAF50; /* Verde */
 }
 
+/* Estido do grafico */
+.Graph {
+  width: 43%;
+  display: inline-block;
+}
+
 .gag {
   left: 20px;
   top: 20px;
