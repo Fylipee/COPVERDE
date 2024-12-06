@@ -50,7 +50,7 @@
                 <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
-           <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.webp" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+           <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -65,7 +65,7 @@
     
    <section class="hero">
     <div class="hero-text">
-        <h2>Composte Facil: Nutri a sua planta e o <span>planeta.</span></h2>
+        <h2>Composte Facil: Nutri a sua planta e o <span class="hero_span">planeta.</span></h2>
         <p>Cansado de jogar comida no lixo? Transforme seus restos orgânicos em um adubo natural poderoso e nutritivo para suas plantas.</p>
     </div>
    </section>
@@ -82,10 +82,10 @@
         
                     <h2>Por que Compostar?</h2>
                     <ul class="textp">
-                        <li><span>Menos lixo</span>: Diminui a quantidade de lixo que vai para os aterros sanitários.</li>
-                        <li><span>Adubo natural</span>: Cria um adubo orgânico e gratuito para suas plantas.</li>
-                        <li><span>Melhora o solo</span>: Torna o solo mais rico em nutrientes e com melhor estrutura.</li>
-                        <li><span>Reduz a emissão de gases do efeito estufa</span>: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</li>
+                        <li class="spane"><span>Menos lixo</span>: Diminui a quantidade de lixo que vai para os aterros sanitários.</li>
+                        <li class="spane"><span>Adubo natural</span>: Cria um adubo orgânico e gratuito para suas plantas.</li>
+                        <li class="spane"><span>Melhora o solo</span>: Torna o solo mais rico em nutrientes e com melhor estrutura.</li>
+                        <li class="spane"><span>Reduz a emissão de gases do efeito estufa</span>: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</li>
                     </ul>
         
                     <div class="tracinho2"></div>
@@ -146,10 +146,13 @@
                         Mas é importante lembrar que nem tudo pode ir para a composteira.
                         Alguns alimentos podem atrair insetos e outros animais, 
                         além de dificultar a decomposição dos materiais.</p>
-                    <p class="espaco">  Na composteira, você pode colocar quase tudo que vem da natureza! Imagine as sobras da sua 
-                    <span>cozinha</span>: cascas de frutas, talos de legumes, borra de café e até saquinhos de chá usados.
-                     Do <span>jardim</span>, você pode adicionar grama cortada, folhas secas e até mesmo flores que já murcharam. E da sua <span>casa</span>,
-                      as cinzas da lareira ou churrasqueira também podem ir para a composteira.</p>
+                    <p class="espaco">  
+                        Na composteira, você pode colocar quase tudo que vem da natureza! Imagine as sobras da sua 
+                        <span class="spane">cozinha</span>: cascas de frutas, talos de legumes, borra de café e até saquinhos de chá usados.
+                        Do <span class="spane">jardim</span>, você pode adicionar grama cortada, folhas secas e até mesmo flores que já murcharam. 
+                        E da sua <span class="spane">casa</span>,
+                        as cinzas da lareira ou churrasqueira também podem ir para a composteira.
+                    </p>
                       
                     <div class="img_res">
                         <img src="" alt="">
@@ -171,7 +174,7 @@
 
 
     </main>
-
+    <button id="toggle-theme" class="action_bnt">Modo Noturno</button>
     <footer>
         <!-- Rodapé -->
         <div class="footer-container">
@@ -246,6 +249,7 @@
     <script src="JavasScripts/news api.js"></script>
     <script src="JavasScripts/profile.js"></script>
     <script src="JavasScripts/vefoto.js"></script> 
+    <script src="JavasScripts/dark.js"></script>
     <!-- a api de traduzir -->
     <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>

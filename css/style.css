@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-  /* Paleta Principal */
   --amarelinho: #EDD188;
-  --verde_claro: #EDD188;
   --verde_meio_escuro: #A2CA71;
-  --verde_escuro: #387F39;
+  --background: #eeeeee;
+  --text-color: #000;
+}
 
-  /* Paleta Secundária */
-  --quase_branco: #F8EDE3;
-  --quase_mais_escurinho: #DFD3C3;
-  --mais_escurinho_branco: #DFD3C3;
-  --terracota: #DFD3C3;
-
-  /* gradiente */
-  --gradiente: linear-gradient(88deg, var(--amarelinho), var(--verde_meio_escuro), var(--verde_meio_escuro));
+:root.dark {
+  --fundo_preto: #000;
+  --texto: #fff;
 }
 
 *  {
