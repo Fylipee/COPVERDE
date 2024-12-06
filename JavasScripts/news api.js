@@ -1,7 +1,16 @@
-const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave Projeto;
-const API_KEY2 = "7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave Fylipe;
-const API_KEY3 = "7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave Bruno;
-const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=10&apikey=';
+const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave 1;
+const API_KEY2 = "7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave 2;
+const API_KEY3 = "7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave 3;
+const API_KEY4 = "5d67c65eab96a678f0d648136f613966"; //* Chave 4;
+const API_KEY5 = "05d5bff0264675462b8f08b43d6e8ec6"; //* Chave 5;
+const API_KEY6 = "07bc4af133a5c0f3de0e1642cc3259f2"; //* Chave 6;
+
+//adicionar um timer de troca ou criar um novo html com as noticias...
+const url = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=9&apikey=';
+const url2 = 'https://gnews.io/api/v4/search?q=Sustentabilidade&lang=pt&country=br&max=9&apikey=';
+const url3 = 'https://gnews.io/api/v4/search?q=Energias&lang=pt&country=br&max=9&apikey=';
+const url4 = 'https://gnews.io/api/v4/search?q=Biodiversidade&lang=pt&country=br&max=9&apikey=';
+
 
 let attempts = 0; // Contador de tentativas;
 
@@ -65,7 +74,8 @@ async function getData() {
         console.error(error.message);
         if (error.message.includes("403")) {
             attempts++; // Incrementa o contador de tentativas;
-            if (attempts < 3) {
+            if (attempts < 6) {
+                console.log(`Tentativa ${attempts}: Trocando pra outra chave`) //monitoramento das chaves;
                 getData(); // Tenta novamente com uma chave diferente;
             } else {
                 alert("Todas as chaves de API falharam. Por favor, verifique as chaves.");
@@ -76,10 +86,14 @@ async function getData() {
     }
 }
 
+//escabilidade fica pra próxima...
 function pegachave() {
     if (attempts === 0) return API_KEY;
     if (attempts === 1) return API_KEY2;
-    return API_KEY3;
+    if (attempts === 2) return API_KEY3;
+    if (attempts === 3) return API_KEY4;
+    if (attempts === 4) return API_KEY5;
+    return API_KEY6;
 }
 
 getData();
