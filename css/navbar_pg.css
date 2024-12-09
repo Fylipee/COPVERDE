@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
-    --amarelinho: #EDD188;
+  --amarelinho: #EDD188;
+  --color_text: #000000;
+  --link_preto: #000000;
+  --backgroundg: #eeeeee;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   .links li {
   list-style: none;
@@ -17,11 +14,12 @@
   list-style: none;
 }
 
-header a {
+header a{
   text-decoration: none;
-  color: #000000;
+  color: var(--link_preto);
   font-size: 18px;
 }
+
 
 .links a:hover {
   color: var(--amarelinho);
@@ -61,7 +59,7 @@ header {
 }
 
 .navbar .toggle_bnt{
-  color: #000000;
+  color:  var(--link_preto);
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -69,7 +67,7 @@ header {
 
 .action_bnt {
   background-color: var(--amarelinho);
-  color: #000000;
+  color: var(--link_preto);
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
@@ -146,7 +144,6 @@ header {
 
  /* Style do modal */
 .modal-content {
-  background-color: #fff;
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;

@@ -29,8 +29,9 @@
 
     <!-- Css -->
     <link href="css/reset.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/navbar_pg.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
 
     <!-- Icon do site -->
     <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
@@ -82,10 +83,10 @@
         
                     <h2>Por que Compostar?</h2>
                     <ul class="textp">
-                        <li class="spane"><span>Menos lixo</span>: Diminui a quantidade de lixo que vai para os aterros sanitários.</li>
-                        <li class="spane"><span>Adubo natural</span>: Cria um adubo orgânico e gratuito para suas plantas.</li>
-                        <li class="spane"><span>Melhora o solo</span>: Torna o solo mais rico em nutrientes e com melhor estrutura.</li>
-                        <li class="spane"><span>Reduz a emissão de gases do efeito estufa</span>: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</li>
+                        <li><span class="spane">Menos lixo</span>: Diminui a quantidade de lixo que vai para os aterros sanitários.</li>
+                        <li><span class="spane">Adubo natural</span>: Cria um adubo orgânico e gratuito para suas plantas.</li>
+                        <li><span class="spane">Melhora o solo</span>: Torna o solo mais rico em nutrientes e com melhor estrutura.</li>
+                        <li><span class="spane">Reduz a emissão de gases do efeito estufa</span>: A matéria orgânica em decomposição nos aterros libera metano, um gás que contribui para o aquecimento global.</li>
                     </ul>
         
                     <div class="tracinho2"></div>
@@ -174,7 +175,7 @@
 
 
     </main>
-    <button id="toggle-theme" class="action_bnt">Modo Noturno</button>
+    <button id="tema_site" class="action_bnt">Modo Noturno</button>
     <footer>
         <!-- Rodapé -->
         <div class="footer-container">
@@ -206,7 +207,7 @@
     
     <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">
-        <div class="modal-content">
+        <div id="modal-content" class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Editar Perfil</h2>
           <form id="editProfileForm" class="Form">
