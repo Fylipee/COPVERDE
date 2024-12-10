@@ -7,10 +7,9 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet" />
     <!-- fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +33,7 @@
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
            <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+           <button id="tema_site" class="tema_site"><i class="ri-moon-line"></i></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -108,7 +108,7 @@
 
         <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">
-        <div class="modal-content">
+        <div id="modal-content" class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Editar Perfil</h2>
           <form id="editProfileForm" class="Form">
@@ -135,6 +135,7 @@
           </form>
         </div>
       </div>
+      
     <!--Conecta com o bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -149,6 +150,7 @@
     <script src="JavasScripts/Perfil index.js"></script>
     <script src="JavasScripts/vefoto.js"></script>
     <script src="JavasScripts/consultaforum.js"></script>
+    <script src="JavasScripts/dark.js"></script>
     <!-- Api de tradução-->
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>

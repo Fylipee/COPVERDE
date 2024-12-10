@@ -1,7 +1,15 @@
-/* Estilos gerais da página */
+body.dark-mode {
+  background-color:#121212;
+  color: #fff;
+}
+
+body.dark-mode a {
+  background-color:#121212;
+  color: #fff;
+}
+
 body {
   background-color: #eeeeee;
-
 }
 
 .container {
@@ -202,21 +210,12 @@ section {
   cursor: pointer;
 }
 
-.profile-picture {
-    display: none;
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    border: 2px solid #4CAF50;
-}
-
 .form h2 {
   font-size: 24px;
   color: #333;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .Form {
   display: flex;
   flex-direction: column;

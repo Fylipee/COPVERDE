@@ -5,8 +5,12 @@
   --link_preto: #000000;
   --backgroundg: #eeeeee;
 }
-  
-  .links li {
+
+* {
+  user-select: none;
+}
+
+.links li {
   list-style: none;
 }
 
@@ -19,7 +23,6 @@ header a{
   color: var(--link_preto);
   font-size: 18px;
 }
-
 
 .links a:hover {
   color: var(--amarelinho);
@@ -338,4 +341,11 @@ footer {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.tema_site {
+  border: none;
+  background-color: transparent;
+  margin-left: 50px;
+  font-size: 20px;
 }

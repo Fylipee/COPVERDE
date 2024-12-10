@@ -22,11 +22,13 @@ body.ligth-mode {
 body.dark-mode {
   background-color:#121212;
   color: #fff;
+  transition: background-color 1s, color 1s;
 }
 
 body.dark-mode a {
   background-color:#121212;
   color: #fff;
+  transition: background-color 1s, color 1s;
 }
 
 .hero {
@@ -60,7 +62,7 @@ body.dark-mode a {
   color: var(--span_hero);
 }
 
-section {
+#sectionn {
   padding: 0 19%;
 }
 
@@ -82,7 +84,7 @@ section {
 }
 
 @media (max-width: 1460px){
-  section{
+  #sectionn{
     padding: 0 12%;
     transition: .2s;
   }
@@ -110,7 +112,7 @@ section {
   line-height: 1.2;
   margin: 0 0 30px;
   }
-  section {
+  #sectionn {
     padding: 0 3%;
     transition: .2s;
   }
@@ -209,6 +211,10 @@ section {
 
 .textp {
   list-style:inside;
+}
+
+.res_comp {
+  text-align: justify;
 }
 
 /* Responsividade */
@@ -423,4 +429,3 @@ section {
 }
 
 /* /------------------------------/ */
-

@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-const buttton = document.getElementById("tema_site");
-const body = document.body;
-const fundomd = document.getElementById("modal-content")
+    const button = document.getElementById("tema_site");
+    const icon = button.querySelector("i");
+    const body = document.body;
+    const fundoMd = document.getElementById("modal-content");
 
-buttton.addEventListener("click", () => {
+    button.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-        fundomd.style.backgroundColor = 'black'
-        body.style.transition ="background-color 1.5s, color 1.5s"
-        fundomd.style.transition ="background-color 1.5s, color 1.5s"
-        buttton.textContent = "Alternar para Modo Claro"; //trocar pra icon
-    } else {
-        buttton.textContent = "Alternar para Modo Escuro";
-        fundomd.style.backgroundColor = '#eeeeee'
-        body.style.transition ="background-color 1.5s, color 1.5s"
-        fundomd.style.transition ="background-color 1.5s, color 1.5s"
-    }
- })
+
+        // Transições suaves
+        body.style.transition = "background-color 1s, color 1s";
+        fundoMd.style.transition = "background-color 1s, color 1s";
+
+        if (body.classList.contains("dark-mode")) {
+            fundoMd.style.backgroundColor = 'black';
+            icon.classList.replace('ri-moon-line', 'ri-sun-fill');
+            icon.style.color = 'white';
+        } else {
+            fundoMd.style.backgroundColor = '#eeeeee';
+            icon.classList.replace('ri-sun-fill', 'ri-moon-line');
+            icon.style.color = 'black';
+        }
+    });
 });

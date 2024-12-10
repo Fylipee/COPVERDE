@@ -1,3 +1,17 @@
+body.dark-mode {
+    background-color:#121212;
+    color: #fff;
+  }
+  
+  body.dark-mode a {
+    background-color:#121212;
+    color: #fff;
+  }
+  
+  body {
+    background-color: #eeeeee;
+  }
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;

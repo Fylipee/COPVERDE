@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="css/navbar_pg.css">
     <!-- Icon do site -->
     <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet" />
     <!--Titulo do site-->
     <title>Dicas de Compostagem</title>
 
@@ -41,6 +40,7 @@
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
            <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+           <button id="tema_site" class="tema_site"><i class="ri-moon-line"></i></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -140,7 +140,7 @@
                     </ul>
                 </div>
                 <div id="Aeracao">
-                    <h3 class="h3"Aeração da Mistura</h3>
+                    <h3 class="h3">Aeração da Mistura</h3>
                     <p class="p">A aeração é essencial para a atividade microbiana:</p>
                     <ul class="ul">
                         <li><strong>Virar a Mistura:</strong> Vire os materiais a cada duas semanas com um garfo ou pá
@@ -317,7 +317,7 @@
 
         <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">
-        <div class="modal-content">
+        <div id="modal-content" class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Editar Perfil</h2>
           <form id="editProfileForm" class="Form">
@@ -392,6 +392,7 @@
      <script src="JavasScripts/Perfil index.js"></script>
      <script src="JavasScripts/vefoto.js"></script>
      <script src="JavasScripts/dicas.js"></script>
+     <script src="JavasScripts/dark.js"></script>
     <!-- Api de tradução-->
      <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
