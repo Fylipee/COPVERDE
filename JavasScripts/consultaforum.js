@@ -36,21 +36,25 @@ function addTopicsToScreen(topics) {
     const unorderedList = document.getElementById('topics');
     topics.forEach(topic => {       
         const li = document.createElement('li');
-            const titulo = document.createElement('h3');
-            titulo.innerHTML = topic.titulo; 
-            li.appendChild(titulo);
+        li.classList.add('topico');
 
-            const descricao = document.createElement('p');
-            descricao.innerHTML = topic.descricao;
-            li.appendChild(descricao);
+        const titulo = document.createElement('h3');
+        titulo.innerHTML = topic.titulo;
+        li.appendChild(titulo);
 
-            const tags = document.createElement('div');
-            tags.className = 'tags';        
-                const span = document.createElement('Span');
-                span.Classname = 'tag';
-                span.innerHTML = topic.tags;
-                li.appendChild(span);          
-            li.appendChild(tags);
+        const descricao = document.createElement('p');
+        descricao.innerHTML = topic.descricao;
+        li.appendChild(descricao);
+            
+        const tags = document.createElement('div');
+        tags.className = 'tags';
+            
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.innerHTML = topic.tags;
+        tags.appendChild(span);
+            
+        li.appendChild(tags);
         unorderedList.appendChild(li);
     })
 };

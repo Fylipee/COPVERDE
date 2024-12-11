@@ -50,33 +50,41 @@
         </div>
     </header>
 
-        <main class="headera">
+        <div class="headera">
             <h3>COMUNIDADE COPVERDE</h3>
-            <p>Bem-vindo ao CopVerde! Aqui, falamos sobre compostagem e como transformar resíduos orgânicos em adubo natural. <br> Participe, aprenda e contribua para um futuro mais sustentável!</p>
+            <p>Bem-vindo ao CopVerde! Aqui, falamos sobre compostagem e como transformar resíduos orgânicos em adubo natural. </p>
+            <p>Participe, aprenda e contribua para um futuro mais sustentável!</p>
             <div class="pesquisa">
                 <i onclick="alert('Ícone clicado!')" class="fa-solid fa-magnifying-glass"></i>
                 <input class="barra_pesquisa" type="text" placeholder="Pesquisar tópicos...">
-            </div>
+            </div>  
             <span class="traço"></span>
+        </div> 
         <!-- tags -->
         <sidebar class="tags">
 
         </sidebar>
 
-    <section class="topicos">
-                 <h2>Tópicos Recentes</h2> <!-- colocar quanto post tem no banco. -->
-                <ul id="topics"></ul> 
-    </section>
+        <div class="layout-forum">
+            <!-- Tópicos Recentes -->
+            <section class="topicos-recentes">
+                <h2>Tópicos Recentes</h2>
+                <ul id="topics">
+                    <!-- Os tópicos serão adicionados dinamicamente aqui -->
+                </ul>
+            </section>
+        </div>
+                
         <section class="novo-topico">
                 <h2>Criar Novo Tópico</h2>
-            <form>
+            <form class="forms">
                     <label class="labela" for="titulo">Título:</label>
                     <input type="text" id="titulo" name="titulo" required>
                     <label class="labela" for="descricao">Descrição:</label>
                     <textarea id="descricao" name="descricao" required></textarea>
                     <label class="labela" for="tags">Tags (separadas por vírgula):</label>
                     <input class="tagsname" type="text" id="tags" name="tags">
-                    <button type="button" onclick="cadastrarTopico()">Enviar</button>
+                    <button class="bbttn" type="button" onclick="cadastrarTopico()">Enviar</button>
             </form>
         </section>
  </main>
