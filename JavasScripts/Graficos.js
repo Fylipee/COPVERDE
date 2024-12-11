@@ -36,8 +36,6 @@ var data = [
 
 
 var layout = {
-  width: 500,
-  height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
   font: { color: "darkblue", family: "Arial" },
   paper_bgcolor: 'rgba(0, 0, 0, 0)',
@@ -51,7 +49,7 @@ var data = [
     type: "indicator",
     mode: "gauge+number+delta",
     value: temp,
-    title: { text: "temperatura", font: { size: 24 } },
+    title: { text: "Temperatura", font: { size: 24 } },
     delta: { reference: 50, increasing: { color: "RebeccaPurple" } },
     gauge: {
       axis: { range: [null, 80], tickwidth: 1, tickcolor: "darkblue" },
@@ -67,19 +65,12 @@ var data = [
         { range: [60, 65], color: "red" },
         { range: [70, 80], color: "black" }
       ],
-      // threshold: {
-      //   line: { color: "darkgreen", width: 4 },
-      //   thickness: 0.75,
-      //   value: 55
-      // }
     }
   }
 ]
 
 
 var layout = {
-  width: 500,
-  height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
   font: { color: "darkblue", family: "Arial" },
   paper_bgcolor: 'rgba(0, 0, 0, 0)',

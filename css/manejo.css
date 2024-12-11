@@ -67,6 +67,7 @@ section {
 .Graph {
   width: 43%;
   display: inline-block;
+  margin: 30px;
 }
 
 .gag {
@@ -321,5 +322,18 @@ input[type="tel"] {
 
   .form h2 {
       font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px){
+  .compostagem-actions{
+    padding: 0;
+    margin: 0;
+  }
+  .Graph{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }

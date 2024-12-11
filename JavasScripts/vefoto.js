@@ -1,4 +1,26 @@
 
+// Inicialize o Firebase e a autenticação
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(user => {
+    if (user) {
+        // Usuário está logado
+        const photoURL = user.photoURL; // Obtém a URL da foto do usuário
+        const profilePicture = document.getElementById('profilePicture');
+        profilePicture.classList.add('profile-picture')
+        if (photoURL) {
+            profilePicture.src = photoURL; // Define a URL da foto no elemento <img>
+            profilePicture.style.display = 'block'; // Exibe a imagem
+        } else {
+            profilePicture.src = 'assets/images/Fotos_pra_otimização/perfil.webp'; // URL padrão se não houver foto
+            profilePicture.style.display = 'block'; // Exibe a imagem padrão
+        }
+    } else {
+        // Usuário não está logado
+        console.log('Usuário não autenticado');
+    }
+});
+
 // Função para pré-visualizar a imagem localmente
 function previewImage(event) {
   const file = event.target.files[0]; 
