@@ -8,6 +8,16 @@ body.dark-mode a {
   color: #fff;
 }
 
+body.dark-mode section {
+  background-color:#121212;
+  color: #fff;
+}
+
+body.dark-mode button {
+  background-color:#121212;
+  color: #fff;
+}
+
 body {
   background-color: #eeeeee;
 }
