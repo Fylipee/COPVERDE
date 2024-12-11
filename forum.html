@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/navbar_pg.css">
     <!-- Icon do site -->
     <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
-    <title>Dicas e Guias</title>
+    <title>forum</title>
 </head>
 <body>  
     <header class="navbarmain">
@@ -50,26 +50,22 @@
         </div>
     </header>
 
-        <div class="headera">
-            <div class="barra-pesquisa">
-                <a><img class="perfil" src="assets/images/Fotos_pra_otimização/perfilforum.webp"></a>
-                <input type="text" placeholder="Pesquisar tópicos...">
-                <button type="submit" class="botao-buscar">
-                    <img class="lupa" src="assets/images/Fotos_pra_otimização/lupa.webp">
-                </button>
+        <main class="headera">
+            <h3>COMUNIDADE COPVERDE</h3>
+            <p>Bem-vindo ao CopVerde! Aqui, falamos sobre compostagem e como transformar resíduos orgânicos em adubo natural. <br> Participe, aprenda e contribua para um futuro mais sustentável!</p>
+            <div class="pesquisa">
+                <i onclick="alert('Ícone clicado!')" class="fa-solid fa-magnifying-glass"></i>
+                <input class="barra_pesquisa" type="text" placeholder="Pesquisar tópicos...">
             </div>
-        </div>
-<main class="maainha">
-            <div class="tags">
-                <span class="tag">Tag1</span>
-                <span class="tag">Tag2</span>
-                <span class="tag">Tag3</span>
-                <span class="tag">Tag4</span>
-                <span class="tag">Tag5</span>
-            </div>
+            <span class="traço"></span>
+        <!-- tags -->
+        <sidebar class="tags">
+
+        </sidebar>
+
     <section class="topicos">
-                <h2>Tópicos Recentes</h2>
-                <ul id="topics"></ul>
+                 <h2>Tópicos Recentes</h2> <!-- colocar quanto post tem no banco. -->
+                <ul id="topics"></ul> 
     </section>
         <section class="novo-topico">
                 <h2>Criar Novo Tópico</h2>

@@ -1,4 +1,4 @@
-body.dark-mode {
+  body.dark-mode {
     background-color:#121212;
     color: #fff;
   }
@@ -16,3 +16,79 @@ body.dark-mode {
     width: 50px;
     height: 50px;
   }
+
+  .headera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* / Barra de pesquisa / */
+  .pesquisa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid green; 
+    border-radius: 5px;
+  }
+
+  .pesquisa i {
+    position: absolute;
+    left: 1rem;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .barra_pesquisa {
+    width: 40rem;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    height: 2.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .barra_pesquisa:focus {
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .barra_pesquisa {
+      height: 2.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .pesquisa i {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pesquisa {
+      max-width: 90%;
+    }
+  
+    .barra_pesquisa {
+      padding-left: 2.5rem;
+    }
+  }
+
+  .traço {
+    display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: #000;
+      vertical-align: middle;
+      margin-top: 3px;
+  }
+
+ /* / Tags / */
+  .tags {
+
+  }
+
+  .tag {
+
+  }  
