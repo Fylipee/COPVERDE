@@ -49,7 +49,7 @@ var data = [
     type: "indicator",
     mode: "gauge+number+delta",
     value: temp,
-    title: { text: "temperatura", font: { size: 24 } },
+    title: { text: "Temperatura", font: { size: 24 } },
     delta: { reference: 50, increasing: { color: "RebeccaPurple" } },
     gauge: {
       axis: { range: [null, 80], tickwidth: 1, tickcolor: "darkblue" },
