@@ -67,11 +67,6 @@ var data = [
         { range: [60, 65], color: "red" },
         { range: [70, 80], color: "black" }
       ],
-      // threshold: {
-      //   line: { color: "darkgreen", width: 4 },
-      //   thickness: 0.75,
-      //   value: 55
-      // }
     }
   }
 ]
