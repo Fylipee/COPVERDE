@@ -316,8 +316,14 @@ input[type="tel"] {
 }
 
 @media (max-width: 1000px){
+  .compostagem-actions{
+    padding: 0;
+    margin: 0;
+  }
   .Graph{
     display: block;
-   
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
