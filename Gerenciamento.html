@@ -20,6 +20,10 @@
     <!-- Remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Icon -->
     <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
     <title>Gerenciamento - Minha Compostagem</title>
@@ -39,7 +43,7 @@
                 <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
-           <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+           <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.webp" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
            <button id="tema_site" class="tema_site"><i class="ri-moon-line"></i></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
@@ -77,7 +81,7 @@
                 <h2 class="gh2">Lembretes</h2>
                 <p>Configure seus lembretes para o gerenciamento de compostagem.</p>
                 <div class="lembretes-actions">
-                    <button onclick="openReminderModal()">Adicionar Lembrete</button>
+                    <button class="gag" onclick="openReminderModal()">Adicionar Lembrete</button>
                     <a class="gag" href="#">Ver Lembretes</a>
                 </div>
             </section>
@@ -99,10 +103,36 @@
                 <label for="reminderTime">Hora:</label>
                 <input type="time" id="reminderTime" name="reminderTime" required>
 
-                <button type="submit">Adicionar Lembrete</button>
+                <button  type="submit">Adicionar Lembrete</button>
             </form>
         </div>
     </div>
+
+    <footer>
+        <!-- Rodapé -->
+        <div class="footer-container">
+            <div class="logo">
+                <img src="assets/images/Fotos_pra_otimização/Logo.webp" alt="Logo CopVerde"> <!-- logo Rodapé -->
+            </div>
+
+            <div id="Redes" class="footer-content">
+                <h2>COPVERDE</h2>
+                <h6>Vida sustentável</h6>
+                <h6>SIGA NOSSAS REDE SOCIAIS:</h6>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/copve_rde/" target="_blank"><i class="fa-brands fa-instagram fa-xs"></i>Instagram</a> |
+                    <a href="#" target="_blank"><i class="fa-solid fa-envelope fa-xs"></i>E-mail</a> |
+                    <a href="https://www.youtube.com/@COPVERDE-Projeto" target="_blank"><i class="fa-brands fa-youtube fa-xs"></i></i>YouTube</a>
+                </div>
+            </div>
+            <h7 class="copyright">Integrantes: Alan Lopes, Bruno Coelho, Fylipe Costa, Lucas Souza</h7>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <h7>Copyright (c) 2024 CopVerde All Rights Reserved</h7>
+        </div>
+    </footer>
 
     <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">

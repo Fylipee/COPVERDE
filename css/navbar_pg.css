@@ -184,6 +184,26 @@ header {
     border-radius: 50%; 
     border: 2px solid #4CAF50;
     cursor: pointer;
+    background-color: #ffff;
+}
+
+.cffoto {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+  margin-top: 2px;
+  margin: auto;
+}
+
+.edit {
+  border: none;
+  background-color: transparent;
 }
 
 .form h2 {
@@ -229,21 +249,6 @@ input[type="tel"] {
   text-align: center;
 }
 
-.cffoto {
-  padding: 5px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 50%;
-  margin-top: 2px;
-  margin: auto;
-
-}
-
 .form-rowb button {
   padding: 10px;
   font-size: 16px;
@@ -275,11 +280,6 @@ input[type="tel"] {
   font-weight: 450;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.edit {
-  border: none;
-  border-radius: 25px;
 }
 
 @media (max-width: 600px) {
@@ -322,7 +322,7 @@ footer {
 .social-icons a {
   margin: 0 10px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 .social-icons a:hover {

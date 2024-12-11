@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-body.ligth-mode {
+body {
   background-color: #eeeeee;
   transition: background-color 0.3s, color 0.3s;
 }
