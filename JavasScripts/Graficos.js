@@ -14,7 +14,7 @@ var data = [
     title: { text: "Umidade %", font: { size: 24 } },
     delta: { reference: 55, increasing: { color: "RebeccaPurple" } },
     gauge: {
-      axis: { range: [null, 100], tickwidth: 1, tickcolor: "darkblue" },
+      axis: { range: [null, 99], tickwidth: 1, tickcolor: "darkblue" },
       bar: { color: "purple" }, 
       borderwidth: 2,
       bordercolor: "gray",
