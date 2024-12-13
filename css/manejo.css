@@ -68,6 +68,9 @@ section {
   width: 43%;
   display: inline-block;
   margin: 30px;
+  font-family: arial;
+  color: #387F39;
+  font-weight: 400;
 }
 
 .gag {
