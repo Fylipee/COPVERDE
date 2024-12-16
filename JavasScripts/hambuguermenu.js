@@ -23,27 +23,31 @@ document.addEventListener('click', function(event) {
   }
 });
 
-
 const cards = document.querySelectorAll('.compostagem');
 
 if (window.location.pathname === '/index.html') {
-cards.forEach(compostagem => {
-  const icon = compostagem.querySelector('.compostagem-title i');
-  
-  compostagem.addEventListener('click', () => {
-    // Alterna a classe 'expanded' no card;
-    compostagem.classList.toggle('expanded');
-
-    // Verifica se o card está expandido e troca o ícone;
-    if (compostagem.classList.contains('expanded')) {
+  cards.forEach(compostagem => {
+    const icon = compostagem.querySelector('.compostagem-title i');
+    // Função para alternar o ícone ao passar o mouse
+    const toggleIconOnHover = () => {
       icon.classList.remove('ri-add-line');
       icon.classList.add('ri-subtract-line');
-    } else {
+    };
+    // Função para restaurar o ícone quando o mouse sai
+    const restoreIconOnHoverOut = () => {
+      icon.classList.remove('ri-subtract-line');
+      icon.classList.add('ri-add-line');
+    };
+    // Adiciona os eventos de hover
+    compostagem.addEventListener('mouseenter', toggleIconOnHover);
+    compostagem.addEventListener('mouseleave', restoreIconOnHoverOut);
+    // Verifica o estado inicial do ícone ao carregar a página
+    if (!compostagem.classList.contains('expanded')) {
       icon.classList.remove('ri-subtract-line');
       icon.classList.add('ri-add-line');
     }
   });
-})};
+}
 
 const footer = document.querySelector('footer');
 const esconder = document.getElementById('tradutor');
