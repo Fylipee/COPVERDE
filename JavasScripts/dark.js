@@ -22,32 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-//animações index remover - - - - 
-if (window.location.pathname === '/index.html') {
-    window.onload = function() {
-        setTimeout(function() {
-            document.querySelector('.loading').style.display = 'none';
-        }, 1000);
-    }
-};
-
-if (window.location.pathname === '/index.html' || window.location.pathname === '/')
-    {
-        function handleIntersection(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }
-    
-        const observer = new IntersectionObserver(handleIntersection, {
-            threshold: 0.5
-        });
-    
-        document.querySelectorAll('.oquee h2, .oquee p, .textp li, .tracinho2').forEach(element => {
-            observer.observe(element);
-        });
-    }

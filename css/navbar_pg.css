@@ -14,27 +14,6 @@
   list-style: none;
 }
 
-.links a {
-  position: relative;
-  text-decoration: none;
-  padding-bottom: auto;
-}
-
-.links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: var(--amarelinho);
-  transition: width 0.3s ease;
-}
-
-.links a:hover::after {
-  width: 100%;
-}
-
 .dropdown_menu li {
   list-style: none;
 }
@@ -43,6 +22,10 @@ header a{
   text-decoration: none;
   color: var(--link_preto);
   font-size: 18px;
+}
+
+.links a:hover {
+  color: var(--amarelinho);
 }
 
 header {
@@ -334,27 +317,6 @@ footer {
 
 .social-icons i {
   padding: 5px;
-}
-
-.social-icons a {
-  position: relative;
-  text-decoration: none;
-  padding-bottom: auto;
-}
-
-.social-icons a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: var(--amarelinho);
-  transition: width 0.3s ease;
-}
-
-.social-icons a:hover::after {
-  width: 100%;
 }
 
 .social-icons a {
