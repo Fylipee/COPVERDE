@@ -56,9 +56,10 @@ async function getData() {
 
             // Criação da imagem;
             const img = document.createElement('img');
-            img.src = item.image;
+            img.dataset.src = item.image;  
             img.alt = item.title;
             img.classList.add('card_image');
+            img.loading = 'lazy';  
 
             cardLink.appendChild(img);
             Cards.appendChild(cardLink);
@@ -69,14 +70,30 @@ async function getData() {
                     cardLink.remove();
                 }, 300); 
             };
+
+            // Adicionando a animação ao card
+            setTimeout(() => {
+                cardLink.classList.add('show');
+            }, 50); 
+
+            
+            const loadImageWhenVisible = () => {
+                if (isElementInViewport(cardLink)) {
+                    img.src = img.dataset.src; 
+                    window.removeEventListener('scroll', loadImageWhenVisible);  
+                }
+            };
+
+            window.addEventListener('scroll', loadImageWhenVisible); 
+            loadImageWhenVisible();
         });
     } catch (error) {
         console.error(error.message);
         if (error.message.includes("403")) {
             attempts++; // Incrementa o contador de tentativas;
             if (attempts < 6) {
-                console.log(`Tentativa ${attempts}: Trocando pra outra chave`) //monitoramento das chaves;
-                getData(); // Tenta novamente com uma chave diferente;
+                console.log(`Tentativa ${attempts}: Trocando pra outra chave`)
+                getData();
             } else {
                 alert("Todas as chaves de API falharam. Por favor, verifique as chaves.");
             }
@@ -86,7 +103,17 @@ async function getData() {
     }
 }
 
-//escabilidade fica pra próxima...
+// Função para verificar se um elemento está visível na tela
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 function pegachave() {
     if (attempts === 0) return API_KEY;
     if (attempts === 1) return API_KEY2;
