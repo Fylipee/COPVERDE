@@ -40,6 +40,14 @@ body.dark-mode a {
   border-top-left-radius: 15px;
   transition: ease;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
 @media (max-width: 576px) {
@@ -475,7 +483,7 @@ body.dark-mode a {
 
 /* /------------------------------/ */
 
-.loading {
+/* .loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -500,7 +508,7 @@ body.dark-mode a {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 
 @keyframes typing {
   0% { width: 0; }

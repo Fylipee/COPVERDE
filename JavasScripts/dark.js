@@ -51,3 +51,39 @@ if (window.location.pathname === '/index.html' || window.location.pathname === '
             observer.observe(element);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (window.location.pathname.includes('DicasEGuias.html')) {
+            // Função para adicionar a classe de animação
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+            // Criação do observador
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5
+            });
+    
+            // Seletor do botão
+            const button = document.querySelector('#bntt');
+            if (button) {
+                observer.observe(button);
+            }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verifica se a página é a index.html
+        if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+          const hero = document.querySelector('.hero');
+          
+          // Adiciona a classe 'parallax' ao hero para aplicar o efeito
+          if (hero) {
+            hero.classList.add('parallax');
+          }
+        }
+      });
