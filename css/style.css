@@ -39,6 +39,15 @@ body.dark-mode a {
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   transition: ease;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
 @media (max-width: 576px) {
@@ -429,3 +438,105 @@ body.dark-mode a {
 }
 
 /* /------------------------------/ */
+
+/* .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading .spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--span_hero);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação de deslizamento e fade-in para os títulos */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para as listas */
+@keyframes slideInList {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe para ativar as animações */
+.animate {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 1;
+}
+
+/* Aplica animação nas listas */
+.textp li.animate {
+  animation: slideInList 1s ease-out forwards;
+  opacity: 1;
+  animation-delay: 1s;
+}
+
+/* Aplica animação nas spans dentro das listas */
+.spane {
+  font-weight: bold;
+  font-style: italic;
+  color: #DDA77B;
+  animation: slideIn 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+/* Efeito de linha (tracinho) */
+.tracinho.animate {
+  width: 82px;
+  height: 1.1px;
+  background-color: #DDA77B;
+  padding: 6px;
+  margin: 8px 0;
+  opacity: 1;
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 2s;
+}
