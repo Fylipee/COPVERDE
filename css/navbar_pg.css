@@ -90,30 +90,45 @@ header {
   scale: 0.95;
 }
 
-  /* ITEMS MENU */
+/* Menu Dropdown */
 .dropdown_menu {
   position: absolute;
-  right: 2rem;
-  height: 0;
+  right: 0;
   top: 60px;
-  width: 280px;
+  width: 100%;
   background: #fff;
   backdrop-filter: blur(15px);
-  border-radius: 10px;
   overflow: hidden;
-  transition: heigth cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(-4px);
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  height: 0;
 }
 
+.dropdown_menu.dark-mode {
+  background-color: #121212;
+}
+
+/* Menu aberto */
 .dropdown_menu.open {
   height: 160px;
+  opacity: 1;
   z-index: 1;
+  transform: translateY(0);
 }
 
+/* Itens do Menu */
 .dropdown_menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.dropdown_menu.dark-mode li {
+  color: white;
 }
 
 .dropdown_menu .action_bnt {
@@ -135,13 +150,6 @@ header {
 
   .dropdown_menu {
     display: block;
-  }
-}
-
-@media (max-width: 576px) {
-  .dropdown_menu {
-    left: 2rem;
-    width: unset;
   }
 }
 
@@ -175,15 +183,6 @@ header {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-.profile-picture {
-    display: none;
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    border: 2px solid #4CAF50;
-    cursor: pointer;
 }
 
 .form h2 {
@@ -241,7 +240,6 @@ input[type="tel"] {
   width: 50%;
   margin-top: 2px;
   margin: auto;
-
 }
 
 .form-rowb button {
@@ -277,18 +275,42 @@ input[type="tel"] {
   margin-bottom: 20px;
 }
 
+.profile-picture {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  background-color: white;
+}
+
 .edit {
   border: none;
+  background: none;
   border-radius: 25px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.edit:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 @media (max-width: 600px) {
   .modal-content {
       width: 90%;
   }
-
   .form h2 {
-      font-size: 20px;
+    font-size: 20px;
+  }
+  .profile-picture {
+    margin-left: 20px;
+    box-shadow: none;
+  }
+  .edit {
+    background-color: transparent;
   }
 }
 /* <--> */
@@ -346,6 +368,7 @@ footer {
 .tema_site {
   border: none;
   background-color: transparent;
-  margin-left: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
   font-size: 20px;
 }

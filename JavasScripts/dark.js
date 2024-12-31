@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById("tema_site");
-    const icon = button.querySelector("i");
+    const iconremix = button.querySelector("i");
+    const toggleBntIcon = document.querySelector('.toggle_bnt i');
     const body = document.body;
     const fundoMd = document.getElementById("modal-content");
+    const dropdownMenu = document.querySelector('.dropdown_menu');
 
     button.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
+        dropdownMenu.classList.toggle("dark-mode");
 
         // Transições suaves
         body.style.transition = "background-color 1s, color 1s";
@@ -13,12 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (body.classList.contains("dark-mode")) {
             fundoMd.style.backgroundColor = 'black';
-            icon.classList.replace('ri-moon-line', 'ri-sun-fill');
-            icon.style.color = 'white';
+            iconremix.classList.replace('ri-moon-line', 'ri-sun-fill');
+            iconremix.style.color = 'white';
+            toggleBntIcon.style.color = 'white';
         } else {
             fundoMd.style.backgroundColor = '#eeeeee';
-            icon.classList.replace('ri-sun-fill', 'ri-moon-line');
-            icon.style.color = 'black';
+            iconremix.classList.replace('ri-sun-fill', 'ri-moon-line');
+            iconremix.style.color = 'black';
+            toggleBntIcon.style.color = 'black';
         }
     });
 });
