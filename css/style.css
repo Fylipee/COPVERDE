@@ -38,10 +38,10 @@ body.dark-mode a {
   background-position: center;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
-  transition: ease;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  transition: background-position 0.3s ease;
 }
 
 .hero.parallax {
@@ -50,9 +50,9 @@ body.dark-mode a {
   background-size: cover;
 }
 
-@media (max-width: 576px) {
-  .hero {
-   background-image: url(../assets/images/Fotos_pra_otimização/Imagem_site.webp);
+@media (max-width: 768px) {
+  .hero.parallax {
+    background-attachment: scroll;
   }
 }
 
@@ -242,7 +242,7 @@ body.dark-mode a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .dropdown {
@@ -260,7 +260,7 @@ body.dark-mode a {
   text-align: center;
   margin: auto;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -359,8 +359,8 @@ body.dark-mode a {
 }
 
 .card_image {
-  max-width: 500px; 
-  margin-left: 15px; 
+  max-width: 450px; 
+  margin-left: 50px; 
 }
 
 .cards_item {

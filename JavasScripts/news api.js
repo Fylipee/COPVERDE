@@ -1,9 +1,9 @@
-const API_KEY = "fac887160d7fdceea35ae023029c348c"; //* Chave 1;
-const API_KEY2 = "7e806a0d5f1aa9306dd4ea22b741923e"; //* Chave 2;
-const API_KEY3 = "7afb3a834857e3d31a8a2f33cfe48d9c"; //* Chave 3;
-const API_KEY4 = "5d67c65eab96a678f0d648136f613966"; //* Chave 4;
-const API_KEY5 = "05d5bff0264675462b8f08b43d6e8ec6"; //* Chave 5;
-const API_KEY6 = "07bc4af133a5c0f3de0e1642cc3259f2"; //* Chave 6;
+const API_KEY = "fac887160d7fdceea35ae023029c348c" ; // Chave 1;
+const API_KEY2 = "7e806a0d5f1aa9306dd4ea22b741923e"; // Chave 2;
+const API_KEY3 = "7afb3a834857e3d31a8a2f33cfe48d9c"; // Chave 3;
+const API_KEY4 = "5d67c65eab96a678f0d648136f613966"; // Chave 4;
+const API_KEY5 = "05d5bff0264675462b8f08b43d6e8ec6"; // Chave 5;
+const API_KEY6 = "07bc4af133a5c0f3de0e1642cc3259f2"; // Chave 6;
 
 const url1 = 'https://gnews.io/api/v4/search?q=Compostagem&lang=pt&country=br&max=9&apikey=';
 const url2 = 'https://gnews.io/api/v4/search?q=Sustentabilidade&lang=pt&country=br&max=9&apikey=';
@@ -61,6 +61,7 @@ async function getData() {
             img.src = item.image;
             img.alt = item.title;
             img.classList.add('card_image');
+            img.loading = 'lazy';
 
             cardLink.appendChild(img);
             Cards.appendChild(cardLink);

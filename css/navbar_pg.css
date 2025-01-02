@@ -18,14 +18,25 @@
   list-style: none;
 }
 
-header a{
+.links a {
+  position: relative;
+  color: inherit;
   text-decoration: none;
-  color: var(--link_preto);
-  font-size: 18px;
 }
 
-.links a:hover {
-  color: var(--amarelinho);
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--amarelinho);
+  transition: width 0.5s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
 }
 
 header {
@@ -48,6 +59,8 @@ header {
 .navbar .logo a {
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--link_preto);
 }
 
 .navbar .links {
@@ -153,7 +166,7 @@ header {
   }
 }
 
- /* Style do modal */
+ /* Style do modal form do perfil */
 .modal-content {
   margin: 10% auto;
   padding: 20px;
@@ -313,7 +326,6 @@ input[type="tel"] {
     background-color: transparent;
   }
 }
-/* <--> */
 
 /* Rodapé */
 footer {
@@ -342,14 +354,25 @@ footer {
 }
 
 .social-icons a {
+  position: relative;
   margin: 0 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
-.social-icons a:hover {
-  text-decoration: none;
-  color: var(--amarelinho);
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--amarelinho);
+  transition: width 0.5s ease;
+}
+
+.social-icons a:hover::before {
+  width: 100%;
 }
 
 .copyright {
