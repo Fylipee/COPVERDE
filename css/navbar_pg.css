@@ -60,7 +60,11 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--link_preto);
+  color: black;
+}
+
+.logo.dark-mode a {
+  color: #fff;
 }
 
 .navbar .links {

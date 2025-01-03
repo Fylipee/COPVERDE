@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const fundoMd = document.getElementById("modal-content");
     const dropdownMenu = document.querySelector('.dropdown_menu');
+    const linkLogo = document.querySelector('.navbar .logo a');
 
     button.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
@@ -19,11 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
             iconremix.classList.replace('ri-moon-line', 'ri-sun-fill');
             iconremix.style.color = 'white';
             toggleBntIcon.style.color = 'white';
+            linkLogo.style.color = 'white';
         } else {
             fundoMd.style.backgroundColor = '#eeeeee';
             iconremix.classList.replace('ri-sun-fill', 'ri-moon-line');
             iconremix.style.color = 'black';
             toggleBntIcon.style.color = 'black';
+            linkLogo.style.color = 'black';
         }
     });
 });
