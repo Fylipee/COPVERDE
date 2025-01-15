@@ -1,16 +1,13 @@
+/* Estilo geral */
 body.dark-mode {
-    background-color:#121212;
+    background-color: #121212;
     color: #fff;
-  }
-  
-  body.dark-mode a {
-    background-color:#121212;
+}
+
+body.dark-mode a {
+    background-color: #121212;
     color: #fff;
-  }
-  
-  body {
-    background-color: #eeeeee;
-  }
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -19,6 +16,7 @@ body {
     background-color: #eeeeee;
 }
 
+/* Estilo do header */
 .headera {
     background: #3b8b3a;
     padding: 15px 0;
@@ -32,26 +30,26 @@ body {
     justify-content: center;
     margin: 10px auto;
     max-width: 900px;
-    order:3;
+    order: 3;
 }
 
 .barra-pesquisa input[type="text"] {
     background-color: #BEDC74;
     border-color: #BEDC74;
     padding: 10px;
-    width: 60%; 
-    border-radius: 9px;  
+    width: 60%;
+    border-radius: 9px;
 }
 
-.perfil img{
+.perfil img {
     width: 40px;
     margin-right: 20px;
     margin-bottom: 5px;
-    order:2;  
+    order: 2;
 }
 
 .lupa {
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .barra-pesquisa .botao-buscar {
@@ -65,33 +63,37 @@ body {
     margin-left: 10px;
     margin-bottom: 5px;
     transition: color 0.3s;
-    order:4;
+    order: 4;
 }
 
 .barra-pesquisa .botao-buscar:hover {
     color: #f0f4f0;
 }
 
-.tags {
-    text-align: center;
-    margin: 20px 0;
+/* Estilo das tags no header */
+.tags-container {
+    display: flex; /* Alinha as tags horizontalmente à esquerda */
+    flex-wrap: wrap; /* Permite que as tags se movam para a próxima linha se não couberem */
+    margin-top: 10px; /* Espaço entre a barra de pesquisa e as tags */
+    justify-content: center; /* Pode ser alterado para 'flex-start' se quiser alinhar à esquerda */
+    gap: 10px; /* Adiciona espaçamento entre as tags */
 }
 
 .tag {
-    display: inline-block;
     background: #D4E4D7;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 15px;
-    margin-right: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    white-space: nowrap; /* Garante que as tags não quebrem em várias linhas */
 }
 
 .tag:hover {
     background: #3b8b3a;
 }
 
+/* Estilo do conteúdo principal */
 .maainha {
     padding: 20px;
     max-width: 800px;
@@ -150,7 +152,6 @@ body {
     display: block;
     margin: 10px 0 5px;
     color: #333;
-    height: 100%;
 }
 
 .tagsname, textarea {
