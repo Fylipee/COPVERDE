@@ -18,9 +18,11 @@ function addTopicsToScreen(topics) {
     const unorderedList = document.getElementById('topics');
     topics.forEach(topic => {       
         const li = document.createElement('li');
+        li.classList.add('discursao-container')
 
         const titulo = document.createElement('h3');
         titulo.innerHTML = topic.titulo;
+        titulo.classList.add('discursao-title')
         li.appendChild(titulo);
 
         const descricao = document.createElement('p');
