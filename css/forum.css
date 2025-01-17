@@ -16,162 +16,185 @@ body {
     background-color: #eeeeee;
 }
 
-/* Estilo do header */
-.headera {
-    background: #3b8b3a;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.barra-pesquisa {
+/* tags */
+.conteiner {
     display: flex;
+    justify-content: end;
     align-items: center;
-    justify-content: center;
-    margin: 10px auto;
-    max-width: 900px;
-    order: 3;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.barra-pesquisa input[type="text"] {
-    background-color: #BEDC74;
-    border-color: #BEDC74;
+.subconteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subconteiner span {
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color:rgba(16, 72, 16, 0.355);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.subconteiner span:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .conteiner {
+        padding: 10px;
+    }
+
+    .subconteiner span {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* botão do topico */
+.new-topic {
+    font-size: 17px;
+    padding: 8px 12px;
+    color: rgb(33, 32, 32);
+    background-color: #eeeeee;
+    border:2px solid #555858;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.new-topic:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    width: 60%;
-    border-radius: 9px;
 }
 
-.perfil img {
-    width: 40px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    order: 2;
+.info h2 {
+    margin: 0;
+    font-weight: 600;
 }
 
-.lupa {
-    background-color: transparent;
+@media (max-width: 600px) {
+    .info h2 {
+        font-size: 20px;
+    }
+    .new-topic {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }
 
-.barra-pesquisa .botao-buscar {
-    max-width: 50px;
-    max-height: 50px;
-    padding: 8px;
-    color: #3b8b3a;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    transition: color 0.3s;
-    order: 4;
-}
+  
 
-.barra-pesquisa .botao-buscar:hover {
-    color: #f0f4f0;
-}
-
-/* Estilo das tags no header */
-.tags-container {
-    display: flex; /* Alinha as tags horizontalmente à esquerda */
-    flex-wrap: wrap; /* Permite que as tags se movam para a próxima linha se não couberem */
-    margin-top: 10px; /* Espaço entre a barra de pesquisa e as tags */
-    justify-content: center; /* Pode ser alterado para 'flex-start' se quiser alinhar à esquerda */
-    gap: 10px; /* Adiciona espaçamento entre as tags */
-}
-
-.tag {
-    background: #D4E4D7;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-    white-space: nowrap; /* Garante que as tags não quebrem em várias linhas */
-}
-
-.tag:hover {
-    background: #3b8b3a;
-}
 
 /* Estilo do conteúdo principal */
-.maainha {
+
+.discursao-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#topicos {
-    margin-bottom: 20px;
-}
-
-#topicos h2, .novo-topico h2 {
-    color: #3b8b3a;
-}
-
-#topics {
-    list-style-type: none;
-    padding: 0;
-}
-
-#topics li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-#topics li h3 {
-    margin: 0 0 5px;
-    color: #3b8b3a;
-}
-
-#topics li a {
-    color: #3b8b3a;
-    text-decoration: none;
-}
-
-#topics li a:hover {
-    text-decoration: underline;
-}
-
-#topics li .tags {
-    margin-top: 10px;
-}
-
-.novo-topico form {
-    background: #ffffff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.labela {
-    display: block;
-    margin: 10px 0 5px;
+.discursao-title {
+    font-size: 20px;
+    font-weight: bold;
     color: #333;
+    margin-bottom: 15px;
 }
 
-.tagsname, textarea {
+.topicos ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
-
-.novo-topico button {
-    background: #3b8b3a;
-    color: #ffffff;
-    padding: 10px 15px;
+.modal-contento {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
+}
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-bottom: 2px;
+}
+.fechar_modal {
+    color: #aaa;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: none;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    width: 100%;
+    left: 10px;
+}
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+.modal label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.modal input, .modal button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.buttonn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.buttonn:hover {
+    background-color: #45a049;
 }
 
-.novo-topico button:hover {
-    background: #66c46f;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

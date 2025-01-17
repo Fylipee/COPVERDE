@@ -65,31 +65,44 @@
                 </button>
             </div>
         </div>
-<main class="maainha">
-            <div class="tags">
-                <span class="tag">Vermicompostagem</span>
-                <span class="tag">Leiras</span>
-                <span class="tag">tag3</span>
-                <span class="tag">Tag4</span>
-                <span class="tag">Tag5</span>
+
+        <main class="principal">
+            <div class="conteiner">
+                <div class="subconteiner">
+                    <span>Compostagem Doméstica</span>
+                    <span>Dicas De Compostagem</span>
+                    <span>Redução De Resíduos</span>
+                    <span>Adubo Orgânico</span>
+                    <span>Sustentabilidade</span>
+                </div>
             </div>
-            <section class="topicos">
-                <h2>Tópicos Recentes</h2>
-                <ul id="topics"></ul> <!-- Aqui é onde os tópicos serão exibidos -->
-            </section>            
-        <section class="novo-topico">
-                <h2>Criar Novo Tópico</h2>
-            <form>
-                    <label class="labela" for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="titulo" required>
-                    <label class="labela" for="descricao">Descrição:</label>
-                    <textarea id="descricao" name="descricao" required></textarea>
-                    <label class="labela" for="tags">Tags (separadas por vírgula):</label>
-                    <input class="tagsname" type="text" id="tags" name="tags">
-                    <button type="button" onclick="cadastrarTopico()">Enviar</button>
-            </form>
-        </section>
- </main>
+    
+                <div class="topicos">
+                    <div class="info">
+                    <h2>Tópicos Recentes</h2>
+                    <button class="new-topic" onclick="openModalf()">Criar Novo Tópico</button>
+                    </div>
+                    <ul id="topics"></ul>
+                </div>
+                
+            <!-- Modal criação do topico -->
+                <div class="modal" id="newTopicModal">
+                    <div class="modal-contento">
+                        <span class="fechar_modal" onclick="closeModalf()"><i class="ri-close-line"></i></span>
+                        <div class="modal-header">Criar Novo Tópico</div>
+                        <form>
+                            <label for="titulo">Título:</label>
+                            <input type="text" id="titulo" name="titulo" required>
+                            <label for="descricao">Descrição:</label>
+                            <input id="descricao" name="descricao" required></input>
+                            <label for="tags">Tags (separadas por vírgula):</label>
+                            <input type="text" id="tags" name="tags">
+                            <button class="buttonn" type="button" onclick="createTopic()">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+     </main>
+     
      <footer>
             <!-- Rodapé -->
             <div class="footer-container">
