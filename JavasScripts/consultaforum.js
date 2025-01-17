@@ -122,3 +122,12 @@ function filterByTag(tag) {
 
 // Inicializar a busca pelos tópicos ao carregar a página
 findTopic();
+
+
+function openModalf() {
+    document.getElementById('newTopicModal').style.display = 'flex';
+}
+
+function closeModalf() {
+    document.getElementById('newTopicModal').style.display = 'none';
+}
