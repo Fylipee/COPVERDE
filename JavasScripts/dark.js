@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fundoMd.style.transition = "background-color 1s, color 1s";
 
         if (body.classList.contains("dark-mode")) {
-            fundoMd.style.backgroundColor = 'black';
+            fundoMd.style.backgroundColor = '#121212';
             iconremix.classList.replace('ri-moon-line', 'ri-sun-fill');
             iconremix.style.color = 'white';
             toggleBntIcon.style.color = 'white';

@@ -21,13 +21,13 @@ body.ligth-mode {
 
 body.dark-mode {
   background-color:#121212;
-  color: #fff;
+  color: #E0E0E0;
   transition: background-color 1s, color 1s;
 }
 
 body.dark-mode a {
   background-color:#121212;
-  color: #fff;
+  color: #E0E0E0;
   transition: background-color 1s, color 1s;
 }
 
