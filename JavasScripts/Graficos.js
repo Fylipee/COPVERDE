@@ -36,8 +36,6 @@ var data = [
 
 
 var layout = {
-  width: 500,
-  height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
   font: { color: "darkblue", family: "Arial" },
   paper_bgcolor: 'rgba(0, 0, 0, 0)',
@@ -78,8 +76,6 @@ var data = [
 
 
 var layout = {
-  width: 500,
-  height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
   font: { color: "darkblue", family: "Arial" },
   paper_bgcolor: 'rgba(0, 0, 0, 0)',

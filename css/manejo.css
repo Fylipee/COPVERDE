@@ -305,11 +305,24 @@ input[type="tel"] {
 }
 
 @media (max-width: 600px) {
+  .compostagem-actions{
+    padding: 0;
+    margin: 0;
+  }
+
   .modal-content {
       width: 90%;
   }
 
   .form h2 {
       font-size: 20px;
+  }
+
+  .Graph{
+    display: block;
+   
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
