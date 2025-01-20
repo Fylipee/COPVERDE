@@ -18,32 +18,52 @@ function addTopicsToScreen(topics) {
     const unorderedList = document.getElementById('topics');
     topics.forEach(topic => {       
         const li = document.createElement('li');
-        li.classList.add('discursao-container')
+        li.classList.add('discursao-container');
 
         const titulo = document.createElement('h3');
         titulo.innerHTML = topic.titulo;
-        titulo.classList.add('discursao-title')
+        titulo.classList.add('discursao-title');
         li.appendChild(titulo);
 
         const descricao = document.createElement('p');
         descricao.innerHTML = topic.descricao;
         li.appendChild(descricao);
 
-        const tags = document.createElement('div');
-        tags.className = 'tags';
+        const metadataContainer = document.createElement('div');
+        metadataContainer.classList.add('metadata-container');
 
-        // Dividir as tags e criar um span para cada uma
+        const tagsContainer = document.createElement('div');
+        tagsContainer.classList.add('tags-container');
+
         topic.tags.split(',').forEach(tag => {
             const span = document.createElement('span');
             span.className = 'tag';
             span.innerHTML = tag.trim();  // Remover espaços extras
-            tags.appendChild(span);
+            tagsContainer.appendChild(span);  
         });
+        metadataContainer.appendChild(tagsContainer);
 
-        li.appendChild(tags);
+        const userInfoContainer = document.createElement('div');
+        userInfoContainer.classList.add('user-info-container');
+
+        const nomeuser = document.createElement('span');
+        nomeuser.innerHTML = "user";
+        userInfoContainer.appendChild(nomeuser);
+
+        const iconcoversation = document.createElement('i');
+        iconcoversation.classList.add('ri-chat-3-line');
+        userInfoContainer.appendChild(iconcoversation);
+
+        const tempopostagem = document.createElement('span');
+        tempopostagem.innerHTML = "14:45pm";
+        userInfoContainer.appendChild(tempopostagem);
+
+        metadataContainer.appendChild(userInfoContainer);
+
+        li.appendChild(metadataContainer);
         unorderedList.appendChild(li);
     });
-};
+}
 
 function cadastrarTopico() {
     const topic = createTopic();
@@ -74,50 +94,50 @@ const form = {
     tags: () => document.getElementById('tags')
 };
 
-function displayTags() {
-    firebase.firestore()
-        .collection('topicos_forum')
-        .get()
-        .then(snapshot => {
-            const allTags = new Set();  // Usamos Set para evitar duplicação de tags
-            snapshot.docs.forEach(doc => {
-                const tags = doc.data().tags;  // Supondo que 'tags' seja um array
-                tags.forEach(tag => allTags.add(tag));
-            });
+// function displayTags() {
+//     firebase.firestore()
+//         .collection('topicos_forum')
+//         .get()
+//         .then(snapshot => {
+//             const allTags = new Set();  // Usamos Set para evitar duplicação de tags
+//             snapshot.docs.forEach(doc => {
+//                 const tags = doc.data().tags;  // Supondo que 'tags' seja um array
+//                 tags.forEach(tag => allTags.add(tag));
+//             });
 
-            const tagsContainer = document.getElementById('tagsContainer');
-            allTags.forEach(tag => {
-                const tagElement = document.createElement('span');
-                tagElement.className = 'tag';
-                tagElement.textContent = tag;
-                tagElement.onclick = () => filterByTag(tag);  // Filtra ao clicar na tag
-                tagsContainer.appendChild(tagElement);
-            });
-        })
-        .catch(error => {
-            console.error("Erro ao carregar tags: ", error);
-        });
-}
+//             const tagsContainer = document.getElementById('tagsContainer');
+//             allTags.forEach(tag => {
+//                 const tagElement = document.createElement('span');
+//                 // tagElement.className = 'tag';
+//                 tagElement.textContent = tag;
+//                 tagElement.onclick = () => filterByTag(tag);  // Filtra ao clicar na tag
+//                 tagsContainer.appendChild(tagElement);
+//             });
+//         })
+//         .catch(error => {
+//             console.error("Erro ao carregar tags: ", error);
+//         });
+// }
 
-window.onload = function() {
-    displayTags();  // Carregar as tags ao carregar a página
-    findTopic();    // Carregar os tópicos
-};
+// window.onload = function() {
+//     displayTags();  // Carregar as tags ao carregar a página
+//     findTopic();    // Carregar os tópicos
+// };
 
-function filterByTag(tag) {
-    firebase.firestore()
-        .collection('topicos_forum')
-        .where('tags', 'array-contains', tag)  // Filtra tópicos com essa tag
-        .get()
-        .then(snapshot => {
-            const topics = snapshot.docs.map(doc => doc.data());
-            cleanTopicsFromScreen();
-            addTopicsToScreen(topics);
-        })
-        .catch(error => {
-            console.error("Erro ao filtrar tópicos: ", error);
-        });
-}
+// function filterByTag(tag) {
+//     firebase.firestore()
+//         .collection('topicos_forum')
+//         .where('tags', 'array-contains', tag)  // Filtra tópicos com essa tag
+//         .get()
+//         .then(snapshot => {
+//             const topics = snapshot.docs.map(doc => doc.data());
+//             cleanTopicsFromScreen();
+//             addTopicsToScreen(topics);
+//         })
+//         .catch(error => {
+//             console.error("Erro ao filtrar tópicos: ", error);
+//         });
+// }
 
 
 // Inicializar a busca pelos tópicos ao carregar a página
