@@ -35,8 +35,9 @@ function checkUserAndSaveProfile() {
       const nameElement = document.getElementById("name");
       const phoneElement = document.getElementById("phone");
       const localElement = document.getElementById("local");
+      const fotoElement = document.getElementById("FtPerfil");
 
-      if (!nameElement || !phoneElement || !localElement) {
+      if (!nameElement || !phoneElement || !localElement || !fotoElement) {
         alert("Erro: Campos do formulário não encontrados!");
         return;
       }
@@ -44,8 +45,9 @@ function checkUserAndSaveProfile() {
       const name = nameElement.value || "Nome não informado";
       const phone = phoneElement.value || "Sem telefone";
       const local = localElement.value || "Sem localização";
+      const foto = fotoElement.value || "Sem escolha";
 
-      saveOrUpdateUserProfile(user, { name, phone, local});
+      saveOrUpdateUserProfile(user, { name, phone, local, foto});
     } else {
       console.log('houve algum erro' + error)
     }

@@ -51,7 +51,7 @@
                 <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
             </ul>
             <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
-            <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfil.webp" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
+            <button onclick="openModal()" class="edit"><img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture"></button>
            <button id="tema_site" class="tema_site"><i class="ri-moon-line"></i></button>
             <div class="toggle_bnt">
                 <i class="fa-solid fa-bars"></i>
@@ -218,8 +218,16 @@
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Editar Perfil</h2>
           <form id="editProfileForm" class="Form">
-            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
-            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button>
+            <!-- <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button> -->
+            <img src="assets/images/Fotos_pra_otimização/perfilforum.png" alt="Foto de Perfil" id="profilePicture" class="profile-picture">
+            <select id="FtPerfil">
+                <option id="Alface" class="foto" value="Alface">Alface</option>
+                <option id="Batata" class="foto" value="Batata">Batata</option>
+                <option id="Cebola" class="foto" value="Cebola">Cebola</option>
+                <option id="Cenoura" class="foto" value="Cenoura">Cenoura</option>
+                <option id="Tomate" class="foto" value="Tomate">Tomate</option>
+            </select>
             <p id="email_user"></p>
             <div class="form-row">
               <label for="name">Nome:</label>
