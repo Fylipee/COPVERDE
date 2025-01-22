@@ -38,8 +38,21 @@ function addTopicsToScreen(topics) {
         topic.tags.split(',').forEach(tag => {
             const span = document.createElement('span');
             span.className = 'tag';
-            span.innerHTML = tag.trim();  // Remover espaços extras
-            tagsContainer.appendChild(span);  
+            span.innerHTML = tag.trim();
+            tagsContainer.appendChild(span);
+            
+            // Dentro da função addTopicsToScreen ou onde você for exibir o nome do usuário:
+        firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+        // Se o usuário estiver logado
+        nomeuser.innerHTML = user.displayName || user.email;  // Usa o nome de exibição ou e-mail
+        } else {
+        // Caso o usuário não esteja logado
+       
+        nomeuser.innerHTML = "Visitante";  // Exibe "Visitante" caso o usuário não esteja logado
+        userInfoContainer.appendChild(nomeuser);
+        }
+        });
         });
         metadataContainer.appendChild(tagsContainer);
 
@@ -84,7 +97,9 @@ function createTopic() {
     return {
         titulo: form.titulo().value,
         descricao: form.descricao().value,
-        tags: form.tags().value
+        tags: form.tags().value,
+        userId: user.uid,
+        createdAt: firebase.firestore.fieldValue.serverTimeStamp()
     };
 };
 
@@ -92,57 +107,9 @@ const form = {
     titulo: () => document.getElementById('titulo'),
     descricao: () => document.getElementById('descricao'),
     tags: () => document.getElementById('tags')
+    
+    
 };
-
-// function displayTags() {
-//     firebase.firestore()
-//         .collection('topicos_forum')
-//         .get()
-//         .then(snapshot => {
-//             const allTags = new Set();  // Usamos Set para evitar duplicação de tags
-//             snapshot.docs.forEach(doc => {
-//                 const tags = doc.data().tags;  // Supondo que 'tags' seja um array
-//                 tags.forEach(tag => allTags.add(tag));
-//             });
-
-//             const tagsContainer = document.getElementById('tagsContainer');
-//             allTags.forEach(tag => {
-//                 const tagElement = document.createElement('span');
-//                 // tagElement.className = 'tag';
-//                 tagElement.textContent = tag;
-//                 tagElement.onclick = () => filterByTag(tag);  // Filtra ao clicar na tag
-//                 tagsContainer.appendChild(tagElement);
-//             });
-//         })
-//         .catch(error => {
-//             console.error("Erro ao carregar tags: ", error);
-//         });
-// }
-
-// window.onload = function() {
-//     displayTags();  // Carregar as tags ao carregar a página
-//     findTopic();    // Carregar os tópicos
-// };
-
-// function filterByTag(tag) {
-//     firebase.firestore()
-//         .collection('topicos_forum')
-//         .where('tags', 'array-contains', tag)  // Filtra tópicos com essa tag
-//         .get()
-//         .then(snapshot => {
-//             const topics = snapshot.docs.map(doc => doc.data());
-//             cleanTopicsFromScreen();
-//             addTopicsToScreen(topics);
-//         })
-//         .catch(error => {
-//             console.error("Erro ao filtrar tópicos: ", error);
-//         });
-// }
-
-
-// Inicializar a busca pelos tópicos ao carregar a página
-findTopic();
-
 
 function openModalf() {
     document.getElementById('newTopicModal').style.display = 'flex';
@@ -151,3 +118,5 @@ function openModalf() {
 function closeModalf() {
     document.getElementById('newTopicModal').style.display = 'none';
 }
+
+findTopic();

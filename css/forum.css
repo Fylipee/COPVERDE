@@ -265,10 +265,13 @@ body {
 }
 
 .tag {
-    background-color: #e0e0e0;
+    background-color: #198754;
     padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:#eeeeee
 }
 
 .user-info-container {
