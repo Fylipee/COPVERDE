@@ -69,49 +69,24 @@
 
         <main>
             <section class="compostagem">
-                <h2 class="gh2">Gerenciamento de Compostagem</h2>
-                <p>Aqui você pode gerenciar suas compostagens.</p>
+                <h2 class="gh2">Informações</h2>
+                <p>Gráficos Umidade/Temperatura</p>
                 <div class="compostagem-actions">
                     <div class="Graph" id='umida'></div>  
-                    <div class="Graph" id='temp'></div>  
-                    <a class="gag" href="#">Adicionar Compostagem</a>
-                    <!-- Graficos: Umidade, Redução de volume, Tipo de material -->
-                    <!-- Weatherapi.com copverdeyt@gmail.com CopVerde2024 -->
-                    <!-- fusioncharts -->
-                    <a class="gag" href="#">Ver Compostagens</a>
+                    <div class="Graph" id='temp'></div> 
+                    <div id="mensagens"></div>
                 </div>
             </section>
 
-            <section class="lembretes">
-                <h2 class="gh2">Lembretes</h2>
-                <p>Configure seus lembretes para o gerenciamento de compostagem.</p>
-                <div class="lembretes-actions">
-                    <button class="gag" onclick="openReminderModal()">Adicionar Lembrete</button>
-                    <a class="gag" href="#">Ver Lembretes</a>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Modal para adicionar lembrete -->
-    <div id="reminderModal" class="modall">
-        <div class="modal-contentt">
-            <span class="closee" onclick="closeReminderModal()">&times;</span>
-            <h2 class="gh2">Adicionar Lembrete</h2>
-            <form id="reminderForm">
-                <label for="reminderTitle">Título:</label>
-                <input type="text" id="reminderTitle" name="reminderTitle" required>
-
-                <label for="reminderDate">Data:</label>
-                <input type="date" id="reminderDate" name="reminderDate" required>
-
-                <label for="reminderTime">Hora:</label>
-                <input type="time" id="reminderTime" name="reminderTime" required>
-
-                <button type="submit">Adicionar Lembrete</button>
+            <section>
+            <h3 class="material">Adicionar Material à Compostagem</h3>
+            <form id="formMaterial">
+                <input type="text" id="material" placeholder="Ex: Restos de comida" required>
+                <button type="submit">Adicionar Material</button>
             </form>
-        </div>
-    </div>
+
+            <ul id="listaMateriais"></ul>
+        </section>
 
     <!-- Modal para editar perfil -->
     <div id="editProfileModal" class="modal">

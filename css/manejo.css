@@ -59,6 +59,10 @@ section {
   display: inline-block;
 }
 
+#mensagens {
+  text-align: center;
+}
+
 .gag {
   left: 20px;
   top: 20px;
@@ -75,233 +79,6 @@ section {
 .gag:hover {
   background-color: #4CAF50;
   color: white; /* Texto branco ao passar o mouse */
-}
-
-/* Estilo para o modal */
-.modall {
-  display: none; /* Escondido por padrão */
-  position: fixed; /* Fica em cima da página */
-  z-index: 1; /* Fica na frente */
-  left: 0;
-  top: 0;
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
-  overflow: auto; /* Habilita scroll se necessário */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade */
-}
-
-.modal-contentt {
-  background-color: #fff;
-  margin: 10% auto; /* 10% do topo e centralizado */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 90%; /* Largura do modal */
-  max-width: 500px; /* Largura máxima do modal */
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.closee {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.closee:hover,
-.closee:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Estilo do formulário */
-#reminderForm label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-#reminderForm input {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s; /* Efeito de transição */
-}
-
-#reminderForm input:focus {
-  border-color: #4CAF50; /* Mudança de cor ao focar */
-  outline: none; /* Remove o contorno padrão */
-}
-
-.reminderForm button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s; /* Efeito de transição */
-}
-
-.reminderForm button:hover {
-    background-color: #45a049; /* Cor do botão ao passar o mouse */
-}
-
-/* Estilo da área de perfil */
-.perfil-info {
-    display: flex; /* Flexbox para alinhar a foto e os detalhes */
-    align-items: center; /* Alinha verticalmente ao centro */
-}
-
-.perfil-details {
-    flex-grow: 1; /* Para que os detalhes ocupem o espaço restante */
-}
-
-.upload-label {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4CAF50;
-    text-decoration: none;
-    border: 1px solid #4CAF50;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-}
-
-.upload-label:hover {
-    background-color: #4CAF50;
-    color: white; /* Texto branco ao passar o mouse */
-}
-
- /* Style do modal */
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.modal-content h2 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.form h2 {
-  font-size: 24px;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.Form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.Form .form-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.Form .form-rowb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-input[type="file"] {
-  margin: auto;
-  padding-top:10px ;
-  cursor: pointer;
-}
-
-input[type="text"], 
-input[type="tel"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.cffoto {
-  padding: 5px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 50%;
-  margin-top: 2px;
-  margin: auto;
-
-}
-
-.form-rowb button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.form-rowb button:hover {
-  background-color: #45a049;
-}
-
-#logoutBtn {
-  background-color: #f44336; 
-}
-
-#logoutBtn:hover {
-  background-color: #e53935;
-}
-
-#email_user {
-  font-size: 18px;
-  color: black;
-  font-weight: 450;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.edit {
-  border: none;
 }
 
 @media (max-width: 600px) {
@@ -325,4 +102,79 @@ input[type="tel"] {
     margin: 0;
     padding: 0;
   }
+}
+
+.material {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Estilo do formulário */
+form#formMaterial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Campo de input */
+form#formMaterial input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+form#formMaterial input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(58, 60, 61, 0.5);
+}
+
+/* Botão de envio */
+form#formMaterial button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6cc26c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form#formMaterial button:hover {
+  background-color: #108510d8;
+}
+
+/* Lista de materiais */
+ul#listaMateriais {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#listaMateriais li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#listaMateriais li:last-child {
+  border-bottom: none;
+}
+
+ul#listaMateriais li:hover {
+  background-color: #f1f1f1;
 }
