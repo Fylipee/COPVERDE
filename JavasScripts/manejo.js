@@ -58,3 +58,51 @@ firebase.auth().onAuthStateChanged(user => {
         console.log('Usuário não autenticado');
     }
 });
+
+// ------------------------------------------ //
+
+// Escolha da compostagem
+const tipoCompostagem = document.getElementById('tipoCompostagem');
+const informacoesCompostagem = document.getElementById('informacoesCompostagem');
+
+// Informações de compostagem
+const compostagemData = {
+    domestica: `
+        <h3 class="tituloc">Compostagem Doméstica</h3>
+        <p class="descc">A compostagem doméstica é uma forma prática de transformar resíduos orgânicos em adubo para o seu jardim ou horta. Para começar:</p>
+        <ul class="listac">
+            <li>Separe resíduos orgânicos como restos de frutas, legumes e borra de café.</li>
+            <li>Evite colocar carne, laticínios ou gorduras.</li>
+            <li>Use uma composteira simples ou um balde perfurado com tampa.</li>
+        </ul>
+    `,
+    industrial: `
+        <h3 class="tituloc">Compostagem Industrial</h3>
+        <p class="descc">A compostagem industrial é realizada em larga escala por empresas ou indústrias. Para começar:</p>
+        <ul class="listac">
+            <li>Entre em contato com empresas locais que ofereçam serviços de coleta de resíduos orgânicos.</li>
+            <li>Separe grandes quantidades de resíduos orgânicos de forma adequada.</li>
+            <li>Considere visitar instalações para entender o processo.</li>
+        </ul>
+    `,
+    vermicompostagem: `
+        <h3 class="tituloc">Vermicompostagem</h3>
+        <p class="descc">A vermicompostagem utiliza minhocas para transformar resíduos orgânicos em húmus rico em nutrientes. Para começar:</p>
+        <ul class="listac">
+            <li>Adquira minhocas californianas (espécie ideal para compostagem).</li>
+            <li>Use uma composteira com várias camadas ou caixas plásticas furadas.</li>
+            <li>Alimente as minhocas com resíduos vegetais picados e evite alimentos ácidos.</li>
+        </ul>
+    `
+};
+
+// Evento para exibir informações
+tipoCompostagem.addEventListener('change', (event) => {
+    const tipo = event.target.value;
+    if (compostagemData[tipo]) {
+        informacoesCompostagem.innerHTML = compostagemData[tipo];
+        informacoesCompostagem.style.display = 'block';
+    } else {
+        informacoesCompostagem.style.display = 'none';
+    }
+});

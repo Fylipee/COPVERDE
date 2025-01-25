@@ -178,3 +178,61 @@ ul#listaMateriais li:last-child {
 ul#listaMateriais li:hover {
   background-color: #f1f1f1;
 }
+
+
+/* seção escolha */
+#compostagemSection {
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#informacoesCompostagem {
+  background-color: #f9f9f9;
+}
+
+#compostagemSection h2 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Estilo para o conteúdo*/
+.tituloc {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.descc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: Georgia, serif;
+}
+
+.listac {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.listac li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.listac li::marker {
+  color: #2e7d32;
+  font-size: 1.2rem;
+}
