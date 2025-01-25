@@ -88,10 +88,6 @@ nav.sumario a:hover {
 }
 
 /* Seções */
-.secao {
-    margin-bottom: 40px;
-}
-
 .secao h2 {
     font-size: 2rem;
     color: #4CAF50;
@@ -170,4 +166,64 @@ nav.sumario a:hover {
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* style video */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-video {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.play-video:hover {
+    background-color: #256b2b;
+}
+
+.video-wrapper {
+    position: relative;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.close-video {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.close-video:hover {
+    background-color: #cc0000;
+}
+
+video {
+    border-radius: 8px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -72,12 +72,12 @@
                 <!-- Sumário -->
                 <nav class="sumario">
                     <ul>
-                        <li><a href="#como-funciona">Como Funciona a Compostagem?</a></li>
-                        <li><a href="#pode-e-nao-pode">O que Pode e o que Não Pode Ser Compostado?</a></li>
-                        <li><a href="#dicas">Dicas para Manter a Compostagem Saudável</a></li>
-                        <li><a href="#beneficios">Benefícios da Compostagem</a></li>
-                        <li><a href="#começar">Como Começar a Compostagem em Casa?</a></li>
-                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><a class="REFE" href="#como-funciona">Como Funciona a Compostagem?</a></li>
+                        <li><a class="REFE" href="#pode-e-nao-pode">O que Pode e o que Não Pode Ser Compostado?</a></li>
+                        <li><a class="REFE" href="#dicas">Dicas para Manter a Compostagem Saudável</a></li>
+                        <li><a class="REFE" href="#beneficios">Benefícios da Compostagem</a></li>
+                        <li><a class="REFE" href="#começar">Como Começar a Compostagem em Casa?</a></li>
+                        <li><a class="REFE" href="#faq">Perguntas Frequentes</a></li>
                     </ul>
                 </nav>
         
@@ -119,13 +119,18 @@
         
                     <section class="secao" id="começar">
                         <h2>Como Começar a Compostagem em Casa?</h2>
-                        <p class="parag">Começar é fácil! Aqui está um guia rápido para te ajudar:</p>
-                        <ol>
-                            <li><strong>Escolha o local:</strong> Encontre um local adequado no seu jardim ou varanda para iniciar a compostagem. Deve ser um lugar com boa ventilação.</li>
-                            <li><strong>Escolha o método:</strong> Você pode optar por compostagem em pilha ou por compostagem em caixa. Se você tem pouco espaço, compostagem em balde também é uma boa opção.</li>
-                            <li><strong>Comece a adicionar materiais:</strong> Adicione uma camada de materiais secos, como folhas, seguida por restos de comida, como cascas de frutas. Alterne camadas de materiais secos e úmidos.</li>
-                            <li><strong>Vire a pilha:</strong> Mexa o conteúdo a cada duas semanas para garantir que o material se decomponha de maneira uniforme.</li>
-                        </ol>
+                        <div class="video-container">
+                            <button id="playVideoBtn" class="play-video">Clique aqui para ver um vídeo!</button>
+                            <div id="videoWrapper" class="video-wrapper" style="display: none; position: relative;">
+                                <button id="closeVideoBtn" class="close-video">&times;</button>
+                                <video id="videoCompostagem" controls preload="metadata" style="width: 100%; border-radius: 8px;">
+                                    <source src="assets/Videos/COMO FAZER UM MINHOCÁRIO SIMPLES E BARATO.mp4" type="video/mp4">
+                                    <source src="assets/Videos/COMO FAZER UM MINHOCÁRIO SIMPLES E BARATO.webm" type="video/webm">
+                                    <source src="assets/Videos/COMO FAZER UM MINHOCÁRIO SIMPLES E BARATO.ogv" type="video/ogg">
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+                            </div>
+                        </div>
                     </section>
         
                     <section class="secao" id="faq">
