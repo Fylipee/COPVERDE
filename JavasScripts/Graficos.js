@@ -1,7 +1,7 @@
 import { getData } from "./Clima.js";
 
 const TEMPERATURA_MAXIMA = 65; // Máxima temperatura em °C
-const TEMPERATURA_MINIMA = 45; // Mínima temperatura em °C
+const TEMPERATURA_MINIMA = 15; // Mínima temperatura em °C
 const UMIDADE_MINIMA = 40;    // Mínima umidade em %
 
 document.addEventListener("DOMContentLoaded", () => {
