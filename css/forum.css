@@ -136,28 +136,6 @@ body {
     }
 }
 
-/* Estilo do conteúdo principal */
-
-.discursao-container {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 1200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.discursao-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.topicos ul {
-    padding: 0;
-    margin: 0;
-}
 
 /* Modal Styling */
 .modal {
@@ -242,13 +220,38 @@ body {
     }
 }
 
-/* Estilo do span */
+.topicos ul {
+    padding: 0;
+    margin: 0;
+}
+
+#loginMessage {
+    color: rgb(241, 70, 70);
+    margin: auto 0;
+    font-weight: 600;
+}
 
 .discursao-container {
     margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discursao-container::marker {
+    content: "";
+}
+
+.discursao-title { 
+    top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .metadata-container {
@@ -283,4 +286,20 @@ body {
 
 .user-info-container i {
     font-size: 14px;
+}
+
+.discursao-title-container i {
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.discursao-title-container i:hover {
+    transform: scale(1.1);
+}
+
+.discursao-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
