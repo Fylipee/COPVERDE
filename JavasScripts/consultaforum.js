@@ -1,4 +1,3 @@
-
 function checkUserLogin() {
     const user = firebase.auth().currentUser;
     const newTopicButton = document.getElementById('newTopicButton');
@@ -34,7 +33,6 @@ function cleanTopicsFromScreen() {
     clear.innerHTML = "";
 }
 
-// Adiciona os tópicos à tela
 function addTopicsToScreen(topics) {
     const unorderedList = document.getElementById('topics');
     topics.forEach(topic => {
@@ -55,7 +53,6 @@ function addTopicsToScreen(topics) {
 
         li.appendChild(divtitx);
         
-        // Verifica se o usuário logado é o mesmo que criou o tópico
         const user = firebase.auth().currentUser;
         if (user && topic.userId === user.uid) {
             deleteButton.style.display = 'inline-block';
@@ -90,9 +87,23 @@ function addTopicsToScreen(topics) {
         nomeuser.innerHTML = topic.userName || "Visitante";
         userInfoContainer.appendChild(nomeuser);
 
+        const iconContainer = document.createElement('div');
+        iconContainer.style.position = 'relative';
+        iconContainer.style.display = 'inline-block';
+
         const iconcoversation = document.createElement('i');
         iconcoversation.classList.add('ri-chat-3-line');
-        userInfoContainer.appendChild(iconcoversation);
+        iconcoversation.onclick = () => openCommentSection(topic.id);
+        
+        const commentCountBadge = document.createElement('span');
+        commentCountBadge.classList.add('comment-count-badge');
+        commentCountBadge.textContent = '0';
+        
+        iconContainer.appendChild(iconcoversation);
+        iconContainer.appendChild(commentCountBadge);
+        userInfoContainer.appendChild(iconContainer);
+
+        loadCommentCount(topic.id, commentCountBadge);
 
         const tempopostagem = document.createElement('span');
         tempopostagem.innerHTML = formatDate(topic.createdAt);
@@ -101,11 +112,113 @@ function addTopicsToScreen(topics) {
         metadataContainer.appendChild(userInfoContainer);
 
         li.appendChild(metadataContainer);
+
+        const commentSection = document.createElement('div');
+        commentSection.id = `commentSection-${topic.id}`;
+        commentSection.classList.add('comment-section');
+        commentSection.style.display = 'none';
+        li.appendChild(commentSection);
+
         unorderedList.appendChild(li);
     });
 }
 
-// Função para excluir um tópico
+function loadCommentCount(topicId, badgeElement) {
+    firebase.firestore()
+    .collection('topicos_forum')
+    .doc(topicId)
+    .collection('comentarios')
+    .onSnapshot(snapshot => {
+        badgeElement.textContent = snapshot.size;
+    });
+}
+
+function openCommentSection(topicId) {
+    const commentSection = document.getElementById(`commentSection-${topicId}`);
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+       const destamensagem = document.getElementById('loginMessage');
+       destamensagem.classList.add('login-message-highlight');
+       setTimeout(() => {
+        destamensagem.classList.remove('login-message-highlight');
+    }, 3000);
+
+        return;
+    }
+
+    const isVisible = commentSection.style.display === 'block';
+    commentSection.style.display = isVisible ? 'none' : 'block';
+    
+    if (!isVisible) {
+        loadComments(topicId, commentSection);
+    }
+}
+
+function loadComments(topicId, commentSection) {
+    firebase.firestore()
+    .collection('topicos_forum')
+    .doc(topicId)
+    .collection('comentarios')
+    .orderBy('createdAt', 'asc')
+    .get()
+    .then(snapshot => {
+        commentSection.innerHTML = '';
+        snapshot.forEach(doc => {
+            const comment = doc.data();
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerHTML = `
+                <strong>${comment.userName}:</strong> ${comment.text}
+                <span class="comment-date">${formatDate(comment.createdAt)}</span>
+            `;
+            commentSection.appendChild(commentElement);
+        });
+
+        const commentInput = document.createElement('textarea');
+        commentInput.classList.add('comment-input');
+        commentInput.placeholder = 'Digite seu comentário...';
+        commentSection.appendChild(commentInput);
+
+        const commentButton = document.createElement('button');
+        commentButton.classList.add('comment-button');
+        commentButton.innerHTML = 'Comentar';
+        commentButton.onclick = () => addComment(topicId, commentInput);
+        commentSection.appendChild(commentButton);
+    });
+}
+
+function addComment(topicId, commentInput) {
+    const user = firebase.auth().currentUser;
+    if (!user) {
+        alert("Você precisa estar logado para comentar.");
+        return;
+    }
+
+    const commentText = commentInput.value.trim();
+    if (!commentText) {
+        alert("O comentário não pode estar vazio.");
+        return;
+    }
+
+    firebase.firestore()
+    .collection('topicos_forum')
+    .doc(topicId)
+    .collection('comentarios')
+    .add({
+        text: commentText,
+        userName: user.displayName || user.email,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    .then(() => {
+        commentInput.value = '';
+        loadComments(topicId, document.getElementById(`commentSection-${topicId}`));
+    })
+    .catch(() => {
+        alert("Erro ao adicionar comentário.");
+    });
+}
+
 function deleteTopic(topicId) {
     const confirmDelete = confirm("Você tem certeza que deseja excluir este tópico?");
     if (!confirmDelete) return;
@@ -155,14 +268,12 @@ function createTopic() {
     return {};
 }
 
-// Formulário de criação de tópico
 const form = {
     titulo: () => document.getElementById('titulo'),
     descricao: () => document.getElementById('descricao'),
     tags: () => document.getElementById('tags')
 };
 
-// Função para formatar a data
 function formatDate(timestamp) {
     const date = timestamp ? timestamp.toDate() : new Date();
     return `${date.getHours()}:${date.getMinutes()} ${date.toDateString()}`;
