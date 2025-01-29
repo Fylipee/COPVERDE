@@ -14,12 +14,45 @@ body.dark-mode {
     transition: background-color 1s, color 1s;
     }
 
-    body.dark-mode .sumario  {
+    body.dark-mode .sumario {
         background-color: #3A4A36;
         color: #E0E0E0;
         transition: background-color 1s, color 1s;
         }
+    body.dark-mode .REFE {
+        background-color: #3A4A36;
+        color: #E0E0E0;
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .principal {
+        background-color: #121212;
+        color: #E0E0E0;
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .parag {
+        background-color: #121212;
+        color: #E0E0E0;
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .forum {
+        background-color: #313130;
+        color: #E0E0E0;
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .hidden {
+        background-color: #121212;
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .visitbnt {
+        background-color:rgba(59, 104, 59, 0.527);
+        transition: background-color 1s, color 1s;
+        }
+    body.dark-mode .play-video {
+        background-color:rgba(59, 104, 59, 0.527);
+        transition: background-color 1s, color 1s;
+        }
   
+
 .principal {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;

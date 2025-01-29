@@ -20,6 +20,7 @@ firebase.auth().onAuthStateChanged(user => {
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = 'Excluir';
                 deleteButton.style.marginLeft = '10px';
+                deleteButton.classList.add('deleteButton');
                 deleteButton.addEventListener('click', () => {
                     materiaisRef.doc(doc.id).delete();
                 });

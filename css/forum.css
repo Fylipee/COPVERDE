@@ -2,17 +2,17 @@ body.dark-mode {
     background-color:#121212;
     color: #E0E0E0;
     transition: background-color 1s, color 1s;
-    }
+}
  body.dark-mode a {
     background-color:#121212;
     color: #E0E0E0;
     transition: background-color 1s, color 1s;
-    }
+}
 body.dark-mode .container {
     background-color: #121212;
     color: #E0E0E0;
     transition: background-color 1s, color 1s;
-    }
+}
 body.dark-mode .modal-contento {
     background-color: #121212;
     color: #E0E0E0;
@@ -38,7 +38,31 @@ body.dark-mode .tags_o{
     color: #E0E0E0;
     transition: background-color 1s, color 1s;
 }
-
+body.dark-mode .discursao-container{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .discursao-container h3{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment-section{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment-input{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;

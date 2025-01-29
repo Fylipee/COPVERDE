@@ -2,10 +2,67 @@ body.dark-mode {
   background-color:#121212;
   color: #fff;
 }
-
 body.dark-mode a {
   background-color:#121212;
   color: #fff;
+}
+body.dark-mode .compostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #compostagemSection {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #tipoCompostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .a {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .material {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #material {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #listaMateriais {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #informacoesCompostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #informacoesCompostagem li{
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .descc{
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #listaMateriais li {
+  background-color:#121212;
+}
+body.dark-mode .headera {
+  background-color:rgba(59, 104, 59, 0.527);
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode #formMaterial button {
+  background-color:rgba(59, 104, 59, 0.527);
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .deleteButnto {
+  background-color:#D63031;
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
 }
 
 body {
@@ -41,7 +98,6 @@ body {
 /* Estilo das seções */
 section {
   background-color: #eeeeee;
-  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -175,9 +231,6 @@ ul#listaMateriais li:last-child {
   border-bottom: none;
 }
 
-ul#listaMateriais li:hover {
-  background-color: #f1f1f1;
-}
 
 
 /* seção escolha */
@@ -245,4 +298,13 @@ select {
 .listac li::marker {
   color: #2e7d32;
   font-size: 1.2rem;
+}
+
+.deleteButnto {
+  background-color: #ff4757;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 2px;
+  font-size: 15px;
 }

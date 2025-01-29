@@ -66,7 +66,7 @@ function criarGraficoUmidade(umidade) {
                 title: { text: "Umidade %", font: { size: 24 } },
                 delta: { reference: 55, increasing: { color: "RebeccaPurple" } },
                 gauge: {
-                    axis: { range: [null, 100], tickwidth: 1, tickcolor: "darkblue" },
+                    axis: { range: [null, 100], tickwidth: 1, tickcolor: "#007B83" },
                     bar: { color: "purple" },
                     borderwidth: 2,
                     bordercolor: "gray",
@@ -88,7 +88,7 @@ function criarGraficoUmidade(umidade) {
 
         var layout = {
             margin: { t: 25, r: 25, l: 25, b: 25 },
-            font: { color: "darkblue", family: "Arial" },
+            font: { color: "#007B83", family: "Arial" },
             paper_bgcolor: 'rgba(0, 0, 0, 0)',
             plot_bgcolor: 'rgba(0, 0, 0, 0)'
         };
@@ -110,7 +110,7 @@ function criarGraficoTemperatura(temp) {
                 title: { text: "Temperatura", font: { size: 24 } },
                 delta: { reference: 50, increasing: { color: "RebeccaPurple" } },
                 gauge: {
-                    axis: { range: [null, 80], tickwidth: 1, tickcolor: "darkblue" },
+                    axis: { range: [null, 80], tickwidth: 1, tickcolor: "#007B83" },
                     bar: { color: "purple" },
                     borderwidth: 2,
                     bordercolor: "gray",
@@ -127,7 +127,7 @@ function criarGraficoTemperatura(temp) {
 
         var layout = {
             margin: { t: 25, r: 25, l: 25, b: 25 },
-            font: { color: "darkblue", family: "Arial" },
+            font: { color: "#007B83", family: "Arial" },
             paper_bgcolor: 'rgba(0, 0, 0, 0)',
             plot_bgcolor: 'rgba(0, 0, 0, 0)'
         };
