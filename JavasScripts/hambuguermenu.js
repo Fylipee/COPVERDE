@@ -25,25 +25,20 @@ document.addEventListener('click', function(event) {
 
 
 const cards = document.querySelectorAll('.compostagem');
-
-if (window.location.pathname === '/index.html') {
-cards.forEach(compostagem => {
-  const icon = compostagem.querySelector('.compostagem-title i');
-  
-  compostagem.addEventListener('click', () => {
-    // Alterna a classe 'expanded' no card;
-    compostagem.classList.toggle('expanded');
-
-    // Verifica se o card está expandido e troca o ícone;
-    if (compostagem.classList.contains('expanded')) {
-      icon.classList.remove('ri-add-line');
-      icon.classList.add('ri-subtract-line');
-    } else {
-      icon.classList.remove('ri-subtract-line');
-      icon.classList.add('ri-add-line');
-    }
-  });
-})};
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/') {
+    cards.forEach(compostagem => {
+        const icon = compostagem.querySelector('.compostagem-title i');
+        compostagem.addEventListener('click', () => {
+            const isExpanded = compostagem.classList.toggle('expanded')
+            if (isExpanded) {
+                compostagem.classList.add('highlight');
+            } else {
+                compostagem.classList.remove('highlight');
+            }
+            icon.classList = isExpanded ? 'ri-subtract-line' : 'ri-add-line';
+        });
+    });
+}
 
 const footer = document.querySelector('footer');
 const esconder = document.getElementById('tradutor');

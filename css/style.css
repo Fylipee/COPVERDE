@@ -428,6 +428,16 @@ body.dark-mode a {
   align-items: center; 
 }
 
+.compostagem {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compostagem.highlight {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid #ff0000;
+}
+
 .compostagem img {
   width: 250px;
   user-select: none;
