@@ -40,23 +40,29 @@ if (window.location.pathname.endsWith('/index.html') || window.location.pathname
     });
 }
 
-const footer = document.querySelector('footer');
-const esconder = document.getElementById('tradutor');
-const seta = document.getElementById('animação');
+document.addEventListener('DOMContentLoaded', () => {
+  const isHomePage = window.location.pathname.endsWith('/index.html') || 
+                     window.location.pathname === '/' || 
+                     window.location.pathname === '';
+  if (isHomePage) {
+    const footer = document.querySelector('footer');
+    const tradutor = document.getElementById('tradutor');
 
-if (window.location.pathname === '/index.html') {
+    if (footer && tradutor) {
+      const updateVisibility = () => {
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const footerPosition = footerRect.top - viewportHeight;
 
-  setTimeout(() => {
-    window.addEventListener('scroll', () => {
-      const posfooter = footer.getBoundingClientRect();
-      esconder.style.display = posfooter.top <= 0 ? 'none' : 'block';
-    });
-  }, 500);
-
-  if (seta) {
-    setTimeout(() => {
-      seta.classList.add('sumir');
-    }, 5000);
+        tradutor.style.opacity = footerPosition < -50 ? '0' : '1';
+        tradutor.style.pointerEvents = footerPosition < -50 ? 'none' : 'all';
+        tradutor.style.transition = 'opacity 0.3s ease';
+      };
+      tradutor.style.opacity = '1';
+      
+      window.addEventListener('scroll', updateVisibility);
+      window.addEventListener('resize', updateVisibility);
+      updateVisibility();
+    }
   }
-}
-
+});

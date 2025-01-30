@@ -137,13 +137,16 @@ header {
 }
 
 /* Itens do Menu */
-.dropdown_menu li {
+.dropdown_menu li a {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
   transition: color 0.3s ease;
+  color: black;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .dropdown_menu.dark-mode li {
