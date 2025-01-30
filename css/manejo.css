@@ -300,11 +300,22 @@ select {
   font-size: 1.2rem;
 }
 
-.deleteButnto {
-  background-color: #ff4757;
-  color: #fff;
-  border-radius: 5px;
+#listaMateriais {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#listaMateriais li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.deleteButton {
+  background: #ff4444;
+  color: white;
   border: none;
-  padding: 2px;
-  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }

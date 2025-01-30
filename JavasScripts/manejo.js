@@ -10,22 +10,47 @@ firebase.auth().onAuthStateChanged(user => {
 
         // Atualiza a lista de materiais em tempo real
         materiaisRef.onSnapshot(snapshot => {
-            listaMateriais.innerHTML = ''; 
+            listaMateriais.innerHTML = '';
             snapshot.forEach(doc => {
                 const material = doc.data().nome;
+                const timestamp = doc.data().timestamp?.toDate();
+                
+                // Criar elementos
                 const li = document.createElement('li');
-                li.textContent = material;
-
-                // Botão de excluir item
+                const materialContainer = document.createElement('div');
+                const linhaSuperior = document.createElement('div');
+                const dataLinha = document.createElement('div');
+                const materialSpan = document.createElement('span');
                 const deleteButton = document.createElement('button');
+                const dataSpan = document.createElement('span');
+            
+                // Estilização básica
+                materialContainer.style.width = '100%';
+                materialContainer.style.margin = '8px 0';
+                
+                linhaSuperior.style.display = 'flex';
+                linhaSuperior.style.justifyContent = 'space-between';
+                linhaSuperior.style.alignItems = 'center';
+                
+                dataLinha.style.marginTop = '4px';
+                dataSpan.style.color = '#666';
+                dataSpan.style.fontSize = '0.8em';
+            
+                // Conteúdo
+                materialSpan.textContent = material;
                 deleteButton.textContent = 'Excluir';
-                deleteButton.style.marginLeft = '10px';
-                deleteButton.classList.add('deleteButton');
-                deleteButton.addEventListener('click', () => {
-                    materiaisRef.doc(doc.id).delete();
-                });
-
-                li.appendChild(deleteButton);
+                dataSpan.textContent = `Cadastrado em: ${timestamp.toLocaleDateString('pt-BR')}`;
+            
+                // Evento de exclusão
+                deleteButton.onclick = () => materiaisRef.doc(doc.id).delete();
+            
+                // Montagem
+                linhaSuperior.appendChild(materialSpan);
+                linhaSuperior.appendChild(deleteButton);
+                dataLinha.appendChild(dataSpan);
+                materialContainer.appendChild(linhaSuperior);
+                materialContainer.appendChild(dataLinha);
+                li.appendChild(materialContainer);
                 listaMateriais.appendChild(li);
             });
         });
@@ -38,12 +63,12 @@ firebase.auth().onAuthStateChanged(user => {
             if (material.trim() !== '') {
                 materiaisRef.add({
                     nome: material,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 });
-                document.getElementById('material').value = ''; 
+                document.getElementById('material').value = '';
             }
         });
 
-        // Reseta todos os dados do Firestore
         resetButton.addEventListener('click', () => {
             if (confirm('Tem certeza de que deseja apagar todos os materiais?')) {
                 materiaisRef.get().then(snapshot => {
