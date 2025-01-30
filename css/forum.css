@@ -375,17 +375,18 @@ body {
 }
 
 .comment-button {
-    background: #007bff;
+    background: #4caf50;
     color: white;
     border: none;
     padding: 8px 20px;
     border-radius: 4px;
+    margin: 0 auto;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .comment-button:hover {
-    background: #0056b3;
+    background: #45a049;
 }
 
 .user-info-container div[style*="inline-block"] {
@@ -401,4 +402,109 @@ body {
 
 .login-message-highlight {
     animation: scaleAnimation 3s;
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .subconteiner {
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .subconteiner span {
+        font-size: 12px;
+        padding: 6px 10px;
+        flex: 1 1 auto;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .new-topic {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-contento {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .modal input, 
+    .modal select, 
+    .modal button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .discursao-container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .discursao-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .metadata-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-section {
+        padding: 8px;
+    }
+    
+    .comment-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        padding: 10px;
+    }
+    
+    .user-info-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tags-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .comment-input {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
 }

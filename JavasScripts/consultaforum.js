@@ -14,24 +14,55 @@ function checkUserLogin() {
 
 firebase.auth().onAuthStateChanged(checkUserLogin);
 
-function findTopic() {
+// Função modificada para aceitar filtro
+function findTopic(filterTag = '') {
     firebase.firestore()
     .collection('topicos_forum')
     .get()
     .then(snapshot => {
-        const topics = snapshot.docs.map(doc => ({
+        const allTopics = snapshot.docs.map(doc => ({
             ...doc.data(),
             id: doc.id
         }));
+        
+        const filteredTopics = filterTag ? 
+            allTopics.filter(topic => topic.tags === filterTag) : 
+            allTopics;
+            
         cleanTopicsFromScreen();
-        addTopicsToScreen(topics);
+        addTopicsToScreen(filteredTopics);
     });
 }
+
+document.getElementById('tagFilter').addEventListener('change', function() {
+    findTopic(this.value);
+});
+
+function updateTagFilter(topics) {
+    const tagFilter = document.getElementById('tagFilter');
+    tagFilter.innerHTML = '<option value="">Todos os Tópicos</option>';
+    
+    const allTags = topics.flatMap(topic => 
+        topic.tags.split(',').map(t => t.trim())
+    ).filter((t, i, arr) => t && arr.indexOf(t) === i);
+    
+    allTags.forEach(tag => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = tag;
+        tagFilter.appendChild(option);
+    });
+}
+
+document.getElementById('tagFilter').addEventListener('change', function() {
+    findTopic(this.value);
+});
 
 function cleanTopicsFromScreen() {
     const clear = document.getElementById('topics');
     clear.innerHTML = "";
 }
+
 
 function addTopicsToScreen(topics) {
     const unorderedList = document.getElementById('topics');
@@ -233,11 +264,20 @@ function deleteTopic(topicId) {
         });
 }
 
-function cadastrarTopico() {
-    const topic = createTopic();
 
+function cadastrarTopico() {
+    const tagSelecionada = form.tags().value;
+    
+    // Validação da tag
+    if (!tagSelecionada) {
+        alert("⚠️ Selecione uma tag antes de criar o tópico!");
+        return;
+    }
+
+    const topic = createTopic();
+    
     if (Object.keys(topic).length === 0) {
-        alert("Você precisa estar logado para criar um tópico.");
+        alert("🔒 Você precisa estar logado para criar um tópico.");
         return;
     }
 
@@ -245,11 +285,14 @@ function cadastrarTopico() {
     .collection('topicos_forum')
     .add(topic)
     .then(() => {
-        alert("Novo tópico criado");
+        closeModalf();
+        form.titulo().value = '';
+        form.descricao().value = '';
+        form.tags().value = '';
         findTopic();
     })
     .catch(() => {
-        alert("Erro ao criar tópico");
+        alert("❌ Erro ao criar tópico");
     });
 }
 
@@ -271,18 +314,31 @@ function createTopic() {
 const form = {
     titulo: () => document.getElementById('titulo'),
     descricao: () => document.getElementById('descricao'),
-    tags: () => document.getElementById('tags')
+    tags: () => document.getElementById('tagFilter')
 };
 
+// FUNÇÃO FORMATDATE ATUALIZADA
 function formatDate(timestamp) {
     const date = timestamp ? timestamp.toDate() : new Date();
-    return `${date.getHours()}:${date.getMinutes()} ${date.toDateString()}`;
+    const options = {
+        weekday: 'long',
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    };
+    
+    return new Intl.DateTimeFormat('pt-BR', options).format(date)
+        .replace(/(^\w{1})| (\w{1})/g, letra => letra.toUpperCase());
 }
 
 function openModalf() {
     document.getElementById('newTopicModal').style.display = 'flex';
 }
 
+// FUNÇÃO PARA FECHAR MODAL
 function closeModalf() {
     document.getElementById('newTopicModal').style.display = 'none';
 }
