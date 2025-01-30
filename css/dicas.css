@@ -260,3 +260,109 @@ video {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .h1a {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.sumario {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    nav.sumario ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav.sumario a {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .secao h2 {
+        font-size: 1.5rem;
+    }
+    
+    .secao li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .forum {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .visitbnt {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .video-container {
+        margin: 20px 0;
+    }
+    
+    .play-video {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .close-video {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* ========== ANIMAÇÕES ========== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    .principal {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .parag {
+        font-size: 1rem;
+        text-align: justify;
+    }
+}

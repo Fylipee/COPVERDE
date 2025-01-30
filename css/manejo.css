@@ -319,3 +319,99 @@ select {
   border-radius: 3px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .headera {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .gh1 {
+    font-size: 1.5rem;
+    order: 0;
+  }
+
+  .tituloc {
+    font-size: 1.5rem;
+  }
+
+  .Graph {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #formMaterial {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #formMaterial input[type="text"] {
+    width: 100%;
+    max-width: none;
+  }
+
+  #formMaterial button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .gh1 {
+    font-size: 1.3rem;
+  }
+
+  .gh2 {
+    font-size: 1.2rem;
+  }
+
+  .tituloc {
+    font-size: 1.2rem;
+  }
+
+  #listaMateriais li {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .deleteButton {
+    width: 100%;
+    padding: 8px;
+  }
+
+  #compostagemSection h2 {
+    font-size: 1.1rem;
+  }
+
+  .material {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  #formMaterial button {
+    font-size: 14px;
+  }
+  
+  .gh1 {
+    font-size: 1.2rem;
+  }
+
+  #listaMateriais li {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
