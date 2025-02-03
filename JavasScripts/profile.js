@@ -21,7 +21,7 @@ function handleAuthStateChange(user) {
       // Define dados do usuário logado
       const profilePicture = document.getElementById('profilePicture');
       if (profilePicture) {
-          profilePicture.src = user.photoURL || 'assets/images/Fotos_pra_otimização/perfil.webp';
+          profilePicture.src = user.photoURL || 'assets/images/Fotos_pra_otimização/logo.webp';
       }
 
       const emailElement = document.getElementById('email_user');
