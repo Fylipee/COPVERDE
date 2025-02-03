@@ -128,6 +128,10 @@ header {
   background-color: #121212;
 }
 
+body.dark-mode .dropdown_menu li a {
+  color: white;
+}
+
 /* Menu aberto */
 .dropdown_menu.open {
   height: 160px;
