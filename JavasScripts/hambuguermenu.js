@@ -24,27 +24,6 @@ document.addEventListener('click', function(event) {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll('.compostagem');
-  if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/') {
-      cards.forEach((compostagem, index) => {
-          const icon = compostagem.querySelector('.compostagem-title i');
-          const isExpanded = localStorage.getItem(`compostagem-${index}`) === 'true';
-
-          if (isExpanded) {
-              compostagem.classList.add('expanded', 'highlight');
-              icon.classList = 'ri-subtract-line';
-          }
-
-          compostagem.addEventListener('click', () => {
-              const expanded = compostagem.classList.toggle('expanded');
-              compostagem.classList.toggle('highlight', expanded);
-              icon.classList = expanded ? 'ri-subtract-line' : 'ri-add-line';
-              localStorage.setItem(`compostagem-${index}`, expanded);
-          });
-      });
-  }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
   const isHomePage = window.location.pathname.endsWith('/index.html') || 

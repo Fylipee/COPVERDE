@@ -28,3 +28,20 @@ if (window.location.pathname === '/index.html' || window.location.pathname === '
         });
     }
 
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll('.compostagem');
+        
+        cards.forEach((compostagem) => {
+            const icon = compostagem.querySelector('.compostagem-title i');
+            
+            compostagem.classList.remove('expanded', 'highlight');
+            icon.classList = 'ri-add-line';
+    
+            compostagem.addEventListener('click', () => {
+                const expanded = compostagem.classList.toggle('expanded');
+                compostagem.classList.toggle('highlight', expanded);
+                icon.classList = expanded ? 'ri-subtract-line' : 'ri-add-line';
+            });
+        });
+    });
